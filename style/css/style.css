@@ -716,7 +716,7 @@ header.grad {
   top: 18px;
   width: 27px;
   height: 21px;
-  background: url(../../img/scrollTop.svg) 0 0 no-repeat;
+  background: url(../img/scrollTop.svg) 0 0 no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 }
@@ -739,7 +739,7 @@ footer .bottom .scrollTop {
   top: 18px;
   width: 27px;
   height: 21px;
-  background: url(../../img/scrollTop.svg) 0 0 no-repeat;
+  background: url(../img/scrollTop.svg) 0 0 no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 }
@@ -1123,7 +1123,7 @@ footer .bottom .scrollTop:hover {
   box-sizing: border-box;
   border-radius: 5px;
   padding-left: 40px;
-  background: url(../../img/period.svg) 9px center no-repeat;
+  background: url(../img/period.svg) 9px center no-repeat;
   font: 400 14px 'permian', sans-serif;
   color: #000;
   line-height: 14px;
