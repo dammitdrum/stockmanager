@@ -1,2 +1,2 @@
 # stockmanager
-mini application for management stock, using backbone marionette
+mini application for management stock, using backbone marionette and require
