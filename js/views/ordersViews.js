@@ -11,9 +11,10 @@ define(['marionette','app'],function(Marionette,App){
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[13]);
+			this.stop = false;
 		},
 		select: function() {
-			this.triggerMethod('show:detail',this.model.get('doors'));
+			this.triggerMethod('show:detail',this.model.get('doors'),this.stop);
 		}
 	});
 	
@@ -39,15 +40,17 @@ define(['marionette','app'],function(Marionette,App){
 			};
 		},
 		setActive: function(child) {
-			this.children.findByIndex(this.children.length - 1).$el.addClass('after');
-			this.children.each(function(view) {
-				if(view===child) return;
-				view.$el.removeClass('active');
-			});
-			child.$el.toggleClass('active');
+			if (!child.stop) {
+				this.children.findByIndex(this.children.length - 1).$el.addClass('after');
+				this.children.each(function(view) {
+					if(view===child) return;
+					view.$el.removeClass('active');
+				});
+				child.$el.toggleClass('active');
 
-			if (child.$el.hasClass('active')) {
-				this.triggerMethod('order:active',child.$el);
+				if (child.$el.hasClass('active')) {
+					this.triggerMethod('order:active',child.$el);
+				}
 			}
 		}
 	});
@@ -102,9 +105,17 @@ define(['marionette','app'],function(Marionette,App){
 		}
 	});
 
+	var emptyResultView = Marionette.ItemView.extend({
+		className: 'search_res_empty',
+		initialize: function() {
+			this.template = _.template('<p class="mess">Ничего не найдено по запросу <b class="js_res">"<%=query%>"</b></p>');
+		}
+	});
+
 	return {
 		orders: ordersView,
-		ordersDetail: ordersDetailView
+		ordersDetail: ordersDetailView,
+		emptyResult: emptyResultView
 	}
 
 })

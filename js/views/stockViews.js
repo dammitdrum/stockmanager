@@ -121,9 +121,17 @@ define(['marionette','app','backbone'],function(Marionette,App,Backbone){
 		}
 	});
 
+	var emptyResultView = Marionette.ItemView.extend({
+		className: 'search_res_empty',
+		initialize: function() {
+			this.template = _.template('<p class="mess">Ничего не найдено <%if(typeof query !== "undefined"){%>по запросу <b class="js_res">"<%=query%>"</b><%}%></p>');
+		}
+	});
+
 	return {
 		stockList: stockListView,
-		orderList: orderListView
+		orderList: orderListView,
+		emptyResult: emptyResultView
 	}
 
 })

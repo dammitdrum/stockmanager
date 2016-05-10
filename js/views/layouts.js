@@ -50,7 +50,7 @@ define([
 				return;
 			};
 			var results = this.doorsResult.search(query,['name','art']);
-			this.renderList(results);
+			this.renderList(results,query);
 		},
 		renderFilterResult: function(child, filterMap) {
 			var results = Entyties.doorsStock,
@@ -76,10 +76,22 @@ define([
 			});
 			return arr_hash.length ? result : filtered;
 		},
-		renderList: function(doors) {
-			var doorsV = new stockViews.stockList({
-				collection: doors
-			});
+		renderList: function(doors,query) {
+			if (doors.length) {
+				var doorsV = new stockViews.stockList({
+					collection: doors
+				});
+			} else {
+				if (typeof query !== 'undefined') {
+					var doorsV = new stockViews.emptyResult({
+						model: new Entyties.model({
+							query: query
+						})
+					}); 
+				} else {
+					var doorsV = new stockViews.emptyResult();
+				};	
+			};
 			this.showChildView('tableRegion',doorsV);
 		}
 	});
@@ -105,7 +117,7 @@ define([
 			'show:detail':'showDetail',
 			'search:orders':'renderSearchResult',
 			'filter:period':'renderPeriodResult',
-			'order:active':'lookActiveEl',
+			'order:active':'lastActiveEl',
 		},
 		initialize: function(opt) {
 			this.template = _.template(App.Templates[16]);
@@ -123,7 +135,7 @@ define([
 				title: this.model.get('title')
 			};
 		},
-		lookActiveEl: function(child,el) {
+		lastActiveEl: function(child,el) {
 			this.elem = el;
 		},
 		setTab: function(e) {
@@ -148,39 +160,83 @@ define([
 				return;
 			};
 			var results = Entyties.ordersHistory.search(query,['id']);
-			this.renderList(results,true);
+			this.renderList(results,true,query);
 		},
 		showDetail: function(child, doors) {
 			var el = child.$el,
-				region = this.getRegion('orderDetailRegion').$el;
-
-			if (el.hasClass('active')) {
-				var order = new ordersViews.ordersDetail({
-					collection: doors
-				});
-				this.showChildView('orderDetailRegion',order);
-				region.hide().slideDown(300);
-				if(el.hasClass('after')) {
-					el.after(region);
-					return;
+				region = this.getRegion('orderDetailRegion').$el,
+				self = this;
+			if (!child.stop) {
+				child.stop = true;
+				if (el.hasClass('active')) {
+					var order = new ordersViews.ordersDetail({
+						collection: doors
+					});
+					if (region.height()>0) {
+						region.addClass('fade').slideUp(300,function() {
+							self.setPosDOM(el,region);
+							self.showChildView('orderDetailRegion',order);
+							region.removeClass('fade').hide().slideDown(300,function() {child.stop = false});
+						});
+					} else {
+						self.setPosDOM(el,region);
+						self.showChildView('orderDetailRegion',order);
+						region.hide().slideDown(300,function() {child.stop = false});
+					};
+				} else {
+					region.addClass('fade').slideUp(300, function() {child.stop = false});
 				}
+			}
+		},
+		setPosDOM: function(el,region) {
+			if(el.hasClass('after')) {
+				el.after(region);
+			} else {
 				var next = el.next();
 				while (!next.hasClass('after')) {
 					next = next.next();
 				};
 				next.after(region);
-			} else {
-				region.slideUp(300);
-			}
+			};
 		},
 		renderPeriodResult: function(child, filter) {
-            console.log(filter);
+			/*var xhr = new XMLHttpRequest();
+			var self = this;
+
+            xhr.open('POST', '?action=get&component=sklad.orders', true);
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            */
+            var data = {filter: {date:[filter.from, filter.to]}};
+            console.log(JSON.stringify(data));
+            /*
+            xhr.send(JSON.stringify(data));
+
+            xhr.onreadystatechange = function () { 
+                if (xhr.readyState != 4)
+                    return;
+                if (xhr.status != 200) {
+                    console.log(xhr.status + ': ' + xhr.statusText);
+                } else {
+					var orders = new Entyties.ordersCollection(JSON.parse(xhr.responseText));
+                    self.renderList(orders,filter.complite);
+                }
+
+            }*/
+
 		},
-		renderList: function(result,complite) {
-			var orders = new ordersViews.orders({
-				model: new Entyties.model({'complite':complite}),
-				collection: result
-			});
+		renderList: function(result,complite,query) {
+			if (result.length) {
+				var orders = new ordersViews.orders({
+					model: new Entyties.model({'complite':complite}),
+					collection: result
+				});
+			} else {
+				var orders = new ordersViews.emptyResult({
+					model: new Entyties.model({
+						query: query
+					})
+				});
+			};
 			this.showChildView('ordersRegion',orders);
 		}
 	});

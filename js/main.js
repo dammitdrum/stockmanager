@@ -26,7 +26,7 @@ require.config({
       deps : ['backbone']
     },
     ui: {
-      deps: ['jquery']
+    	deps: ['jquery']
     },
     backboneSearch: {
       deps: ['underscore', 'backbone'],
@@ -45,9 +45,10 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
     });
     ctrl.start();
     Backbone.history.start();
+    $('body').addClass('loaded');
   });
 
-  var tplLoader = new App.Loader({
+	var tplLoader = new App.Loader({
           tpl:[
             'stock/stock_tpl',                       //0
             'header_tpl',                            //1
@@ -71,6 +72,6 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
           ],
           url:'/serg/stock/templates/'
     });
-    tplLoader.start();
+  	tplLoader.start();
  
 });

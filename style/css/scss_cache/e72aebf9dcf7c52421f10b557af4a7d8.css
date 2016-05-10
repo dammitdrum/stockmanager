@@ -1,6 +1,7 @@
-/* compiled by scssphp v0.1.1 on Tue, 10 May 2016 13:40:37 +0300 (0.2655s) */
+/* compiled by scssphp v0.1.1 on Tue, 10 May 2016 22:19:11 +0300 (0.2661s) */
 
 @import url(../../style/css/reset.css);
+@import url(../../style/css/loader.css);
 @font-face {
   font-family: 'icomoon';
   src: url('../../fonts/icomoon.eot');
@@ -48,6 +49,7 @@ body {
 header {
   background: #f4f4f4;
   padding: 30px 0;
+  position: relative;
 }
 header .logo {
   display: block;
@@ -610,6 +612,20 @@ header.grad {
 .stock .table_order tr:hover td {
   background: #e5f9f1;
 }
+.search_res_empty {
+  padding: 100px 0;
+}
+.search_res_empty .mess {
+  font: 400 34px 'permian', sans-serif;
+  color: #1d1d1d;
+  line-height: 34px;
+  text-align: center;
+}
+.search_res_empty .mess b {
+  font: 700 34px 'permian-bold', sans-serif;
+  color: #1d1d1d;
+  line-height: 34px;
+}
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-2px, 0, 0);
@@ -716,7 +732,7 @@ header.grad {
   top: 18px;
   width: 27px;
   height: 21px;
-  background: url(../img/scrollTop.svg) 0 0 no-repeat;
+  background: url(../../img/scrollTop.svg) 0 0 no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 }
@@ -739,7 +755,7 @@ footer .bottom .scrollTop {
   top: 18px;
   width: 27px;
   height: 21px;
-  background: url(../img/scrollTop.svg) 0 0 no-repeat;
+  background: url(../../img/scrollTop.svg) 0 0 no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 }
@@ -847,7 +863,7 @@ footer .bottom .scrollTop:hover {
   border-left: 6px solid transparent;
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: 0;
   -webkit-transition: all 0.15s ease 0s;
   -moz-transition: all 0.15s ease 0s;
   -o-transition: all 0.15s ease 0s;
@@ -861,7 +877,7 @@ footer .bottom .scrollTop:hover {
   border-right: 6px solid transparent;
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
   -webkit-transition: all 0.15s ease 0s;
   -moz-transition: all 0.15s ease 0s;
   -o-transition: all 0.15s ease 0s;
@@ -870,9 +886,9 @@ footer .bottom .scrollTop:hover {
 .curr_orders .box .back .line {
   position: absolute;
   z-index: 1;
-  top: -25px;
+  bottom: 100%;
   width: 100%;
-  height: 25px;
+  height: 20px;
   background: #e0e0e0;
   background: linear-gradient(to bottom, #e0e0e0 0%, #f5f5f5 100%);
   -webkit-transition: all 0.15s ease 0s;
@@ -884,7 +900,7 @@ footer .bottom .scrollTop:hover {
   content: '';
   width: 0;
   height: 0;
-  border-top: 25px solid #fff;
+  border-top: 20px solid #fff;
   border-left: 5px solid transparent;
   position: absolute;
   right: 0;
@@ -898,7 +914,7 @@ footer .bottom .scrollTop:hover {
   content: '';
   width: 0;
   height: 0;
-  border-top: 25px solid #fff;
+  border-top: 20px solid #fff;
   border-right: 5px solid transparent;
   position: absolute;
   left: 0;
@@ -913,8 +929,13 @@ footer .bottom .scrollTop:hover {
   z-index: 2;
   width: 260px;
   height: 210px;
+  top: 0;
   padding: 42px 50px 0 25px;
   box-sizing: border-box;
+  -webkit-transition: top 0.15s ease 0s;
+  -moz-transition: top 0.15s ease 0s;
+  -o-transition: top 0.15s ease 0s;
+  transition: top 0.15s ease 0s;
 }
 .curr_orders .box .date {
   font: 700 37px 'permian-bold', sans-serif;
@@ -941,11 +962,19 @@ footer .bottom .scrollTop:hover {
   position: absolute;
   left: 25px;
   bottom: 25px;
+  -webkit-transition: all 0.15s ease 0s;
+  -moz-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
 }
 .curr_orders .box .num {
   position: absolute;
   right: 25px;
   top: 46px;
+  -webkit-transition: top 0.15s ease 0s;
+  -moz-transition: top 0.15s ease 0s;
+  -o-transition: top 0.15s ease 0s;
+  transition: top 0.15s ease 0s;
   font: 700 14px 'permian-bold', sans-serif;
   color: #939393;
   line-height: 14px;
@@ -956,6 +985,10 @@ footer .bottom .scrollTop:hover {
   bottom: 23px;
   right: 25px;
   cursor: pointer;
+  -webkit-transition: all 0.15s ease 0s;
+  -moz-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
 }
 .curr_orders .box .print::before {
   content: '\e908';
@@ -969,14 +1002,39 @@ footer .bottom .scrollTop:hover {
 .curr_orders .box:nth-child(4n) {
   margin-right: 0;
 }
+.curr_orders .box:hover .back {
+  box-shadow: 0 14px 17px -12px rgba(0, 0, 0, 0.3);
+}
+.curr_orders .box:active .back {
+  box-shadow: none;
+  height: 190px;
+}
+.curr_orders .box:active .back::after {
+  border-bottom: 190px solid #fff;
+}
+.curr_orders .box:active .back::before {
+  border-bottom: 190px solid #fff;
+}
+.curr_orders .box:active .back .line {
+  height: 15px;
+}
+.curr_orders .box:active .back .line::after {
+  border-top: 15px solid #fff;
+}
+.curr_orders .box:active .back .line::before {
+  border-top: 15px solid #fff;
+}
+.curr_orders .box:active .front {
+  top: -5px;
+}
 .curr_orders .box::after {
   content: '';
-  border: 25px solid transparent;
-  border-bottom: 25px solid #5ea8df;
+  border: 18px solid transparent;
+  border-bottom: 18px solid #5ea8df;
   border-top: none;
   position: absolute;
   left: 50%;
-  margin-left: -25px;
+  margin-left: -18px;
   top: 240px;
   cursor: default;
   opacity: 0;
@@ -1006,10 +1064,10 @@ footer .bottom .scrollTop:hover {
 .curr_orders .box.active::after {
   opacity: 1;
   top: 226px;
-  -webkit-transition: all 0.15s ease 0.1s;
-  -moz-transition: all 0.15s ease 0.1s;
-  -o-transition: all 0.15s ease 0.1s;
-  transition: all 0.15s ease 0.1s;
+  -webkit-transition: all 0.15s ease 0.3s;
+  -moz-transition: all 0.15s ease 0.3s;
+  -o-transition: all 0.15s ease 0.3s;
+  transition: all 0.15s ease 0.3s;
 }
 .curr_orders .table {
   margin-bottom: 30px;
@@ -1045,6 +1103,15 @@ footer .bottom .scrollTop:hover {
 .order_detail {
   float: left;
   width: 100%;
+  display: none;
+  opacity: 1;
+}
+.order_detail.fade {
+  -webkit-transition: opacity 0.3s ease 0s;
+  -moz-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  opacity: 0;
 }
 .more_orders {
   display: inline-block;
@@ -1123,7 +1190,7 @@ footer .bottom .scrollTop:hover {
   box-sizing: border-box;
   border-radius: 5px;
   padding-left: 40px;
-  background: url(../img/period.svg) 9px center no-repeat;
+  background: url(../../img/period.svg) 9px center no-repeat;
   font: 400 14px 'permian', sans-serif;
   color: #000;
   line-height: 14px;
