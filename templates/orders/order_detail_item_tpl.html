@@ -1,0 +1,6 @@
+<td data-toggle="modal" data-target="#stockModal"  class="bold"><%=name%></td>
+<td data-toggle="modal" data-target="#stockModal" ><%=art%></td>
+<td data-toggle="modal" data-target="#stockModal" ><%=open_side%></td>
+<td data-toggle="modal" data-target="#stockModal" ><%=width%></td>
+<td data-toggle="modal" data-target="#stockModal" ><%=order.quantity%></td>
+<td data-toggle="modal" data-target="#stockModal"  class="bold"><%=String(price*order.quantity).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></td>

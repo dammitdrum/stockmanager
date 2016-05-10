@@ -1,0 +1,25 @@
+
+<%if (complite) {%>
+<div class="search">
+	<span class="icon"></span>
+	<input type="text" class="input" id="search" placeholder="Поиск по номеру заказа">
+</div>
+<%} else {%>
+<ul class="period_tabs clearfix js_period">
+	<li>Сегодня</li>
+	<li data-period="d">Вчера</li>
+	<li data-period="w" class="active">Неделя</li>
+	<li data-period="M">Месяц</li>
+	<li data-period="Q">Квартал</li>
+	<li data-period="y">Год</li>
+</ul>
+<%}%>
+<div class="period clearfix">
+	<form action="">
+	<input type="date" class="date js_from js_date" placeholder="С">
+</form>
+<form action="">
+	<input type="date" class="date js_date" placeholder="По">
+	</form>
+
+</div>

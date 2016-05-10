@@ -1,0 +1,1962 @@
+[
+  {
+    "id": 1704,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1703,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1702,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1701,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1700,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1699,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1698,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1697,
+    "name": "Токио",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "от 1980 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/acf/acf301119af40ae385f3f50794126388.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/47f/47fe9f92a345225ce10c0616669b3a4c.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-51",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб беленый» ",
+    "freza_b": "рис. Н-51",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 12222
+  },
+  {
+    "id": 1728,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1727,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1726,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1725,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1724,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1723,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1722,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1721,
+    "name": "Стиль 80.01",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+    "material_f": null,
+    "thickness_f": null,
+    "layer_f": "Металл 1.2 мм",
+    "color_f": "полимер «Черный шелк» ",
+    "freza_f": null,
+    "material_b": "ПВХ",
+    "thickness_b": "10 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Тиковое дерево»",
+    "freza_b": "фрезеровка «Спарта-4» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Border 3B8 8Г (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Border 3B4-3.85Г (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Apecs с поворотной ручкой"
+      ],
+      [
+        "Ручки-розетки",
+        "Avers"
+      ]
+    ],
+    "price": 2000000
+  },
+  {
+    "id": 1712,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1711,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1710,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1709,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1708,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1707,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1706,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1705,
+    "name": "Монарх",
+    "type": "Для дома",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "от 2000 мм до 2380 мм",
+    "contour": "3",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/816/8169c7b0c6bbb481a54c703f3106067a.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/05a/05a86567aa65f7f445a14acb859ecfa1.jpg",
+    "material_f": "Винорит",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ влагостойкий",
+    "color_f": "цвет «Дуб темный»",
+    "freza_f": "рис. Н-54 О-Д",
+    "material_b": "Винорит",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ влагостойкий ",
+    "color_b": "цвет «Дуб темный»",
+    "freza_b": "рис. Н-54 О-Д ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 123456789
+  },
+  {
+    "id": 1744,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1743,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1742,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1741,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1740,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1739,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1738,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1737,
+    "name": "Миллениум",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "2060 мм (от 1980 мм до 2380 мм - под заказ)",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+    "material_f": "Экошпон",
+    "thickness_f": "16 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-55",
+    "material_b": "Экошпон",
+    "thickness_b": "16 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Венге темный»",
+    "freza_b": "фрезеровка «Техно-1» ",
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 60000000
+  },
+  {
+    "id": 1736,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  },
+  {
+    "id": 1735,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  },
+  {
+    "id": 1734,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  },
+  {
+    "id": 1733,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "правое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  },
+  {
+    "id": 1732,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "960 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  },
+  {
+    "id": 1731,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "880 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  },
+  {
+    "id": 1730,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "950 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  },
+  {
+    "id": 1729,
+    "name": "Легран",
+    "type": "Для квартиры",
+    "art": "empty",
+    "width": "860 мм",
+    "height": "2050 мм",
+    "contour": "2",
+    "open_side": "левое",
+    "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+    "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+    "material_f": "Экошпон",
+    "thickness_f": "10 мм",
+    "layer_f": "МДФ",
+    "color_f": "цвет «Венге темный»",
+    "freza_f": "рис. Н-64",
+    "material_b": "Экошпон",
+    "thickness_b": "18 мм",
+    "layer_b": "МДФ",
+    "color_b": "цвет «Эшвайт Мелинга», черное стекло",
+    "freza_b": null,
+    "furniture": [
+      [
+        "Верхний замок",
+        "Kale 257L (сувальдный)"
+      ],
+      [
+        "Глазок",
+        "Apecs"
+      ],
+      [
+        "Ночная задвижка",
+        "Apecs L-0260"
+      ],
+      [
+        "Нижний замок",
+        "Kale 252R (цилиндровый)"
+      ],
+      [
+        "Цилиндр секрета",
+        "Kale с поворотной ручкой"
+      ],
+      [
+        "Ручка",
+        "Crit"
+      ]
+    ],
+    "price": 10000000
+  }
+]

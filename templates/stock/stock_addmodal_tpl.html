@@ -1,0 +1,22 @@
+<div class="modal-content">
+	<i class="close" data-dismiss="modal"></i>
+	<div class="content clearfix">
+		<div class="clearfix">
+			<div class="quantity clearfix">
+				<i class="down icon js_ctrl"></i>
+				<input type="text" class="num js_num" value="<%=quantity%>" disabled>
+				<i class="up icon js_ctrl"></i>
+			</div>
+			<p class="sum">
+				Стоимость:<br>
+				<% var total = price * quantity %>
+				<b><span class="js_total"><%=String(total).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></span> руб.</b>
+			</p>
+		</div>
+		<textarea class="text_field js_comment" placeholder="Введите комментарий"><%=comment%></textarea>
+		<div class="clearfix">
+			<span class="del icon js_del" data-dismiss="modal"></span>
+			<button class="add js_add" data-dismiss="modal">Положить в заказ</button>
+		</div>
+	</div>
+</div>

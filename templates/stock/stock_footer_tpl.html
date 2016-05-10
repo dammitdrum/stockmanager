@@ -1,0 +1,3 @@
+<p class="mar">Кол-во:<br><span><%=quantity%></span></p>
+<p>Суммарная стоимость:<br><span><%=String(total).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%> руб.</span></p>
+<button class="button <%if(quantity==0){%>stop<%}%> js_order">Собрать заказ</button>

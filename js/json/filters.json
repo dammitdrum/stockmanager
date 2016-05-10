@@ -1,0 +1,64 @@
+[
+	{
+		"name":"Фильтр по названию",
+		"code":"name",
+		"list":[
+			{
+				"name":"Монарх",
+				"active":false
+			},
+			{
+				"name":"Лацио",
+				"active":false
+			},
+			{
+				"name":"Токио",
+				"active":false
+			},
+			{
+				"name":"Луна",
+				"active":false
+			},
+			{
+				"name":"Спарта",
+				"active":false
+			}
+		]
+	},
+	{
+		"name":"Ст. открытия",
+		"code":"open_side",
+		"list":[
+			{
+				"name":"Левая",
+				"active":false
+			},
+			{
+				"name":"Правая",
+				"active":false
+			}
+		]
+	},
+	{
+		"name":"Ширина",
+		"code":"width",
+		"list":[
+			{
+				"name":"860 мм",
+				"active":false
+			},
+			{
+				"name":"880 мм",
+				"active":false
+			},
+			{
+				"name":"920 мм",
+				"active":false
+			},
+			{
+				"name":"940 мм",
+				"active":false
+			}
+		] 
+	}
+]
