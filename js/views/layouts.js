@@ -84,11 +84,13 @@ define([
 		}
 	});
 
-	var homeLayout = Marionette.LayoutView.extend({
+	var ordersLayout = Marionette.LayoutView.extend({
 		el: '#content',
 		regions: {
-			ordersRegion: "#orders_preview",
-			historyRegion: "#history_preview",
+			ordersRegion: "#orders_region",
+			filtersRegion: "#filters_region",
+			ordersPreviewRegion: "#orders_preview",
+			historyPreviewRegion: "#history_preview",
 			footerRegion: "#footer"
 		},
 		ui: {
@@ -101,16 +103,25 @@ define([
 		childEvents: {
 			'render:detailModal':'renderDetailModal',
 			'show:detail':'showDetail',
+			'search:orders':'renderSearchResult',
+			'filter:period':'renderPeriodResult',
 			'order:active':'lookActiveEl',
 		},
-		initialize: function() {
-			this.template = _.template(App.Templates[12]);
+		initialize: function(opt) {
+			this.template = _.template(App.Templates[16]);
+			this.home = opt.page;
 		},
 		onRender: function() {
 			this.addRegions({
 				orderDetailRegion: "#order_detail",
 				modalRegion: "#stockModal"
 			})
+		},
+		serializeData: function() {
+			return {
+				page: this.home,
+				title: this.model.get('title')
+			};
 		},
 		lookActiveEl: function(child,el) {
 			this.elem = el;
@@ -124,57 +135,6 @@ define([
 
 			this.getRegion('orderDetailRegion').empty();
 			this.elem ? this.elem.removeClass('active'):'';
-		},
-		renderDetailModal: function(child, door) {
-			var modal = new modalViews.Detail({ 
-				model: door
-			});
-			this.showChildView('modalRegion',modal);
-		},
-		showDetail: function(child, doors) {
-			var el = child.$el;
-			if(el.hasClass('active')) {
-				var order = new ordersViews.ordersDetail({
-					collection: doors
-				});
-				this.showChildView('orderDetailRegion',order);
-				if(el.hasClass('after')) {
-					el.after(this.getRegion('orderDetailRegion').$el);
-					return;
-				}
-				var next = el.next();
-				while (!next.hasClass('after')) {
-					next = next.next();
-				};
-				next.after(this.getRegion('orderDetailRegion').$el);
-			} else {
-				this.getRegion('orderDetailRegion').empty();
-			}
-			
-		}
-	});
-
-	var ordersLayout = Marionette.LayoutView.extend({
-		el: '#content',
-		regions: {
-			ordersRegion: "#orders_preview",
-			filtersRegion: "#filters_region",
-			footerRegion: "#footer"
-		},
-		childEvents: {
-			'render:detailModal':'renderDetailModal',
-			'show:detail':'showDetail',
-			'search:orders':'renderSearchResult',
-			'filter:period':'renderPeriodResult'
-		},
-		initialize: function() {
-			this.template = _.template(App.Templates[16]);
-		},
-		onRender: function() {
-			this.addRegions({
-				orderDetailRegion: "#order_detail",
-				modalRegion: "#stockModal"
-			})
 		},
 		renderDetailModal: function(child, door) {
 			var modal = new modalViews.Detail({ 
@@ -209,14 +169,12 @@ define([
 					next = next.next();
 				};
 				next.after(region);
-				
 			} else {
 				region.slideUp(300);
 			}
-			
 		},
 		renderPeriodResult: function(child, filter) {
-			console.log(filter);
+            console.log(filter);
 		},
 		renderList: function(result,complite) {
 			var orders = new ordersViews.orders({
@@ -229,7 +187,6 @@ define([
 
 	return {
 		stockLayout: stockLayout,
-		homeLayout: homeLayout,
 		ordersLayout: ordersLayout
 	}
 

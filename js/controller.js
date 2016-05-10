@@ -32,8 +32,12 @@ define([
 			this.stockLayout = new Loyouts.stockLayout({
 				model: this.title_page
 			});
-			this.homeLayout = new Loyouts.homeLayout();
+			this.homeLayout = new Loyouts.ordersLayout({
+				page: 'homePage',
+				model: this.title_page
+			});
 			this.ordersLayout = new Loyouts.ordersLayout({
+				page: '',
 				model: this.title_page
 			});
 		},
@@ -53,8 +57,8 @@ define([
 				collection:  Entyties.ordersHistory
 			});
 			var footer = new footerViews.footer();
-			this.homeLayout.showChildView('ordersRegion',orders);
-			this.homeLayout.showChildView('historyRegion',history);
+			this.homeLayout.showChildView('ordersPreviewRegion',orders);
+			this.homeLayout.showChildView('historyPreviewRegion',history);
 			this.homeLayout.showChildView('footerRegion',footer);
 		},
 		stockRoute: function() {			

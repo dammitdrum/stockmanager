@@ -26,7 +26,7 @@ require.config({
       deps : ['backbone']
     },
     ui: {
-    	deps: ['jquery']
+      deps: ['jquery']
     },
     backboneSearch: {
       deps: ['underscore', 'backbone'],
@@ -47,7 +47,7 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
     Backbone.history.start();
   });
 
-	var tplLoader = new App.Loader({
+  var tplLoader = new App.Loader({
           tpl:[
             'stock/stock_tpl',                       //0
             'header_tpl',                            //1
@@ -61,17 +61,16 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
             'stock/order_list_tpl',                  //9
             'stock/order_item_tpl',                  //10
             'stock/order_footer_tpl',                //11
-            'home_tpl',                              //12
+            'profile_tpl',                           //12
             'orders/order_item_tpl',                 //13
             'orders/order_detail_tpl',               //14
             'orders/order_detail_item_tpl',          //15
             'orders/orders_tpl',                     //16
             'orders/filters_tpl',                    //17
-            'footer_tpl',                            //18
-            'profile_tpl'                            //19
+            'footer_tpl'                             //18
           ],
           url:'/serg/stock/templates/'
     });
-  	tplLoader.start();
+    tplLoader.start();
  
 });
