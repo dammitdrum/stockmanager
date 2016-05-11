@@ -1,6 +1,6 @@
 // ui_scrollTop global
 
-define(['marionette','app'],function(Marionette,App){
+define(['marionette','app','entities'],function(Marionette,App,Entities){
 
 	var stockFooterView = Marionette.ItemView.extend({
 		className: 'top clearfix',
@@ -46,7 +46,7 @@ define(['marionette','app'],function(Marionette,App){
 			'click @ui.but': 'submitOrder'
 		},
 		collectionEvents: {
-			'add remove': 'render'
+			'add remove reset': 'render'
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[11]);
@@ -67,23 +67,34 @@ define(['marionette','app'],function(Marionette,App){
 			};
 		},
 		submitOrder: function() {
-			console.log(this.collection.toJSON());
+			if (!this.collection.length) return;
+			var data = [],
+				self = this;
 			
+			this.collection.each(function(model) {
+				var obj = {};
+				obj.id = model.get('id');
+				obj.quantity = model.get('order').quantity;
+				obj.comment = model.get('order').comment;
+				data.push(obj);
+			});
+
 			var xhr = new XMLHttpRequest();
-
-		    xhr.open('POST', '?action=add&component=sklad.orders', true);
+		    xhr.open('POST', '/request/sklad/?component=sklad:orders', true);
 		    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-		    xhr.send({DATA:[{id:1,quantity:4,comment:'first'}, {id:3,quantity:2,comment:'second'}]}); 
-		    
-		    xhr.onreadystatechange = function() { 
-				if (xhr.readyState != 4) return;
-				if (xhr.status != 200) {
-					alert(xhr.status + ': ' + xhr.statusText);
-				} else {
-					console.log(xhr.responseText);
-				}
+		    xhr.send(JSON.stringify({data: data}));
+		    xhr.onreadystatechange = function () { // (2)
+                if (xhr.readyState != 4) return;
+                if (xhr.status = 200) {
+                	self.collection.each(function(model) {
+                		model.unset('order',{silent: true});
+                	});
+                	self.collection.reset();
+                    self.triggerMethod('submit:order',self.collection.length);
+                    Entities.orders.fetch();
+                }
 
-		    }
+            }
 		}
 	});
 

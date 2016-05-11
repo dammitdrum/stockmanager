@@ -128,10 +128,18 @@ define(['marionette','app','backbone'],function(Marionette,App,Backbone){
 		}
 	});
 
+	var sendOrderView = Marionette.ItemView.extend({
+		className: 'send_order_mess',
+		initialize: function() {
+			this.template = _.template(App.Templates[19]);
+		}
+	});
+
 	return {
 		stockList: stockListView,
 		orderList: orderListView,
-		emptyResult: emptyResultView
+		emptyResult: emptyResultView,
+		sendOrder: sendOrderView
 	}
 
 })

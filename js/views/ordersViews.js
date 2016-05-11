@@ -29,8 +29,8 @@ define(['marionette','app'],function(Marionette,App){
 			this.count = 0;
 		},
 		onDomRefresh: function() {
-			if(this.model.get('complite')) {
-				this.$el.addClass('complite');
+			if(this.model.get('complete')) {
+				this.$el.addClass('complete');
 			}
 		},
 		onAddChild: function(child) {
@@ -108,7 +108,7 @@ define(['marionette','app'],function(Marionette,App){
 	var emptyResultView = Marionette.ItemView.extend({
 		className: 'search_res_empty',
 		initialize: function() {
-			this.template = _.template('<p class="mess">Ничего не найдено по запросу <b class="js_res">"<%=query%>"</b></p>');
+			this.template = _.template('<p class="mess">Ничего не найдено <%if(typeof query !== "undefined"){%>по запросу <b class="js_res">"<%=query%>"</b><%}%></p>');
 		}
 	});
 

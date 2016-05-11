@@ -1,4 +1,4 @@
-define(['marionette','app','entyties'],function(Marionette,App,Entyties){
+define(['marionette','app','entities'],function(Marionette,App,Entities){
 
 	var Detail = Marionette.ItemView.extend({
 		className: 'modal-dialog stockModal',
@@ -48,13 +48,13 @@ define(['marionette','app','entyties'],function(Marionette,App,Entyties){
 			this.order.comment = $(e.target).val();
 		},
 		addToOrder: function() {
-			Entyties.orderCollection.remove(this.model);
+			Entities.orderCollection.remove(this.model);
 			this.model.set({'order': this.order});
-			Entyties.orderCollection.add(this.model);
+			Entities.orderCollection.add(this.model);
 						
 		},
 		delFromOrder: function() {
-			Entyties.orderCollection.remove(this.model);
+			Entities.orderCollection.remove(this.model);
 			this.model.unset('order');
 		}
 	});

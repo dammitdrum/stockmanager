@@ -11,7 +11,7 @@ define(['backbone'],function(Backbone){
 
 	var CollectionDoors = Backbone.Collection.extend({
 		model: Model,
-		url: '/serg/stock/js/json/doors.json'
+		url: '/request/sklad/'
 	});
 
 	var FilterModel = Backbone.Model.extend({
@@ -23,7 +23,7 @@ define(['backbone'],function(Backbone){
 
 	var FilterCollection = Backbone.Collection.extend({
 		model: FilterModel,
-		url: '/serg/stock/js/json/filters.json'
+		url: '/request/sklad/?component=sklad:filter'
 	});
 
 	var OrdersModel = Backbone.Model.extend({
@@ -39,12 +39,7 @@ define(['backbone'],function(Backbone){
 
 	var OrdersCollection = Backbone.Collection.extend({
 		model: OrdersModel,
-		url: '/serg/stock/js/json/orders.json'
-	});
-
-	var HistoryCollection = Backbone.Collection.extend({
-		model: OrdersModel,
-		url: '/serg/stock/js/json/history.json'
+		url: '/request/sklad/?component=sklad:orders'
 	});
 
 
@@ -52,11 +47,10 @@ define(['backbone'],function(Backbone){
 	return {
 		model: Model,
 		collection: Collection,
-		filterCollection: FilterCollection,
+		filtersStock: FilterCollection,
 		doorsStock: new CollectionDoors(),
 		orderCollection: new Collection(),
 		orders: new OrdersCollection(),
-		ordersHistory: new HistoryCollection(),
 		ordersCollection: Orders
 	}
 

@@ -45,7 +45,6 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
     });
     ctrl.start();
     Backbone.history.start();
-    $('body').addClass('loaded');
   });
 
 	var tplLoader = new App.Loader({
@@ -56,7 +55,7 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
             'stock/filters_tpl',                     //3
             'stock/stock_item_tpl',                  //4
             'stock/stock_list_tpl',                  //5
-            'stock/stock_modal_tpl',                 //6
+            'modal_tpl',                             //6
             'stock/stock_addmodal_tpl',              //7
             'stock/stock_footer_tpl',                //8
             'stock/order_list_tpl',                  //9
@@ -68,9 +67,10 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
             'orders/order_detail_item_tpl',          //15
             'orders/orders_tpl',                     //16
             'orders/filters_tpl',                    //17
-            'footer_tpl'                             //18
+            'footer_tpl',                            //18
+            'stock/order_send_tpl'                   //19
           ],
-          url:'/serg/stock/templates/'
+          url:'/stock/templates/'
     });
   	tplLoader.start();
  

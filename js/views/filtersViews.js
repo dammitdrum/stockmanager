@@ -109,7 +109,7 @@ define([
 			this.filter = {
 				from: moment().subtract(1,'w').format('DD.MM.YY'),
 				to: moment().format('DD.MM.YY'),
-				complite: this.model.get('complite')
+				complete: this.model.get('complete')
 			};
 		},
 		onDomRefresh: function() {

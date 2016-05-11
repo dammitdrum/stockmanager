@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.1.1 on Tue, 10 May 2016 22:19:11 +0300 (0.2661s) */
+/* compiled by scssphp v0.1.1 on Wed, 11 May 2016 22:24:34 +0300 (0.3992s) */
 
 @import url(../../style/css/reset.css);
 @import url(../../style/css/loader.css);
@@ -999,7 +999,7 @@ footer .bottom .scrollTop:hover {
 .curr_orders .box .print:hover::before {
   color: #333;
 }
-.curr_orders .box:nth-child(4n) {
+.curr_orders .box.after {
   margin-right: 0;
 }
 .curr_orders .box:hover .back {
@@ -1045,7 +1045,7 @@ footer .bottom .scrollTop:hover {
 }
 .curr_orders .box.active {
   top: 16px;
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 .curr_orders .box.active .back {
   background: #e1bd99;
@@ -1084,19 +1084,19 @@ footer .bottom .scrollTop:hover {
   background: #f3f9fd;
   border-color: #e8f2fa;
 }
-.curr_orders.complite .box::after {
+.curr_orders.complete .box::after {
   border-bottom-color: #bebebe;
 }
-.curr_orders.complite .box.active::after {
+.curr_orders.complete .box.active::after {
   border-bottom-color: #bebebe;
 }
-.curr_orders.complite .table tr th {
+.curr_orders.complete .table tr th {
   background: #bebebe;
 }
-.curr_orders.complite .table tr td {
+.curr_orders.complete .table tr td {
   border-bottom: 1px solid #f2f2f3;
 }
-.curr_orders.complite .table tr:hover td {
+.curr_orders.complete .table tr:hover td {
   background: #f8f9f9;
   border-color: #f2f2f3;
 }
@@ -1180,6 +1180,7 @@ footer .bottom .scrollTop:hover {
 .orders .controls .period form {
   float: left;
   margin-right: 8px;
+  position: relative;
 }
 .orders .controls .period .date {
   display: block;
@@ -1549,6 +1550,63 @@ footer .bottom .scrollTop:hover {
 .addModal .content .add:active {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
 }
+.send_order_mess {
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 420px;
+}
+.send_order_mess .title {
+  font: 700 52px 'permian-bold', sans-serif;
+  color: #0f0f0f;
+  line-height: 52px;
+  margin-bottom: 30px;
+}
+.send_order_mess .info {
+  font: 400 18px 'permian', sans-serif;
+  color: #0f0f0f;
+  line-height: 18px;
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+.send_order_mess .bold {
+  font: 700 15px 'permian-bold', sans-serif;
+  color: #0f0f0f;
+  line-height: 15px;
+  margin-bottom: 6px;
+}
+.send_order_mess .mail {
+  font: 400 15px 'permian', sans-serif;
+  color: #1a83d1;
+  line-height: 15px;
+  border-bottom: 1px solid #389ce6;
+}
+.send_order_mess .mail:hover {
+  border-color: #1a83d1;
+}
+.send_order_mess .to_orders {
+  display: inline-block;
+  background: #25d67c;
+  -webkit-transition: all 0.15s ease 0s;
+  -moz-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
+  border-radius: 4px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  font: 400 17px 'permian', sans-serif;
+  color: #fff;
+  line-height: 17px;
+  padding: 15px 0px 14px 0px;
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+  width: 420px;
+}
+.send_order_mess .to_orders:hover {
+  background: #22c572;
+}
+.send_order_mess .to_orders:active {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+}
 .profile_page {
   padding-bottom: 70px;
 }
@@ -1750,4 +1808,9 @@ footer .bottom .scrollTop:hover {
 }
 .profileModal .content .button:active {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+}
+span.input-buttons {
+  position: absolute;
+  top: 9px;
+  right: 3px;
 }

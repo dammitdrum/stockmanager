@@ -883,7 +883,7 @@ footer {
 				color: #333;
 			}
 		}
-		&:nth-child(4n) {
+		&.after {
 			margin-right: 0;
 		}
 		&:hover {
@@ -930,7 +930,7 @@ footer {
 		}
 		&.active {
 			top: 16px;
-			margin-bottom: 0;
+			margin-bottom: 50px;
 			.back {
 				background: rgb(225,189,153);
 				background: linear-gradient(135deg, rgba(255,255,204,1) 0%,rgba(225,189,153,1) 100%); 
@@ -971,7 +971,7 @@ footer {
 			}
 		}
 	}
-	&.complite {
+	&.complete {
 		.box {
 			&::after {
 			    border-bottom-color: #bebebe;
@@ -1058,6 +1058,7 @@ footer {
 			form {
 				float: left;
 				margin-right: 8px;
+				position: relative;
 			}
 			.date {
 				display: block;
@@ -1358,6 +1359,39 @@ footer {
 	}
 }
 
+.send_order_mess {
+	padding: 50px 0;
+	margin: 0 auto;
+	width: 420px;
+	.title {
+		@include font2(52px,#0f0f0f);
+		margin-bottom: 30px;
+	}
+	.info {
+		@include font1(18px,#0f0f0f);
+		margin-bottom: 30px;
+		line-height: 24px;
+	}
+	.bold {
+		@include font2(15px,#0f0f0f);
+		margin-bottom: 6px;
+	}
+	.mail {
+		@include font1(15px,$blue);
+		border-bottom: 1px solid lighten($blue,10%);
+		&:hover {
+			border-color: $blue;
+		}
+	}
+	.to_orders {
+		@include but(0px,#25d67c);
+		display: block;
+		margin-top: 40px;
+		text-align: center;
+		width: 420px;
+	}
+}
+
 .profile_page {
 	padding-bottom: 70px;
 	.wrapper {
@@ -1487,4 +1521,10 @@ footer {
 			left: 95px;
 		}
 	}
+}
+
+span.input-buttons {
+	position: absolute;
+	top: 9px;
+	right: 3px;
 }

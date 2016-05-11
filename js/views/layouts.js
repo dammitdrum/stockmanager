@@ -2,11 +2,11 @@ define([
 	'marionette',
 	'app',
 	'views/modalViews',
-	'entyties',
+	'entities',
 	'views/stockViews',
 	'views/ordersViews',
 	'backboneSearch'
-],function(Marionette, App, modalViews, Entyties, stockViews, ordersViews){
+],function(Marionette, App, modalViews, Entities, stockViews, ordersViews){
 
 	var stockLayout = Marionette.LayoutView.extend({
 		el: '#content',
@@ -21,10 +21,11 @@ define([
 			'render:addModal':'renderAddModal',
 			'search:doors':'renderSearchResult',
 			'filter:doors':'renderFilterResult',
+			'submit:order':'renderSendMess'
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[0]);
-			this.doorsResult = Entyties.doorsStock;
+			this.doorsResult = Entities.doorsStock;
 		},
 		onRender: function() {
 			this.addRegions({
@@ -53,7 +54,7 @@ define([
 			this.renderList(results,query);
 		},
 		renderFilterResult: function(child, filterMap) {
-			var results = Entyties.doorsStock,
+			var results = Entities.doorsStock,
 				self = this;
 			filterMap.each(function(filter) {
 				results = self.filtering(results,filter);
@@ -61,9 +62,14 @@ define([
 			this.doorsResult = results;
 			this.renderList(this.doorsResult);
 		},
+		renderSendMess: function(child,param) {
+			var sendV = new stockViews.sendOrder();
+			this.showChildView('tableRegion',sendV);
+			this.getRegion('footerRegion').empty();
+		},
 		filtering: function(filtered,filter) {
 			var arr_hash = [];
-			var result = new Entyties.collection();
+			var result = new Entities.collection();
 			filter.get('list').each(function(val) {
 				var hash = {};
 				if (val.get('active')) {
@@ -84,7 +90,7 @@ define([
 			} else {
 				if (typeof query !== 'undefined') {
 					var doorsV = new stockViews.emptyResult({
-						model: new Entyties.model({
+						model: new Entities.model({
 							query: query
 						})
 					}); 
@@ -107,10 +113,12 @@ define([
 		},
 		ui: {
 			tabs: '[data-tab]',
-			screens: '.js_screen_tab'
+			screens: '.js_screen_tab',
+			more: '.js_more'
 		},
 		events: {
-			'click @ui.tabs': 'setTab'
+			'click @ui.tabs': 'setTab',
+			'click @ui.more': 'getMoreOrders'
 		},
 		childEvents: {
 			'render:detailModal':'renderDetailModal',
@@ -122,6 +130,7 @@ define([
 		initialize: function(opt) {
 			this.template = _.template(App.Templates[16]);
 			this.home = opt.page;
+			this.numPage = 1;
 		},
 		onRender: function() {
 			this.addRegions({
@@ -156,16 +165,18 @@ define([
 		},
 		renderSearchResult: function(child, query) {
 			if (query.length === 0) {
-				this.renderList(Entyties.ordersHistory,true);
+				this.renderList(Entities.orders,true);
 				return;
 			};
-			var results = Entyties.ordersHistory.search(query,['id']);
+			var results = Entities.orders.search(query,['id']);
 			this.renderList(results,true,query);
 		},
 		showDetail: function(child, doors) {
 			var el = child.$el,
 				region = this.getRegion('orderDetailRegion').$el,
 				self = this;
+
+			region.removeClass('fade');
 			if (!child.stop) {
 				child.stop = true;
 				if (el.hasClass('active')) {
@@ -200,40 +211,48 @@ define([
 			};
 		},
 		renderPeriodResult: function(child, filter) {
-			/*var xhr = new XMLHttpRequest();
-			var self = this;
-
-            xhr.open('POST', '?action=get&component=sklad.orders', true);
-            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-            */
-            var data = {filter: {date:[filter.from, filter.to]}};
-            console.log(JSON.stringify(data));
-            /*
-            xhr.send(JSON.stringify(data));
-
-            xhr.onreadystatechange = function () { 
-                if (xhr.readyState != 4)
-                    return;
-                if (xhr.status != 200) {
-                    console.log(xhr.status + ': ' + xhr.statusText);
-                } else {
-					var orders = new Entyties.ordersCollection(JSON.parse(xhr.responseText));
-                    self.renderList(orders,filter.complite);
-                }
-
-            }*/
-
+            var status = filter.complete ? 'history':'new';
+            this.dataFilt = {
+            	filter: {
+            		date:[filter.from, filter.to],
+            		status: [status]
+            	},
+            	nav: 'page-'+this.numPage
+            };
+            this.complete = filter.complete;
+            var self = this;
+            Entities.orders.fetch({data: this.dataFilt}).then(function() {
+            	self.renderList(Entities.orders,filter.complete);
+            });
+            
 		},
-		renderList: function(result,complite,query) {
+		getMoreOrders: function() {
+			var self = this;
+			this.numPage++;
+			this.dataFilt.nav = 'page-'+this.numPage;
+
+			Entities.orders.fetch({
+				data: self.dataFilt,
+				remove: false,
+				success: function(coll,response) {
+					if (coll.length%12 !== 0 || response === null) {
+						self.ui.more.hide();
+					}
+				}
+			}).then(function() {
+            	self.renderList(Entities.orders,self.complete);
+            });
+		},
+		renderList: function(result,complete,query) {
 			if (result.length) {
 				var orders = new ordersViews.orders({
-					model: new Entyties.model({'complite':complite}),
+					model: new Entities.model({'complete':complete}),
 					collection: result
 				});
 			} else {
 				var orders = new ordersViews.emptyResult({
-					model: new Entyties.model({
-						query: query
+					model: new Entities.model({
+						'query': query
 					})
 				});
 			};

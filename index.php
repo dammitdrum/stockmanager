@@ -7,8 +7,8 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="keywords" content="">
 		<meta name="author" content="">
-		<link rel="shortcut icon" href="favicon.ico" type="image/ico">
-		<link rel="icon" href="favicon.ico" type="image/ico">
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+		<link rel="icon" href="favicon.png" type="image/png">
 		<link rel="stylesheet" href="http://cdn.jsdelivr.net/webshim/1.14.5/shims/styles/shim.css">
 		<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 		<link rel="stylesheet" type="text/css" href="style/s.php/sass.scss">
@@ -35,4 +35,3 @@
 		<script data-main="js/main" src="js/lib/require.js"></script>
 	</body>
 </html>
-										
