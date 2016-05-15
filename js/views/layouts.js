@@ -173,22 +173,22 @@ define([
 			this.renderList(results,true,'undefined',query);
 		},
 		renderPeriodResult: function(child, filter) {
-            var status = filter.complete ? 'history':'new',
-            	self = this;
-
-            this.navPage = 1;
-            var dataFilt = {
-            	filter: {
-            		date:[filter.from, filter.to],
-            		status: [status]
-            	},
-            	nav: 'page-'+this.navPage
-            };
-            this.complete = filter.complete;
-            this.showPreload();
-            Entities.orders.fetch({data: dataFilt}).then(function() {
-            	self.renderList(Entities.orders,filter.complete);
-            });
+	            var status = filter.complete ? 'history':'new',
+	            	self = this;
+	
+	            this.navPage = 1;
+	            var dataFilt = {
+	            	filter: {
+	            		date:[filter.from, filter.to],
+	            		status: [status]
+	            	},
+	            	nav: 'page-'+this.navPage
+	            };
+	            this.complete = filter.complete;
+	            this.showPreload();
+	            Entities.orders.fetch({data: dataFilt}).then(function() {
+	            	self.renderList(Entities.orders,filter.complete);
+	            });
 		},
 		getMoreOrders: function(child,param) {
 			var self = this,
@@ -196,12 +196,12 @@ define([
 				nav = true;
 
 			this.navPage++;
-            var dataFilt = {
-            	filter: {
-            		status: [status]
-            	},
-            	nav: 'page-'+this.navPage
-            };
+			var dataFilt = {
+			    filter: {
+			    	status: [status]
+			    },
+			    nav: 'page-'+this.navPage
+			};
 			Entities.orders.fetch({
 				data: dataFilt,
 				remove: false,
@@ -211,7 +211,7 @@ define([
 				}
 			}).then(function() {
 				self.renderList(Entities.orders,self.complete,nav)
-            });
+            		});
 		},
 		renderList: function(result,complete,nav,query) {
 			if (result.length) {
