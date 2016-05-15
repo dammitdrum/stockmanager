@@ -9,8 +9,6 @@
 		<meta name="author" content="">
 		<link rel="shortcut icon" href="favicon.png" type="image/png">
 		<link rel="icon" href="favicon.png" type="image/png">
-		<link rel="stylesheet" href="http://cdn.jsdelivr.net/webshim/1.14.5/shims/styles/shim.css">
-		<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 		<link rel="stylesheet" type="text/css" href="style/s.php/sass.scss">
 		
 	</head>
@@ -22,7 +20,7 @@
 		
 		</div>
 
-		<div id="loader-wrapper">
+		<!--div id="loader-wrapper">
 			<div id="loader"></div>
 
 			<div class="loader-section section-left"></div>
@@ -30,7 +28,7 @@
             <div class="content_loader">
 				
 			</div>
-		</div>
+		</div-->
 
 		<script data-main="js/main" src="js/lib/require.js"></script>
 	</body>

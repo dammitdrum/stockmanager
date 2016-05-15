@@ -17,8 +17,12 @@ define([
 			day: '.js_day_week',
 			profile: '.js_profile'
 		},
+		modelEvents: {
+			'change':'render'
+		},
 		initialize: function() {
 			this.template = _.template(App.Templates[1]);
+			setInterval(this.upTime.bind(this),500);
 		},
 		onRender: function() {
 			var self = this;
@@ -26,12 +30,11 @@ define([
 				self.setActive(window.location.hash);
 			});
 			moment.locale('ru');
-			setInterval(this.upTime.bind(this),500);
 		},
 		upTime: function() {
 			this.ui.hour.text(moment().format('HH'));
 			this.ui.min.text(moment().format('mm'));
-			this.ui.dots.toggleClass('show');
+			this.ui.dots.toggleClass('fadein');
 			this.ui.date.text(moment().format('DD MMMM YYYY'));
 			this.ui.day.text(moment().format('dddd'));
 		},

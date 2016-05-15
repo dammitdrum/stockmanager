@@ -11,7 +11,7 @@ define([
 		'views/ordersViews',
 		'views/profileView'
 	],
-	function(Marionette, App, Entities, Loyouts, headerView, filtersViews, stockViews, footerViews, ordersViews, profileView){
+	function(Marionette, App, Entities, Layouts, headerView, filtersViews, stockViews, footerViews, ordersViews, profileView){
 
 	var Router = Marionette.AppRouter.extend({
 		appRoutes: {
@@ -26,10 +26,15 @@ define([
 
 	var Controller = Marionette.Object.extend({
 		initialize: function () {
+			this.user = new Entities.profile();
 			this.title_page = new Entities.model();
 			this.filtersStock = new Entities.filtersStock();
 			Entities.doorsStock.fetch();
-			this.stockLayout = new Loyouts.stockLayout({
+			this.stockLayout = new Layouts.stockLayout({
+				model: this.title_page
+			});
+			this.ordersLayout = new Layouts.ordersLayout({
+				page: '',
 				model: this.title_page
 			});
 		},
@@ -37,24 +42,14 @@ define([
 			this.showHeader();
 		},
 		mainRoute: function() {
-			var homeLayout = new Loyouts.ordersLayout({
-				page: 'homePage',
-				model: this.title_page
-			});
-			homeLayout.render();
-			Entities.orders.fetch();
-			var orders = new ordersViews.orders({
-				model: new Entities.model({'complete':false}),
-				collection:  Entities.orders
-			});
-			var history = new ordersViews.orders({
-				model: new Entities.model({'complete':true}),
-				collection:  Entities.orders
-			});
+			this.ordersLayout.page = 'homePage';
+			this.ordersLayout.render();
+			
+			var filtersV = new filtersViews.tabView();
 			var footer = new footerViews.footer();
-			homeLayout.showChildView('ordersPreviewRegion',orders);
-			homeLayout.showChildView('historyPreviewRegion',history);
-			homeLayout.showChildView('footerRegion',footer);
+			
+			this.ordersLayout.showChildView('filtersRegion',filtersV);
+			this.ordersLayout.showChildView('footerRegion',footer);
 		},
 		stockRoute: function() {			
 			var filtersV = new filtersViews.filters({
@@ -85,16 +80,6 @@ define([
 			});
 			this.showStock(back,doorsV,footer,'Бланк заказа');
 		},
-		ordersRoute: function() {
-			this.showOrders(Entities.orders,'Текущие заказы',false);
-		},
-		historyRoute: function() {
-			this.showOrders(Entities.ordersHistory,'История заказов',true);
-		},
-		profileRoute: function() {
-			var profile = new profileView();
-			App.contentRegion.show(profile);
-		},
 		showStock: function(filtersV,doorsV,footer,title) {
 			this.title_page.set('title',title);
 			this.stockLayout.render();	
@@ -102,29 +87,40 @@ define([
 			this.stockLayout.showChildView('tableRegion',doorsV);
 			this.stockLayout.showChildView('footerRegion',footer);
 		},
+		ordersRoute: function() {
+			this.showOrders(Entities.orders,'Текущие заказы',false);
+		},
+		historyRoute: function() {
+			this.showOrders(Entities.ordersHistory,'История заказов',true);
+		},
 		showOrders: function(orders,title,complete) {
 			this.title_page.set('title',title);
-			var ordersLayout = new Loyouts.ordersLayout({
-				page: '',
-				model: this.title_page
-			});
-			ordersLayout.render();
-			//orders.fetch();
-			var ordersV = new ordersViews.orders({
-				model: new Entities.model({'complete':complete}),
-				collection: orders
-			});
+			this.ordersLayout.page = '';
+			this.ordersLayout.render();
 			var filtersV = new filtersViews.orderFilters({
 				model: new Entities.model({'complete':complete})
 			});
 			var footer = new footerViews.footer();
-			ordersLayout.showChildView('ordersRegion',ordersV);
-			ordersLayout.showChildView('filtersRegion',filtersV);
-			ordersLayout.showChildView('footerRegion',footer);
+			this.ordersLayout.showChildView('filtersRegion',filtersV);
+			this.ordersLayout.showChildView('footerRegion',footer);
+		},
+		profileRoute: function() {
+			var model = this.user;
+			model.fetch().then(function() {
+				var profile = new profileView({
+					model: model
+				});
+				App.contentRegion.show(profile);
+			});
 		},
 		showHeader: function() {
-			var header = new headerView();
-			App.headerRegion.show(header);
+			var model = this.user;
+			model.fetch().then(function() {
+				var header = new headerView({
+					model: model
+				});
+				App.headerRegion.show(header);
+			})
 		},
 		
 	});

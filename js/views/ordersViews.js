@@ -19,19 +19,30 @@ define(['marionette','app'],function(Marionette,App){
 	});
 	
 
-	var ordersView = Marionette.CollectionView.extend({
+	var ordersView = Marionette.CompositeView.extend({
 		childView: orderItem,
 		className: 'curr_orders clearfix',
+		childViewContainer: "#orders_list",
 		childEvents: {
 			'show:detail':'setActive',
 		},
+		collectionEvents: {
+			'change':'render'
+		},
+		ui: {
+			more: '.js_more'
+		},
+		events: {
+			'click @ui.more': 'getMore'
+		},
 		initialize: function() {
+			this.template = _.template('<div id="orders_list"></div><%if(nav){%><button class="more_orders js_more">Показать более поздние заказы</button><%}%>');
 			this.count = 0;
 		},
 		onDomRefresh: function() {
 			if(this.model.get('complete')) {
 				this.$el.addClass('complete');
-			}
+			};
 		},
 		onAddChild: function(child) {
 			this.count++;
@@ -47,12 +58,11 @@ define(['marionette','app'],function(Marionette,App){
 					view.$el.removeClass('active');
 				});
 				child.$el.toggleClass('active');
-
-				if (child.$el.hasClass('active')) {
-					this.triggerMethod('order:active',child.$el);
-				}
 			}
-		}
+		},
+		getMore: function() {
+			this.triggerMethod('get:moreOrders');
+		},
 	});
 
 	var doorItemView = Marionette.ItemView.extend({
@@ -112,10 +122,18 @@ define(['marionette','app'],function(Marionette,App){
 		}
 	});
 
+	var preloadView = Marionette.ItemView.extend({
+		className: 'preloader',
+		initialize: function() {
+			this.template = _.template('<div id="loader"></div>');
+		}
+	});
+
 	return {
 		orders: ordersView,
 		ordersDetail: ordersDetailView,
-		emptyResult: emptyResultView
+		emptyResult: emptyResultView,
+		preload: preloadView
 	}
 
 })

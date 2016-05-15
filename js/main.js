@@ -6,7 +6,8 @@ require.config({
     marionette : 'lib/backbone.marionette',
     jquery     : 'lib/jquery',
     backboneSearch  : 'lib/backbone.search',
-    moment: 'lib/moment'
+    moment: 'lib/moment',
+    dateRange: 'lib/daterangepicker',
   },
   config: {
     moment: {
@@ -31,7 +32,7 @@ require.config({
     backboneSearch: {
       deps: ['underscore', 'backbone'],
       exports: 'Backbone'
-    },
+    }
   },
   deps : ['jquery','underscore','ui']
 });

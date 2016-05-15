@@ -39,10 +39,15 @@ define(['backbone'],function(Backbone){
 
 	var OrdersCollection = Backbone.Collection.extend({
 		model: OrdersModel,
-		url: '/request/sklad/?component=sklad:orders'
+		url: '/request/sklad/?component=sklad:orders',
+		comparator: function(model) {
+			return -model.get('id');
+		}
 	});
 
-
+	var profileModel = Backbone.Model.extend({
+		url: '/request/sklad/?component=sklad:user',
+	})
 	
 	return {
 		model: Model,
@@ -51,7 +56,8 @@ define(['backbone'],function(Backbone){
 		doorsStock: new CollectionDoors(),
 		orderCollection: new Collection(),
 		orders: new OrdersCollection(),
-		ordersCollection: Orders
+		ordersCollection: Orders,
+		profile: profileModel
 	}
 
 })

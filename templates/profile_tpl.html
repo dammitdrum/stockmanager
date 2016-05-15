@@ -1,40 +1,36 @@
 <div class="title_top air">
 	
 </div>
-<div class="profile_page">
+<div class="profile_page" id="front_region">
 	<div class="wrapper">
 		<p class="title">ПРОФИЛЬ</p>
-		<p class="name">Менеджер</p>
-		<p class="salon">Фирменный салон «Стальная линия»</p>
-		<p class="address">Минск, ТЦ Трюм, ул. Кальварийская, 7Б-6</p>
+		<p class="name" ><%=main_name%></p>
+		<p class="salon"><%=name%></p>
+		<p class="address"><%=city%>, <%=address%></p>
 		<div class="clearfix">
 			<div class="left col">
 				<p class="head">Юридический адрес</p>
-				<p>ООО "Дверной сезон" 213105,Республика</p>
-				<p>Беларусь Могилевская обл., Могилевский р-н,</p>
-				<p>д.Вейно р/с 3012437149018 в ЦБУ №801</p>
-				<p>ОАО "Белинвестбанк" г.Могилев,</p>
-				<p>б-р Непокоренных, 43б код 153001739</p>
-				<p>ОКПО 30069447000 УНП 790823530</p>
+				<p><%=ur_address%></p>
 			</div>
 			<div class="right col">
 				<p class="head">Контактное лицо</p>
-				<p>Вахтанов Константин Константинович</p>
-				<a href="" class="tel">+375 (29) 000-00-00</a><br>
-				<a href="" class="mail">contact@ds-steelline.by</a>
+				<p><%=fio%></p>
+				<a href="tel:<%=phone%>" class="tel"><%=phone%></a><br>
+				<a href="mailto:<%=email%>" class="mail"><%=email%></a>
 			</div>
 		</div>
 		<div class="buts clearfix">
 			<a href="" class="exit">Выйти из системы</a>
-			<button class="change" data-toggle="modal" data-target="#profileModal">Изменить профиль</button>
+			<button class="change js_change" data-toggle="modal" data-target="#profileModal">Изменить профиль</button>
 		</div>
 	</div>
 </div>
+
 <div class="modal fade" id="profileModal" role="dialog">
 	<div class="modal-dialog profileModal">
 		<div class="modal-content">
 			<i class="close" data-dismiss="modal"></i>
-			<form action="" class="content clearfix">
+			<div class="content clearfix">
 				<p class="title">Изменить профиль</p>
 				<div class="field">
 					<span class="name">Название объекта</span>
@@ -72,12 +68,12 @@
 					<span class="name">Контактный адрес эл. ящика</span>
 					<input type="text" name="email">
 				</div>
-				<button type="submit" class="button">Сохранить изменения</button>
-			</form>
+				<button class="button js_submit" data-dismiss="modal">Сохранить изменения</button>
+			</div>
 		</div>
 	</div>
 </div><!-- end Modal-->
-<footer>
+<footer id="footer">
 	<div class="wrap">
 		<div class="bottom">
 			<p class="info">ООО «Дверной сезон», УНП 790823530</p>

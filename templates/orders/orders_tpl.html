@@ -1,26 +1,14 @@
 <%if (page === 'homePage') {%>
-<div class="top_tabs">
-	<div class="wrap clearfix">
-		<span class="tab active" data-tab="0">Текущие заказы</span>
-		<span class="tab" data-tab="1">История заказов</span>
-		<a href="#stock" class="button">Оформить новый заказ</a>
-	</div>
-</div>
+
+<div id="filters_region">
+			
+		</div>
 <div class="screen_tab js_screen_tab active">
 	<div class="wrap">
-		<div id="orders_preview">
+		<div id="orders_region">
 			
 		</div>
 
-		<button class="more_orders js_more">Показать более поздние заказы</button>
-	</div>
-</div>
-<div class="screen_tab js_screen_tab">
-	<div class="wrap">
-		<div id="history_preview">
-			
-		</div>
-		<button class="more_orders js_more">Показать более поздние заказы</button>
 	</div>
 </div>
 <%} else {%>
@@ -38,7 +26,6 @@
 			
 		</div>
 
-		<button class="more_orders js_more">Показать более поздние заказы</button>
 	</div>
 </div>
 <%}%>
