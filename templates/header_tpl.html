@@ -2,6 +2,9 @@
 <a href="#" class="logo"></a>
 <nav class="nav clearfix">
 	<a href="#stock">Склад</a>
+	<%if(role==='admin'){%>
+	<a href="#neworders">Новые заказы</a>
+	<%}%>
 	<a href="#orders">Текущие заказы</a>
 	<a href="#history">История заказов</a>
 </nav>

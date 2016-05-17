@@ -1,6 +1,6 @@
 // ui_scrollTop global
 
-define(['marionette','app','entities'],function(Marionette,App,Entities){
+define(['marionette','app','entities','backbone'],function(Marionette,App,Entities){
 
 	var stockFooterView = Marionette.ItemView.extend({
 		className: 'top clearfix',
@@ -40,7 +40,8 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 	var orderFooterView = Marionette.ItemView.extend({
 		className: 'top clearfix',
 		ui: {
-			but: '.js_submit'
+			but: '.js_submit',
+			select: '.js_manager'
 		},
 		events: {
 			'click @ui.but': 'submitOrder'
@@ -48,8 +49,10 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		collectionEvents: {
 			'add remove reset': 'render'
 		},
-		initialize: function() {
+		initialize: function(opt) {
 			this.template = _.template(App.Templates[11]);
+			var self = this;
+			this.managers = opt.managers
 		},
 		onRender: function() {
 			ui_scrollTop();
@@ -60,10 +63,12 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 				this.collection.each(function(model) {
 					total += model.get('price')*model.get('order').quantity;
 				});
-			}
+			};
 			return {
 				quantity: this.collection.length, 
-				total: total
+				total: total,
+				role: App.user.get('role'),
+				managers: this.managers
 			};
 		},
 		submitOrder: function() {
@@ -78,23 +83,22 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 				obj.comment = model.get('order').comment;
 				data.push(obj);
 			});
-
-			var xhr = new XMLHttpRequest();
-		    xhr.open('POST', '/request/sklad/?component=sklad:orders', true);
-		    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-		    xhr.send(JSON.stringify({data: data}));
-		    xhr.onreadystatechange = function () { // (2)
-                if (xhr.readyState != 4) return;
-                if (xhr.status = 200) {
-                	self.collection.each(function(model) {
+			if (this.ui.select.length) {
+				var manager = this.ui.select.find('option:selected').val();
+			};
+            $.ajax({
+				url: '/request/sklad/?component=sklad:orders',
+				type: "POST",
+				data: JSON.stringify({data: data, manager: manager}),
+				success: function() {
+					self.collection.each(function(model) {
                 		model.unset('order',{silent: true});
                 	});
                 	self.collection.reset();
                     self.triggerMethod('submit:order',self.collection.length);
                     Entities.orders.fetch();
-                }
-
-            }
+				}
+			});
 		}
 	});
 

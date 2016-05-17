@@ -1,3 +1,14 @@
+<%if(role==="admin"){%>
+	<div class="role">
+		<span class="text">Отправитель заказа:</span>
+		<select class="js_manager">
+			<option value="admin">admin</option>
+			<% _.each(managers, function(manager){ %>
+			<option value="<%=manager.value%>"><%=manager.name%></option>
+			<% }); %>
+		</select>
+	</div>
+<%}%>
 <p class="mar">Кол-во:<br><span><%=quantity%></span></p>
 <p>Суммарная стоимость:<br><span><%=String(total).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%> руб.</span></p>
 <button class="button submit js_submit">Отправить заказ</button>

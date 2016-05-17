@@ -48,13 +48,13 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.order.comment = $(e.target).val();
 		},
 		addToOrder: function() {
-			Entities.orderCollection.remove(this.model);
+			this.collection.remove(this.model);
 			this.model.set({'order': this.order});
-			Entities.orderCollection.add(this.model);
+			this.collection.add(this.model);
 						
 		},
 		delFromOrder: function() {
-			Entities.orderCollection.remove(this.model);
+			this.collection.remove(this.model);
 			this.model.unset('order');
 		}
 	});

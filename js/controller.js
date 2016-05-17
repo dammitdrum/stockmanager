@@ -3,7 +3,8 @@ define([
 		'marionette',
 		'app',
 		'entities',
-		'views/layouts',
+		'views/stockLayout',
+		'views/ordersLayout',
 		'views/headerView',
 		'views/filtersViews',
 		'views/stockViews',
@@ -11,13 +12,14 @@ define([
 		'views/ordersViews',
 		'views/profileView'
 	],
-	function(Marionette, App, Entities, Layouts, headerView, filtersViews, stockViews, footerViews, ordersViews, profileView){
+	function(Marionette, App, Entities, stockLayout, ordersLayout, headerView, filtersViews, stockViews, footerViews, ordersViews, profileView){
 
 	var Router = Marionette.AppRouter.extend({
 		appRoutes: {
 			"":"mainRoute",
 			"stock" : "stockRoute",
 			"orders" : "ordersRoute",
+			"neworders" : "newordersRoute",
 			"history" : "historyRoute",
 			"stock/order": "orderRoute",
 			"profile": "profileRoute"
@@ -26,32 +28,44 @@ define([
 
 	var Controller = Marionette.Object.extend({
 		initialize: function () {
-			this.user = new Entities.profile();
 			this.title_page = new Entities.model();
 			this.filtersStock = new Entities.filtersStock();
+			this.managers = new Entities.managers();
+			this.managers.fetch();
 			Entities.doorsStock.fetch();
-			this.stockLayout = new Layouts.stockLayout({
+			this.stockLayout = new stockLayout({
 				model: this.title_page
 			});
-			this.ordersLayout = new Layouts.ordersLayout({
+			this.ordersLayout = new ordersLayout({
 				page: '',
+				status: [],
 				model: this.title_page
 			});
 		},
 		start: function() {
 			this.showHeader();
 		},
+
 		mainRoute: function() {
+			var role = App.user.get('role');
+			var status = role==='admin' ? ['new'] : ['new','approved'];
+
 			this.ordersLayout.page = 'homePage';
+			this.ordersLayout.status = status;
 			this.ordersLayout.render();
 			
-			var filtersV = new filtersViews.tabView();
+			var tabsV = new filtersViews.tabView({
+				model: new Entities.model({
+					'role': role
+				})
+			});
 			var footer = new footerViews.footer();
 			
-			this.ordersLayout.showChildView('filtersRegion',filtersV);
+			this.ordersLayout.showChildView('filtersRegion',tabsV);
 			this.ordersLayout.showChildView('footerRegion',footer);
 		},
-		stockRoute: function() {			
+
+		stockRoute: function() {		
 			var filtersV = new filtersViews.filters({
 				collection: this.filtersStock
 			});
@@ -70,16 +84,19 @@ define([
 				ui_dropdown();
 			};
 		},
+
 		orderRoute: function() {
 			var back = new filtersViews.backStock();
 			var doorsV = new stockViews.orderList({
 				collection: Entities.orderCollection
 			});
 			var footer = new footerViews.orderFooter({
-				collection: Entities.orderCollection
+				collection: Entities.orderCollection,
+				managers: this.managers.at(0).get('list').toJSON()
 			});
 			this.showStock(back,doorsV,footer,'Бланк заказа');
 		},
+
 		showStock: function(filtersV,doorsV,footer,title) {
 			this.title_page.set('title',title);
 			this.stockLayout.render();	
@@ -87,40 +104,64 @@ define([
 			this.stockLayout.showChildView('tableRegion',doorsV);
 			this.stockLayout.showChildView('footerRegion',footer);
 		},
+
+		newordersRoute: function() {
+			this.showOrders(Entities.orders,'Новые заказы',['new']);
+		},
+
 		ordersRoute: function() {
-			this.showOrders(Entities.orders,'Текущие заказы',false);
+			var status = App.user.get('role') === 'admin' ? ['approved']:['new','approved'];
+			this.showOrders(Entities.orders,'Текущие заказы',status);
 		},
+
 		historyRoute: function() {
-			this.showOrders(Entities.ordersHistory,'История заказов',true);
+			this.showOrders(Entities.ordersHistory,'История заказов',['history']);
 		},
-		showOrders: function(orders,title,complete) {
+
+		showOrders: function(orders,title,status) {
+			var role = App.user.get('role');
+
 			this.title_page.set('title',title);
 			this.ordersLayout.page = '';
+			this.ordersLayout.status = status;
 			this.ordersLayout.render();
+
 			var filtersV = new filtersViews.orderFilters({
-				model: new Entities.model({'complete':complete})
+				model: new Entities.model({
+					'status':status,
+					'role': role,
+					'managers': this.managers
+				})
 			});
+
+			if(role === 'admin') {
+				var self = this;
+				this.managers.fetch().then(function() {
+					self.ordersLayout.showChildView('filtersRegion',filtersV);
+					ui_dropdown();
+				});
+			} else if(role === 'manager') {
+				this.ordersLayout.showChildView('filtersRegion',filtersV);
+			};
+
 			var footer = new footerViews.footer();
-			this.ordersLayout.showChildView('filtersRegion',filtersV);
 			this.ordersLayout.showChildView('footerRegion',footer);
 		},
+
 		profileRoute: function() {
-			var model = this.user;
-			model.fetch().then(function() {
+			App.user.fetch().then(function() {
 				var profile = new profileView({
-					model: model
+					model: App.user
 				});
 				App.contentRegion.show(profile);
 			});
 		},
+
 		showHeader: function() {
-			var model = this.user;
-			model.fetch().then(function() {
-				var header = new headerView({
-					model: model
-				});
-				App.headerRegion.show(header);
-			})
+			var header = new headerView({
+				model: App.user
+			});
+			App.headerRegion.show(header);
 		},
 		
 	});

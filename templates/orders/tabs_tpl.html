@@ -1,0 +1,12 @@
+<div class="wrap clearfix">
+	<%if(role==='admin'){%>
+	<span class="tab active" data-tab="0">Новые</span>
+	<span class="tab" data-tab="1">Текущие</span>
+	<span class="tab" data-tab="3">История</span>
+	<%}%>
+	<%if(role==='manager'){%>
+	<span class="tab active" data-tab="2">Текущие заказы</span>
+	<span class="tab" data-tab="3">История заказов</span>
+	<%}%>
+	<a href="#stock" class="button">Оформить новый заказ</a>
+</div>

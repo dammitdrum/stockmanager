@@ -5,7 +5,12 @@
 	<th>Ст. открытия</th>
 	<th>Ширина</th>
 	<th>Высота</th>
+	<%if(role==="manager"){%>
 	<th colspan="2"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
+	<%} else if(role==="admin"){%>
+	<th class="price"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
+	<th class="quant" colspan="2">Кол-во</th>
+	<%}%>
 </tr>
 </thead>
 <tbody></tbody>

@@ -1,4 +1,4 @@
-define(['marionette','app'],function(Marionette,App){
+define(['marionette','app','entities'],function(Marionette,App,Entities){
 
 	
 	var orderItem = Marionette.ItemView.extend({
@@ -9,12 +9,15 @@ define(['marionette','app'],function(Marionette,App){
 		events: {
 			'click':'select'
 		},
+		modelEvents: {
+			'change':'render'
+		},
 		initialize: function() {
 			this.template = _.template(App.Templates[13]);
 			this.stop = false;
 		},
 		select: function() {
-			this.triggerMethod('show:detail',this.model.get('doors'),this.stop);
+			this.triggerMethod('show:detail',this.model,this.stop);
 		}
 	});
 	
@@ -27,7 +30,7 @@ define(['marionette','app'],function(Marionette,App){
 			'show:detail':'setActive',
 		},
 		collectionEvents: {
-			'change':'render'
+			'remove':'render'
 		},
 		ui: {
 			more: '.js_more'
@@ -40,8 +43,16 @@ define(['marionette','app'],function(Marionette,App){
 			this.count = 0;
 		},
 		onDomRefresh: function() {
-			if(this.model.get('complete')) {
+			var status = this.model.get('status');
+
+			if (_.find(status,function(str) {return str === 'history'})) {
 				this.$el.addClass('complete');
+			};
+			if (_.find(status,function(str) {return str === 'new'})) {
+				this.$el.addClass('new');
+			};
+			if (_.find(status,function(str) {return str === 'approved'})) {
+				this.$el.removeClass('new').addClass('curr');
 			};
 		},
 		onAddChild: function(child) {
@@ -55,8 +66,8 @@ define(['marionette','app'],function(Marionette,App){
 				this.children.findByIndex(this.children.length - 1).$el.addClass('after');
 				this.children.each(function(view) {
 					if(view===child) return;
-					view.$el.removeClass('active');
-				});
+						view.$el.removeClass('active');
+					});
 				child.$el.toggleClass('active');
 			}
 		},
@@ -79,28 +90,45 @@ define(['marionette','app'],function(Marionette,App){
 		initialize: function() {
 			this.template = _.template(App.Templates[15]);
 		},
-		showModal: function() {
-			this.triggerMethod('render:detailModal',this.model);
+		serializeData: function() {
+			var obj = this.model.toJSON();
+			obj["role"] = App.user.get('role');
+			return obj;
+		},
+		showModal: function(e) {
+			if ($(e.target).hasClass('js_to_edit')) {
+				this.triggerMethod('request:collection');
+			} else {
+				this.triggerMethod('render:detailModal',this.model);
+			}
 		}
 	});
 
 	var ordersDetailView = Marionette.CompositeView.extend({
-		className: 'table',
-		tagName: 'table',
 		childView: doorItemView,
 		childViewContainer: "tbody",
 		ui: {
-			sort: '[data-sort]'
+			sort: '[data-sort]',
+			approve: '.js_approve',
+			cancel: '.js_cancel'
 		},
 		events: {
-			'click @ui.sort': 'sortHandler'
+			'click @ui.sort': 'sortHandler',
+			'click @ui.approve': 'approveHandler',
+			'click @ui.cancel': 'cancelHandler'
 		},
 		collectionEvents: {
-			'sort':'render'
+			'sort':'render',
+			'add':'saveOrder'
+		},
+		childEvents: {
+			'request:collection': 'triggerEditModal'
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[14]);
-			this.model = new Backbone.Model({'cost':''}); // model for sorting
+		},
+		triggerEditModal: function(child) {
+			this.triggerMethod('render:editModal',child.model,this.collection);
 		},
 		sortHandler: function(e) {
 			var prop = $(e.target).attr('data-sort'),
@@ -112,6 +140,36 @@ define(['marionette','app'],function(Marionette,App){
 			};
 			model.get(prop) ? model.set(prop,''):model.set(prop,'up');
 			this.collection.sort();
+		},
+		approveHandler: function() {
+			this.triggerMethod('approve:order',this.model.get('orderId'));
+		},
+		cancelHandler: function() {
+			this.triggerMethod('remove:order',this.model.get('orderId'));
+		},
+		saveOrder: function() {
+			var arr = [],
+				self = this;
+			this.collection.each(function(door) {
+				door = {
+					id: door.get('id'),
+					quantity: door.get('order').quantity,
+					comment: door.get('order').comment
+				};
+				arr.push(door);
+			});
+			var data = {
+				id: this.model.get('orderId'),
+				data: arr
+			};
+            $.ajax({
+				url: '/request/sklad/?component=sklad:orders',
+				type: "PUT",
+				data: JSON.stringify(data),
+				success: function(res) {
+					self.triggerMethod('rerender:order',JSON.parse(res));
+				}
+			});
 		}
 	});
 

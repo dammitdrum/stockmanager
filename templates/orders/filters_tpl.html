@@ -1,5 +1,5 @@
 
-<%if (complete) {%>
+<%if (_.find(status,function(str) {return str === 'history'})) {%>
 <div class="search">
 	<span class="icon"></span>
 	<input type="text" class="input" id="search" placeholder="Поиск по номеру заказа">
@@ -17,3 +17,13 @@
 <div class="period clearfix">
 	<input type="text" class="date js_date_range">
 </div>
+<%if(role==="admin"){%>
+	<div data-toggle="dropdown" class="dropdown">
+		<span class="head js_trigger">Фильтр по объектам <b>(<i class="js_count">0</i>)</b><i class="arrow"></i></span>
+		<ul class="list js_list" id="filter_list">
+			<% _.each(managers.at(0).get('list').toJSON(), function(manager){ %>
+			<li data-val="<%=manager.value%>"><i></i><span class="js_name"><%=manager.name%></span></li>
+			<% }); %>
+		</ul>
+	</div>
+<%}%>

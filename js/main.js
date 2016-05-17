@@ -37,7 +37,7 @@ require.config({
   deps : ['jquery','underscore','ui']
 });
 
-require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
+require(['backbone','app','controller','entities','ui'],function(Backbone,App,Controller,Entities){
 
   App.on("start", function() {
     var ctrl = new Controller.controller();
@@ -47,32 +47,37 @@ require(['backbone','app','controller','ui'],function(Backbone,App,Controller){
     ctrl.start();
     Backbone.history.start();
   });
+  App.user = new Entities.profile();
 
 	var tplLoader = new App.Loader({
           tpl:[
-            'stock/stock_tpl',                       //0
-            'header_tpl',                            //1
-            'stock/filter_tpl',                      //2
-            'stock/filters_tpl',                     //3
-            'stock/stock_item_tpl',                  //4
-            'stock/stock_list_tpl',                  //5
-            'modal_tpl',                             //6
-            'stock/stock_addmodal_tpl',              //7
-            'stock/stock_footer_tpl',                //8
-            'stock/order_list_tpl',                  //9
-            'stock/order_item_tpl',                  //10
-            'stock/order_footer_tpl',                //11
-            'profile_tpl',                           //12
-            'orders/order_item_tpl',                 //13
-            'orders/order_detail_tpl',               //14
-            'orders/order_detail_item_tpl',          //15
-            'orders/orders_tpl',                     //16
-            'orders/filters_tpl',                    //17
-            'footer_tpl',                            //18
-            'stock/order_send_tpl'                   //19
-          ],
+            'stock/stock_tpl',                //0
+            'header_tpl',                     //1
+            'stock/filter_tpl',               //2
+            'stock/filters_tpl',              //3
+            'stock/stock_item_tpl',           //4
+            'stock/stock_list_tpl',           //5
+            'modal_tpl',                      //6
+            'stock/stock_addmodal_tpl',       //7
+            'stock/stock_footer_tpl',         //8
+            'stock/order_list_tpl',           //9
+            'stock/order_item_tpl',           //10
+            'stock/order_footer_tpl',         //11
+            'profile_tpl',                    //12
+            'orders/order_item_tpl',          //13
+            'orders/order_detail_tpl',        //14
+            'orders/order_detail_item_tpl',   //15
+            'orders/orders_tpl',              //16
+            'orders/filters_tpl',             //17
+            'footer_tpl',                     //18
+            'stock/order_send_tpl',           //19
+            'orders/tabs_tpl'                 //20
+            ],
           url:'/stock/templates/'
     });
-  	tplLoader.start();
+    App.user.fetch().then(function() {
+        tplLoader.start();
+    })
+  	
  
 });

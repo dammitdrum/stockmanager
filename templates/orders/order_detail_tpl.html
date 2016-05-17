@@ -1,11 +1,23 @@
-<thead>
-<tr class="head">
-	<th>Наименование</th>
-	<th>Артикул</th>
-	<th>Ст. открытия</th>
-	<th>Ширина</th>
-	<th>Кол-во</th>
-	<th><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
-</tr>
-</thead>
-<tbody></tbody>
+<table class="table">
+	<thead>
+	<tr class="head">
+		<th>Наименование</th>
+		<th>Артикул</th>
+		<th>Ст. открытия</th>
+		<th>Ширина</th>
+		<th>Кол-во</th>
+		<th <%if(role==="admin"){%>colspan="2"<%}%>><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
+	</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+<%if(role==='admin'){%>
+<div class="clearfix buts">
+	<%if(_.find(status,function(str) {return str === 'new'})){%>
+	<button class="approve js_approve">Подтвердить заказ</button>
+	<%}%>
+	<%if(!_.find(status,function(str) {return str === 'history'})){%>
+	<button class="cancel js_cancel">Отменить заказ</button>
+	<%}%>
+</div>
+<%}%>

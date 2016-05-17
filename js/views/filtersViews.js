@@ -98,30 +98,34 @@ define([
 		ui: {
 			li: '.js_period li',
 			date: '.js_date_range',
-			search: '#search'
+			search: '#search',
+			objs: '[data-toggle="dropdown"] li'
 		},
 		events: {
 			'click @ui.li': 'setPeriod',
-			'keyup @ui.search': 'searchHandler'
+			'keyup @ui.search': 'searchHandler',
+			'click @ui.objs': 'filterManager'
 		},
 		initialize: function(opt) {
 			this.template = _.template(App.Templates[17]);
 			this.filter = {
 				from: moment().subtract(1,'w').format('DD.MM.YY'),
 				to: moment().format('DD.MM.YY'),
-				complete: this.model.get('complete')
+				status: this.model.get('status'),
+				managers: []
 			};
 		},
 		onDomRefresh: function() {
-			this.triggerMethod('filter:period',this.filter);
+			this.triggerMethod('filter:orders',this.filter);
+
 			var self = this;
 			this.ui.date.daterangepicker({
 			    "showDropdowns": true,
-			    "autoApply": true,
 			    "locale": {
 			        "format": "DD.MM.YY",
 			        "separator": "  -  ",
-			        "daysOfWeek": ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
+			        'applyLabel':'Показать',
+			        "daysOfWeek": ["В","П","В","С","Ч","П","С"],
 			        "monthNames": ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
 			        "firstDay": 1
 			    },
@@ -133,7 +137,9 @@ define([
 			}, function(start, end, label) {
 			  	self.filter.from = moment(start).format('DD.MM.YY');
 			  	self.filter.to = moment(end).format('DD.MM.YY');
-			  	self.triggerMethod('filter:period',self.filter);
+			  	self.ui.li.removeClass('active');
+			  	self.checkManagerFilter();
+			  	self.triggerMethod('filter:orders',self.filter);
 			});
 		},
 		setPeriod: function(e) {
@@ -148,11 +154,24 @@ define([
 				this.filter.to = moment().format('DD.MM.YY');
 			this.ui.date.data('daterangepicker').setStartDate(this.filter.from);
 			this.ui.date.data('daterangepicker').setEndDate(this.filter.to);
-			this.triggerMethod('filter:period',this.filter);
+			this.checkManagerFilter();
+			this.triggerMethod('filter:orders',this.filter);
 		},
 		searchHandler: function() {
 			this.triggerMethod('search:orders',this.ui.search.val());
 		},
+		filterManager: function() {
+			this.checkManagerFilter();
+			this.triggerMethod('filter:orders',this.filter);
+		},
+		checkManagerFilter: function() {
+			var self = this;
+			this.filter.managers = [];
+			this.ui.objs.each(function() {
+				$(this).hasClass('active') ? 
+					self.filter.managers.push($(this).attr('data-val')):'';
+			});
+		}
 	});
 
 	var tabView = Marionette.ItemView.extend({
@@ -165,8 +184,7 @@ define([
 			'click @ui.tabs': 'setTab',
 		},
 		initialize: function(opt) {
-			this.template = _.template('<div class="wrap clearfix"><span class="tab active" data-tab="0">Текущие заказы</span><span class="tab" data-tab="1">История заказов</span><a href="#stock" class="button">Оформить новый заказ</a></div>');
-			
+			this.template = _.template(App.Templates[20]);
 		},
 		setTab: function(e) {
 			if($(e.target).hasClass('active')) return;
@@ -184,7 +202,7 @@ define([
 		filters: filters,
 		backStock: backStock,
 		orderFilters: orderFilters,
-		tabView: tabView
+		tabView: tabView,
 	}
 
 })

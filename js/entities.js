@@ -26,6 +26,11 @@ define(['backbone'],function(Backbone){
 		url: '/request/sklad/?component=sklad:filter'
 	});
 
+	var Managers = Backbone.Collection.extend({
+		model: FilterModel,
+		url: '/request/sklad/?component=sklad:filter&for=orders'
+	});
+
 	var OrdersModel = Backbone.Model.extend({
 		parse: function(response) {
 		    response.doors = new Collection(response.doors);
@@ -57,7 +62,8 @@ define(['backbone'],function(Backbone){
 		orderCollection: new Collection(),
 		orders: new OrdersCollection(),
 		ordersCollection: Orders,
-		profile: profileModel
+		profile: profileModel,
+		managers: Managers
 	}
 
 })

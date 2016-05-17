@@ -14,9 +14,14 @@ define(['marionette','app','backbone'],function(Marionette,App,Backbone){
 		initialize: function() {
 			this.template = _.template(App.Templates[4]);
 		},
+		serializeData: function() {
+			var obj = this.model.toJSON();
+			obj["role"] = App.user.get('role');
+			return obj;
+		},
 		onRender: function() {
 			this.model.get('order') ?
-				this.$el.addClass('active') : this.$el.removeClass('active')
+				this.$el.addClass('active') : this.$el.removeClass('active');
 		},
 		showModal: function(e) {
 			if ($(e.target).hasClass('js_to_order')) {
@@ -43,7 +48,7 @@ define(['marionette','app','backbone'],function(Marionette,App,Backbone){
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[5]);
-			this.model = new Backbone.Model({'price':''});//for sorting model
+			this.model = new Backbone.Model({'price':'','role':App.user.get('role')});
 		},
 		sortHandler: function(e) {
 			var prop = this.ui.sort.attr('data-sort'),
