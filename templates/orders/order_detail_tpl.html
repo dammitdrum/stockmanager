@@ -6,7 +6,7 @@
 		<th>Ст. открытия</th>
 		<th>Ширина</th>
 		<th>Кол-во</th>
-		<th <%if(role==="admin"){%>colspan="2"<%}%>><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
+		<th <%if(role==="admin"||role==="mogilev"&&mode==="ships"){%>colspan="2"<%}%>><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
 	</tr>
 	</thead>
 	<tbody></tbody>
@@ -14,10 +14,25 @@
 <%if(role==='admin'){%>
 <div class="clearfix buts">
 	<%if(_.find(status,function(str) {return str === 'new'})){%>
-	<button class="approve js_approve">Подтвердить заказ</button>
+	<button class="approve green js_approve">Подтвердить заказ</button>
 	<%}%>
 	<%if(!_.find(status,function(str) {return str === 'history'})){%>
 	<button class="cancel js_cancel">Отменить заказ</button>
+	<%}%>
+</div>
+<%}%>
+<%if(role==='sklad'){%>
+<div class="clearfix buts">
+	<%if(_.find(status,function(str) {return str === 'approved'})){%>
+	<button class="approve js_approve"><%if(mode!=='ships'){%>Отгрузить со склада<%}else{%>Принять на склад<%}%></button>
+	<button class="cancel js_cancel">Отменить</button>
+	<%}%>
+</div>
+<%}%>
+<%if(role==='mogilev'&&mode === 'ships'){%>
+<div class="clearfix buts">
+	<%if(_.find(status,function(str) {return str === 'approved'})){%>
+	<button class="cancel js_cancel">Отменить отгрузку</button>
 	<%}%>
 </div>
 <%}%>

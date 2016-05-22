@@ -13,10 +13,25 @@
 				<b><span class="js_total"><%=String(total).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></span> руб.</b>
 			</p>
 		</div>
+		<%if(role!=='mogilev'){%>
 		<textarea class="text_field js_comment" placeholder="Введите комментарий"><%=comment%></textarea>
-		<div class="clearfix">
-			<span class="del icon js_del" data-dismiss="modal"></span>
-			<button class="add js_add" data-dismiss="modal">Сохранить в заказе</button>
+		<%}%>
+		<div class="clearfix ui">
+			<%if(typeof edit === 'undefined'){%>
+				<%if(role==="mogilev"){%>
+				<span class="del icon js_del" data-dismiss="modal"></span>
+				<button class="add js_add" data-dismiss="modal">Добавить в отгрузку</button>
+				<%} else {%>
+				<span class="del icon js_del" data-dismiss="modal"></span>
+				<button class="add js_add" data-dismiss="modal">Добавить в заказ</button>
+				<%}%>
+			<%} else {%>
+				<%if(role==="mogilev"){%>
+				<button class="add js_add" data-dismiss="modal">Сохранить в отгрузке</button>
+				<%} else {%>
+				<button class="add js_add" data-dismiss="modal">Сохранить в заказе</button>
+				<%}%>
+			<%}%>
 		</div>
 	</div>
 </div>

@@ -18,18 +18,22 @@ define([
 		childEvents: {
 			'render:detailModal':'renderDetailModal',
 			'render:addModal':'renderAddModal',
+			'render:priceModal':'renderPriceModal',
 			'search:doors':'renderSearchResult',
 			'filter:doors':'renderFilterResult',
 			'submit:order':'renderSendMess'
 		},
-		initialize: function() {
+		initialize: function(opt) {
 			this.template = _.template(App.Templates[0]);
 			this.doorsResult = Entities.doorsStock;
+			this.role = opt.role;
 		},
 		onRender: function() {
+			ui_scrollTop();
 			this.addRegions({
 				modalRegion: "#stockModal",
-				addModalRegion: "#addModal"
+				addModalRegion: "#addModal",
+				priceModalRegion: "#priceModal"
 			});
 		},
 		renderDetailModal: function(child, door) {
@@ -44,6 +48,12 @@ define([
 				collection: Entities.orderCollection
 			});
 			this.showChildView('addModalRegion',modal);
+		},
+		renderPriceModal: function(child, door) {
+			var modal = new modalViews.Price({ 
+				model: door
+			});
+			this.showChildView('priceModalRegion',modal);
 		},
 		renderSearchResult: function(child, query) {
 			if (query.length === 0) {

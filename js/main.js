@@ -71,7 +71,9 @@ require(['backbone','app','controller','entities','ui'],function(Backbone,App,Co
             'orders/filters_tpl',             //17
             'footer_tpl',                     //18
             'stock/order_send_tpl',           //19
-            'orders/tabs_tpl'                 //20
+            'orders/tabs_tpl',                //20
+            'stock/stock_pricemodal_tpl',     //21
+            'orders/ship_item_tpl'            //22
             ],
           url:'/stock/templates/'
     });

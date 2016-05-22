@@ -1,5 +1,3 @@
-//webshims global
-
 define([
 	'marionette',
 	'app',
@@ -56,7 +54,7 @@ define([
 			if (this.collection.where({'active':true}).length) {
 				var self =this;
 				setTimeout(function() {
-					self.triggerMethod('filter:active');
+					self.triggerMethod('filter:active',self.collection);
 				},4);
 			};
 		},
@@ -65,7 +63,7 @@ define([
 			var model = this.collection.findWhere({'name':name});
 			model.get('active') ? 
 				model.set('active',false) : model.set('active',true);
-			this.triggerMethod('filter:active');
+			this.triggerMethod('filter:active',this.collection);
 		}
 	});
 
@@ -93,31 +91,32 @@ define([
 		}
 	});
 
-	var orderFilters = Marionette.ItemView.extend({
+	var orderFilters = Marionette.CompositeView.extend({
 		className: 'controls clearfix',
+		childView: filterView,
+		childViewContainer: "#filter_list",
 		ui: {
 			li: '.js_period li',
 			date: '.js_date_range',
 			search: '#search',
-			objs: '[data-toggle="dropdown"] li'
 		},
 		events: {
 			'click @ui.li': 'setPeriod',
-			'keyup @ui.search': 'searchHandler',
-			'click @ui.objs': 'filterManager'
+			'keyup @ui.search': 'searchHandler'
+		},
+		childEvents: {
+			'filter:active': 'filterManager'
 		},
 		initialize: function(opt) {
 			this.template = _.template(App.Templates[17]);
 			this.filter = {
-				from: moment().subtract(1,'w').format('DD.MM.YY'),
-				to: moment().format('DD.MM.YY'),
 				status: this.model.get('status'),
-				managers: []
+				managers: [],
+				from: moment().subtract(1,'w').format('DD.MM.YY'),
+				to: moment().format('DD.MM.YY')
 			};
 		},
 		onDomRefresh: function() {
-			this.triggerMethod('filter:orders',this.filter);
-
 			var self = this;
 			this.ui.date.daterangepicker({
 			    "showDropdowns": true,
@@ -131,16 +130,16 @@ define([
 			    },
 			    "linkedCalendars": true,
 			    "startDate": self.filter.from,
-    			"endDate": self.filter.to,
 			    "minDate": "01.01.15",
 			    "maxDate": "01.01.25"
 			}, function(start, end, label) {
 			  	self.filter.from = moment(start).format('DD.MM.YY');
 			  	self.filter.to = moment(end).format('DD.MM.YY');
 			  	self.ui.li.removeClass('active');
-			  	self.checkManagerFilter();
 			  	self.triggerMethod('filter:orders',self.filter);
 			});
+			
+			this.triggerMethod('filter:orders',this.filter);
 		},
 		setPeriod: function(e) {
 			var el = $(e.target),
@@ -154,24 +153,24 @@ define([
 				this.filter.to = moment().format('DD.MM.YY');
 			this.ui.date.data('daterangepicker').setStartDate(this.filter.from);
 			this.ui.date.data('daterangepicker').setEndDate(this.filter.to);
-			this.checkManagerFilter();
 			this.triggerMethod('filter:orders',this.filter);
 		},
 		searchHandler: function() {
 			this.triggerMethod('search:orders',this.ui.search.val());
 		},
-		filterManager: function() {
-			this.checkManagerFilter();
-			this.triggerMethod('filter:orders',this.filter);
-		},
-		checkManagerFilter: function() {
+		filterManager: function(child,managers) {
 			var self = this;
 			this.filter.managers = [];
-			this.ui.objs.each(function() {
-				$(this).hasClass('active') ? 
-					self.filter.managers.push($(this).attr('data-val')):'';
+			managers.each(function(manager) {
+				manager.get('active') ? 
+					self.filter.managers.push(manager.get('value')):'';
 			});
-		}
+			this.triggerMethod('filter:orders',this.filter);
+			
+		},
+		onBeforeDestroy: function() {
+			$('.daterangepicker').remove();
+		},
 	});
 
 	var tabView = Marionette.ItemView.extend({
@@ -183,18 +182,17 @@ define([
 		events: {
 			'click @ui.tabs': 'setTab',
 		},
+		modelEvents: {
+			'change':'render'
+		},
 		initialize: function(opt) {
 			this.template = _.template(App.Templates[20]);
 		},
 		setTab: function(e) {
 			if($(e.target).hasClass('active')) return;
-			var tab = $(e.target).attr('data-tab')
 			this.ui.tabs.removeClass('active');
 			$(e.target).addClass('active');
-			this.ui.screens.removeClass('active')
-				.eq(tab).addClass('active');
-
-			this.triggerMethod('set:tab',tab);
+			this.triggerMethod('set:tab',$(e.target).attr('data-tab'));
 		},
 	})
 

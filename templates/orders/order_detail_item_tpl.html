@@ -1,6 +1,8 @@
 <td data-toggle="modal" data-target="#stockModal"  class="bold"><%=name%>
-	<%if(role==="admin"&&order.changed){%>
-			<i class="changed"><i class="tooltip">Изменялось&nbsp;администратором</i></i>
+	<%if(role==="admin"||role==="mogilev"&&mode==="ships"){%>
+			<%if(order.changed){%>
+			<i class="changed"><i class="tooltip">Изменялось&nbsp;<%if(role==="mogilev"){%>менеджером<%}else{%>администратором<%}%></i></i>
+			<%}%>
 	<%}%>
 </td>
 <td data-toggle="modal" data-target="#stockModal" ><%=art%></td>
@@ -8,7 +10,7 @@
 <td data-toggle="modal" data-target="#stockModal" ><%=width%></td>
 <td data-toggle="modal" data-target="#stockModal" ><%=order.quantity%></td>
 <td data-toggle="modal" data-target="#stockModal"  class="bold price"><%=String(price*order.quantity).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></td>
-<%if(role==="admin"){%>
+<%if(role==="admin"||role==="mogilev"&&mode==="ships"){%>
 <td class="td_edit"><span class="edit js_to_edit" data-toggle="modal" data-target="#editModal">
 	<i class="tooltip">Редактировать</i>
 </span></td>

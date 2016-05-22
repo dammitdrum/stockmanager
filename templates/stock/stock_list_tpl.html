@@ -7,9 +7,9 @@
 	<th>Высота</th>
 	<%if(role==="manager"){%>
 	<th colspan="2"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
-	<%} else if(role==="admin"){%>
+	<%} else {%>
 	<th class="price"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
-	<th class="quant" colspan="2">Кол-во</th>
+	<th class="quant" <%if(role!=="sklad"){%>colspan="2"<%}%>>Кол-во</th>
 	<%}%>
 </tr>
 </thead>

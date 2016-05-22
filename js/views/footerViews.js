@@ -16,9 +16,6 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 		initialize: function() {
 			this.template = _.template(App.Templates[8]);
 		},
-		onRender: function() {
-			ui_scrollTop();
-		},
 		serializeData: function() {
 			var total = 0;
 			if(this.collection.length>0) {
@@ -28,7 +25,8 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 			}
 			return {
 				quantity: this.collection.length, 
-				total: total
+				total: total,
+				role: App.user.get('role')
 			};
 		},
 		goToOrder: function() {
@@ -41,7 +39,8 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 		className: 'top clearfix',
 		ui: {
 			but: '.js_submit',
-			select: '.js_manager'
+			select: '.js_manager',
+			comment: '.js_comment'
 		},
 		events: {
 			'click @ui.but': 'submitOrder'
@@ -52,10 +51,8 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 		initialize: function(opt) {
 			this.template = _.template(App.Templates[11]);
 			var self = this;
-			this.managers = opt.managers
-		},
-		onRender: function() {
-			ui_scrollTop();
+			this.managers = opt.managers;
+			this.stopSubmit = false;
 		},
 		serializeData: function() {
 			var total = 0;
@@ -72,10 +69,12 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 			};
 		},
 		submitOrder: function() {
-			if (!this.collection.length) return;
+			if (!this.collection.length||this.stopSubmit) return;
 			var data = [],
-				self = this;
+				self = this,
+				role = App.user.get('role');
 			
+			this.stopSubmit = true;
 			this.collection.each(function(model) {
 				var obj = {};
 				obj.id = model.get('id');
@@ -86,17 +85,29 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 			if (this.ui.select.length) {
 				var manager = this.ui.select.find('option:selected').val();
 			};
+			if (this.ui.comment.length) {
+				var comment = this.ui.comment.val();
+			};
+			
+			var url = role !== 'mogilev' ?'orders':'ships';
+			var entity = role !== 'mogilev' ? Entities.orders : Entities.ships;
             $.ajax({
-				url: '/request/sklad/?component=sklad:orders',
+				url: '/request/sklad/?component=sklad:'+url,
 				type: "POST",
-				data: JSON.stringify({data: data, manager: manager}),
+				data: JSON.stringify({
+					data: data, 
+					manager: manager, 
+					comment: comment,
+					doc_type: 'A'
+				}),
 				success: function() {
 					self.collection.each(function(model) {
                 		model.unset('order',{silent: true});
                 	});
                 	self.collection.reset();
                     self.triggerMethod('submit:order',self.collection.length);
-                    Entities.orders.fetch();
+                    entity.fetch();
+                    self.stopSubmit = false;
 				}
 			});
 		}

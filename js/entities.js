@@ -1,4 +1,4 @@
-
+	
 define(['backbone'],function(Backbone){
 
 	var Model = Backbone.Model.extend({
@@ -50,8 +50,27 @@ define(['backbone'],function(Backbone){
 		}
 	});
 
+	var ShipsCollection = Backbone.Collection.extend({
+		model: OrdersModel,
+		url: '/request/sklad/?component=sklad:ships',
+		comparator: function(model) {
+			return -model.get('id');
+		}
+	});
+
 	var profileModel = Backbone.Model.extend({
 		url: '/request/sklad/?component=sklad:user',
+	});
+
+	var quantityModel = Backbone.Model.extend({
+		defaults: {
+			orders: 0,
+			ships: 0
+		},
+		initialize: function() {
+			this.fetch();
+		},
+		url: '/request/sklad/?component=sklad:ships&count=true',
 	})
 	
 	return {
@@ -61,9 +80,11 @@ define(['backbone'],function(Backbone){
 		doorsStock: new CollectionDoors(),
 		orderCollection: new Collection(),
 		orders: new OrdersCollection(),
+		ships: new ShipsCollection(),
 		ordersCollection: Orders,
 		profile: profileModel,
-		managers: Managers
+		managers: Managers,
+		quant: quantityModel
 	}
 
 })

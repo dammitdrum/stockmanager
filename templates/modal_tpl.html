@@ -72,11 +72,13 @@
 					</p>
 				</div>
 			</div>
-			<%if(typeof order !== 'undefined'&&window.location.hash !== '#stock'&&order.comment.length>0){%>
-			<div class="comment">
-				<p class="title">Комментарий</p>
-				<p class="text"><%=order.comment%></p>
-			</div>
+			<%if(typeof order !== 'undefined'&&window.location.hash !== '#stock'&&order.comment!==null){%>
+				<%if(order.comment.length>0){%>
+				<div class="comment">
+					<p class="title">Комментарий</p>
+					<p class="text"><%=order.comment%></p>
+				</div>
+				<%}%>
 			<%}%>
 		</div>
 	</div>

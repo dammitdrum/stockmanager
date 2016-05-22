@@ -26,6 +26,8 @@ define(['marionette','app','backbone'],function(Marionette,App,Backbone){
 		showModal: function(e) {
 			if ($(e.target).hasClass('js_to_order')) {
 				this.triggerMethod('render:addModal',this.model);
+			} else if ($(e.target).hasClass('js_edit_price')){
+				this.triggerMethod('render:priceModal',this.model);
 			} else {
 				this.triggerMethod('render:detailModal',this.model);
 			}
@@ -137,6 +139,15 @@ define(['marionette','app','backbone'],function(Marionette,App,Backbone){
 		className: 'send_order_mess',
 		initialize: function() {
 			this.template = _.template(App.Templates[19]);
+		},
+		serializeData: function() {
+			return {
+				role: App.user.get('role')
+			}
+		},
+		onDomRefresh: function() {
+			console.log()
+			App.user.get('role') === 'mogilev' ? this.$el.addClass('ship'): '';
 		}
 	});
 

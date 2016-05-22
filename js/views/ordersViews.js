@@ -1,6 +1,5 @@
 define(['marionette','app','entities'],function(Marionette,App,Entities){
 
-	
 	var orderItem = Marionette.ItemView.extend({
 		className: 'box',
 		ui: {
@@ -16,8 +15,13 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.template = _.template(App.Templates[13]);
 			this.stop = false;
 		},
+		onDomRefresh: function() {
+			if (this.model.get('status')==='canceled') {
+				this.$el.addClass('canceled');
+			};
+		},
 		select: function() {
-			this.triggerMethod('show:detail',this.model,this.stop);
+			this.triggerMethod('show:detail',this.model);
 		}
 	});
 	
@@ -28,9 +32,6 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		childViewContainer: "#orders_list",
 		childEvents: {
 			'show:detail':'setActive',
-		},
-		collectionEvents: {
-			'remove':'render'
 		},
 		ui: {
 			more: '.js_more'
@@ -54,6 +55,7 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			if (_.find(status,function(str) {return str === 'approved'})) {
 				this.$el.removeClass('new').addClass('curr');
 			};
+
 		},
 		onAddChild: function(child) {
 			this.count++;
@@ -93,6 +95,7 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		serializeData: function() {
 			var obj = this.model.toJSON();
 			obj["role"] = App.user.get('role');
+			obj["mode"] = this.mode;
 			return obj;
 		},
 		showModal: function(e) {
@@ -119,7 +122,7 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		},
 		collectionEvents: {
 			'sort':'render',
-			'add':'saveOrder'
+			'add':'fetchOrder',
 		},
 		childEvents: {
 			'request:collection': 'triggerEditModal'
@@ -127,8 +130,11 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		initialize: function() {
 			this.template = _.template(App.Templates[14]);
 		},
+		onBeforeAddChild: function(child) {
+			child.mode = this.model.get('mode');
+		},
 		triggerEditModal: function(child) {
-			this.triggerMethod('render:editModal',child.model,this.collection);
+			this.triggerMethod('render:editModal',child.model,this.collection,1);
 		},
 		sortHandler: function(e) {
 			var prop = $(e.target).attr('data-sort'),
@@ -147,14 +153,15 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		cancelHandler: function() {
 			this.triggerMethod('remove:order',this.model.get('orderId'));
 		},
-		saveOrder: function() {
+		fetchOrder: function() {
 			var arr = [],
 				self = this;
 			this.collection.each(function(door) {
 				door = {
 					id: door.get('id'),
 					quantity: door.get('order').quantity,
-					comment: door.get('order').comment
+					comment: door.get('order').comment,
+					changed: door.get('order').changed
 				};
 				arr.push(door);
 			});
@@ -162,9 +169,10 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 				id: this.model.get('orderId'),
 				data: arr
 			};
+			var url = this.model.get('mode') === 'orders' ?'orders':'ships';
             $.ajax({
-				url: '/request/sklad/?component=sklad:orders',
-				type: "PUT",
+				url: '/request/sklad/?component=sklad:'+url,
+				type: 'PUT',
 				data: JSON.stringify(data),
 				success: function(res) {
 					self.triggerMethod('rerender:order',JSON.parse(res));

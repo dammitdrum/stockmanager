@@ -23,16 +23,20 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			'click @ui.del': 'delFromOrder',
 			'change @ui.comment': 'setComment'
 		},
-		initialize: function() {
+		initialize: function(opt) {
 			this.template = _.template(App.Templates[7]);
 			this.order = this.model.get('order') || {'quantity': 1,'comment': ''};
+			this.editMode = opt.edit;
+			this.changed = opt.changed;
 		},
 		serializeData: function() {
 			var order = this.order;
 			return {
 				quantity: order.quantity, 
 				comment: order.comment,
-				price: this.model.get('price')
+				price: this.model.get('price'),
+				edit: this.editMode,
+				role: App.user.get('role')
 			};
 		},
 		changeQuant: function(e) {
@@ -48,10 +52,12 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.order.comment = $(e.target).val();
 		},
 		addToOrder: function() {
+			if (this.changed) {
+				this.order.changed = 1;
+			}
 			this.collection.remove(this.model);
 			this.model.set({'order': this.order});
 			this.collection.add(this.model);
-						
 		},
 		delFromOrder: function() {
 			this.collection.remove(this.model);
@@ -59,9 +65,36 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		}
 	});
 
+	var EditPrice = Marionette.ItemView.extend({
+		className: 'modal-dialog addModal editPrice',
+		ui: {
+			input: '.js_price',
+			but: '.js_set_price'
+		},
+		events: {
+			'click @ui.but': 'setPrice',
+		},
+		initialize: function(opt) {
+			this.template = _.template(App.Templates[21]);
+		},
+		setPrice: function() {
+			this.model.set({'price': +this.ui.input.val().trim()});
+			var data = {
+				id: this.model.get('id'),
+				price: this.model.get('price')
+			};
+			$.ajax({
+				url: '/request/sklad/?component=sklad:list',
+				type: "PUT",
+				data: JSON.stringify(data)
+			});
+		}
+	});
+
 	return {
 		Detail: Detail,
-		Add: Add
+		Add: Add,
+		Price: EditPrice
 	}
 
 })

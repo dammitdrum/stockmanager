@@ -4,12 +4,13 @@ define([
 	'views/modalViews',
 	'entities',
 	'views/ordersViews',
-],function(Marionette, App, modalViews, Entities, ordersViews){
+	'views/shipsViews',
+	'moment'
+],function(Marionette, App, modalViews, Entities, ordersViews, shipsViews, moment){
 
 	return Marionette.LayoutView.extend({
 		el: '#content',
 		regions: {
-			ordersRegion: "#orders_region",
 			filtersRegion: "#filters_region",
 			footerRegion: "#footer"
 		},
@@ -29,22 +30,31 @@ define([
 			this.template = _.template(App.Templates[16]);
 			this.page = opt.page;
 			this.status = opt.status;
+			this.mode = opt.mode;
 		},
 		onRender: function() {
+			this.entity = this.mode === 'ships'? Entities.ships : Entities.orders;
 			var self = this;
 			this.addRegions({
+				ordersRegion: "#orders_region",
 				orderDetailRegion: "#order_detail",
 				modalRegion: "#stockModal",
 				editModalRegion: "#editModal"
 			});
 			this.navPage = 1;
-			if (this.page === 'homePage') {
-				this.showPreload();
-				Entities.orders.fetch().then(function() {
-	            	self.renderList(Entities.orders,self.status);
+			this.dataFilt = {
+            	filter: {
+            		status: this.status,
+            	}
+            };
+            if (this.page === 'homePage'&&
+            		!(App.user.get('role')==='sklad')) {
+            	this.showPreload();
+				this.entity.fetch({data: self.dataFilt}).then(function() {
+	            	self.renderList(self.entity,self.status);
 	            });
-			}
-		},
+            };
+        },
 		serializeData: function() {
 			return {
 				page: this.page,
@@ -74,10 +84,10 @@ define([
 			this.getRegion('orderDetailRegion').empty();
 			this.showPreload();
 
-			Entities.orders.fetch({
+			this.entity.fetch({
 				data: { filter: {status: self.status}}
 			}).then(function() {
-				self.renderList(Entities.orders,self.status)
+				self.renderList(self.entity,self.status)
 			});
 		},
 		renderDetailModal: function(child, door) {
@@ -86,52 +96,63 @@ define([
 			});
 			this.showChildView('modalRegion',modal);
 		},
-		renderEditModal: function(child, door, doors) {
+		renderEditModal: function(child, door, doors, changed) {
 			var modal = new modalViews.Add({ 
 				model: door,
-				collection: doors
+				collection: doors,
+				edit: true,
+				changed: changed
 			});
 			this.showChildView('editModalRegion',modal);
 		},
 		removeOrder: function(child,id) {
-			Entities.orders.remove(Entities.orders.findWhere({'id':id}));
-			/*$.ajax({
-				url: '',
-				type: "POST",
-				data: data,
-				success: function(res) {
-
-				}
-			});*/
+			this.refreshOrders('canceled',id);
 		},
 		approveOrder: function(child,id) {
-			Entities.orders.remove(Entities.orders.findWhere({'id':id}));
-			//
+			var status = App.user.get('role') !== 'sklad'?'approved':'history';
+			this.refreshOrders(status,id);
+		},
+		refreshOrders: function(status,id) {
+			var self = this;
+			var data = {
+				status: status,
+				id: id
+			};
+			var url = this.model.get('mode') === 'orders' ?'orders':'ships';
+            $.ajax({
+				url: '/request/sklad/?component=sklad:'+url,
+				type: "PUT",
+				data: JSON.stringify(data),
+				success: function() {
+					self.showPreload();
+		            self.entity.fetch({data: self.dataFilt}).then(function() {
+		            	self.renderList(self.entity,self.status);
+		            	Entities.doorsStock.fetch();
+		            });
+				}
+			});
 		},
 		rerenderOrder: function(child, data) {
+
 			var model = new Entities.model(data[0]);
 			var doors = new Entities.collection(model.get('doors'));
+			console.log(data);
 			model.set('doors',doors);
-			Entities.orders.set(model,{remove:false});
+			this.entity.set(model,{remove:false});
 		},
 		renderSearchResult: function(child, query) {
-			var dataFilt = {
-	            	filter: {
-	            		status: this.status,
-	            		id: query
-	            	},
-	            },
-	            self = this;
-
-            Entities.orders.fetch({data: dataFilt}).then(function() {
-            	self.renderList(Entities.orders,this.status);
+	        var self = this;
+            this.dataFilt.filter.status = this.status;
+            this.dataFilt.filter.id = query;
+            this.entity.fetch({data: this.dataFilt}).then(function() {
+            	self.renderList(self.entity,self.status);
             });
 		},
 		renderFilterResult: function(child, filter) {
 			var self = this;
 
             this.navPage = 1;
-            var dataFilt = {
+            this.dataFilt = {
             	filter: {
             		date:[filter.from, filter.to],
             		status: filter.status,
@@ -140,8 +161,8 @@ define([
             };
             this.status = filter.status;
             this.showPreload();
-            Entities.orders.fetch({data: dataFilt}).then(function() {
-            	self.renderList(Entities.orders,filter.status);
+            this.entity.fetch({data: this.dataFilt}).then(function() {
+            	self.renderList(self.entity,filter.status);
             });
 		},
 		getMoreOrders: function(child,param) {
@@ -149,21 +170,21 @@ define([
 				nav = true;
 
 			this.navPage++;
-            var dataFilt = {
+            this.dataFilt = {
             	filter: {
             		status: this.status
             	},
             	nav: 'page-'+this.navPage
             };
-			Entities.orders.fetch({
-				data: dataFilt,
+			this.entity.fetch({
+				data: self.dataFilt,
 				remove: false,
 				success: function(coll,response) {
 					nav = coll.length%12 !== 0 || response === null ?
 						false : true; 
 				}
 			}).then(function() {
-				self.renderList(Entities.orders,self.status,nav)
+				self.renderList(self.entity,self.status,nav)
             });
 		},
 		renderList: function(result,status,nav,query) {
@@ -171,7 +192,8 @@ define([
 				if (typeof nav === 'undefined') {
 					var nav = result.length%12 !== 0 ? false:true;
 				};
-				var orders = new ordersViews.orders({
+				var View = this.mode ==="ships" ? shipsViews.ships : ordersViews.orders;
+				var orders = new View({
 					model: new Entities.model({'status':status,'nav':nav}),
 					collection: result
 				});
@@ -203,7 +225,8 @@ define([
 							'cost':'',
 							'role': App.user.get('role'),
 							'status': this.status,
-							'orderId': order.get('id')
+							'orderId': order.get('id'),
+							'mode': this.mode
 						})
 					});
 

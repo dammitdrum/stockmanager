@@ -1,13 +1,33 @@
 
 <a href="#" class="logo"></a>
+<%if(role==='mogilev'||role==='sklad'){%>
+<nav class="nav">
+	<a href="#stock">Склад в Минске</a>
+	<div class="list">
+		<span class="trigg"><%if(role!=='sklad'){%>Отгрузки<%}else{%>Приемы<%}%></span>
+		<ul class="drop">
+			<li><a href="#ships">Текущие</a></li>
+			<li><a href="#ships/history">История</a></li>
+		</ul>
+	</div>
+	<div class="list">
+		<span class="trigg"><%if(role!=='sklad'){%>Заказы<%}else{%>Отгрузки<%}%></span>
+		<ul class="drop">
+			<li><a href="#orders">Текущие</a></li>
+			<li><a href="#orders/history">История</a></li>
+		</ul>
+	</div>
+</nav>
+<%}else{%>
 <nav class="nav clearfix">
 	<a href="#stock">Склад</a>
 	<%if(role==='admin'){%>
 	<a href="#neworders">Новые заказы</a>
 	<%}%>
 	<a href="#orders">Текущие заказы</a>
-	<a href="#history">История заказов</a>
+	<a href="#orders/history">История заказов</a>
 </nav>
+<%}%>
 <a href="#profile" class="profile js_profile">
 	<span class="name"><%=main_name%></span>
 	<span class="descript"><%=name%>, <%=address%></span>
