@@ -79,6 +79,9 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		},
 		setPrice: function() {
 			this.model.set({'price': +this.ui.input.val().trim()});
+			if (this.model.get('order')) {
+				this.collection.set(this.model,{remove:false})
+			}
 			var data = {
 				id: this.model.get('id'),
 				price: this.model.get('price')

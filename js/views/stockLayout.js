@@ -51,7 +51,8 @@ define([
 		},
 		renderPriceModal: function(child, door) {
 			var modal = new modalViews.Price({ 
-				model: door
+				model: door,
+				collection: Entities.orderCollection
 			});
 			this.showChildView('priceModalRegion',modal);
 		},

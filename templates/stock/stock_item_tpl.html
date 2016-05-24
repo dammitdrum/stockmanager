@@ -1,13 +1,16 @@
 <td data-toggle="modal" data-target="#stockModal"  class="bold"><%=name%></td>
 <td data-toggle="modal" data-target="#stockModal" ><%=art%></td>
 <td data-toggle="modal" data-target="#stockModal" ><%=open_side%></td>
-<td data-toggle="modal" data-target="#stockModal" ><%=width%></td>
-<td data-toggle="modal" data-target="#stockModal" ><%=height%></td>
-<td data-toggle="modal" data-target="<%if(role==="mogilev"){%>#priceModal<%}else{%>#stockModal<%}%>" class="bold <%if(role!=="manager"){%>price<%}%> <%if(role==="mogilev"){%>edit_price js_edit_price<%}%>"><%=String(price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%> 
+<td data-toggle="modal" class="center" data-target="#stockModal" ><%=width%></td>
+<td data-toggle="modal" data-target="#stockModal" class="center"><%=height%></td>
+<td data-toggle="modal" data-target="<%if(role==="mogilev"){%>#priceModal<%}else{%>#stockModal<%}%>" class="bold price <%if(role==="mogilev"){%>edit_price js_edit_price<%}%>"><%=String(price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%> 
 	<%if(role==="mogilev") {%><i class="icon"></i><i class="tooltip">Изменить&nbsp;цену</i><%}%>
 </td>
 <%if(role!=="manager"){%>
 <td class="quant" data-toggle="modal" data-target="#stockModal" ><%=quantity%></td>
+<%}%>
+<%if(role==="mogilev"||role==="admin"){%>
+<td data-toggle="modal" data-target="#stockModal" class="reserv"><%=quantity_reserved%></td>
 <%}%>
 <%if(role !== 'sklad'){%>
 	<%if(typeof order !== 'undefined'){%>

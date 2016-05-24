@@ -28,9 +28,20 @@
 	<a href="#orders/history">История заказов</a>
 </nav>
 <%}%>
+<div class="nav temp">
+<div class="list">
+	<span class="trigg">Изменить роль</span>
+	<ul class="drop">
+		<li><a href="?admin">admin</a></li>
+		<li><a href="?manager">manager</a></li>
+		<li><a href="?mogilev">mogilev</a></li>
+		<li><a href="?sklad">sklad</a></li>
+	</ul>
+</div>
+</div>
 <a href="#profile" class="profile js_profile">
-	<span class="name"><%=main_name%></span>
-	<span class="descript"><%=name%>, <%=address%></span>
+	<span class="name"><%=role%></span>
+	<span class="descript"><%=address%></span>
 </a>
 <div class="date">
 	<span class="time"><i class="js_hour"></i><i class="js_dots dots fadein">:</i><i class="js_min"></i></span>

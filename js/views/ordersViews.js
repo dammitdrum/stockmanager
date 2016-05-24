@@ -2,9 +2,6 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 
 	var orderItem = Marionette.ItemView.extend({
 		className: 'box',
-		ui: {
-			
-		},
 		events: {
 			'click':'select'
 		},
@@ -14,6 +11,11 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		initialize: function() {
 			this.template = _.template(App.Templates[13]);
 			this.stop = false;
+			var sum = 0;
+			this.model.get('doors').each(function(door) {
+				sum += door.get('order').quantity*door.get('price');
+			});
+			this.model.set('total',sum);
 		},
 		onDomRefresh: function() {
 			if (this.model.get('status')==='canceled') {
@@ -169,15 +171,9 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 				id: this.model.get('orderId'),
 				data: arr
 			};
-			var url = this.model.get('mode') === 'orders' ?'orders':'ships';
-            $.ajax({
-				url: '/request/sklad/?component=sklad:'+url,
-				type: 'PUT',
-				data: JSON.stringify(data),
-				success: function(res) {
-					self.triggerMethod('rerender:order',JSON.parse(res));
-				}
-			});
+			var url = this.model.get('mode') === 'orders' ?'/orders':'/ships';
+            console.log('for ajax:\n url: '+url+'\n data: '+JSON.stringify(data));
+			self.triggerMethod('rerender:order',this.collection,this.model.get('orderId'));
 		}
 	});
 

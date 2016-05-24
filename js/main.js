@@ -75,10 +75,15 @@ require(['backbone','app','controller','entities','ui'],function(Backbone,App,Co
             'stock/stock_pricemodal_tpl',     //21
             'orders/ship_item_tpl'            //22
             ],
-          url:'/stock/templates/'
+          url:'templates/'
     });
+
     App.user.fetch().then(function() {
-        tplLoader.start();
+      var get = window.location.search;
+      if (get) {
+        App.user.set('role',get.substring(1));
+      };
+      tplLoader.start();
     })
   	
  

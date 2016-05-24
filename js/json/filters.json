@@ -1,0 +1,165 @@
+[
+  {
+    "name": "Фильтр по названию",
+    "code": "name",
+    "list": [
+      {
+        "name": "Гранд тёмный",
+        "value": "Гранд тёмный",
+        "active": false
+      },
+      {
+        "name": "Стиль 80.01",
+        "value": " Стиль 80.01",
+        "active": false
+      },
+      {
+        "name": "Линия светлая",
+        "value": " Линия светлая",
+        "active": false
+      },
+      {
+        "name": "Миллениум светлая",
+        "value": "Миллениум светлая",
+        "active": false
+      },
+      {
+        "name": "Миллениум тёмная",
+        "value": "Миллениум тёмная",
+        "active": false
+      },
+      {
+        "name": "Легран 06",
+        "value": " Легран 06",
+        "active": false
+      },
+      {
+        "name": "Легран 05",
+        "value": " Легран 05",
+        "active": false
+      },
+      {
+        "name": "Лацио",
+        "value": " Лацио",
+        "active": false
+      },
+      {
+        "name": "Стиль 80.02",
+        "value": " Стиль 80.02",
+        "active": false
+      },
+      {
+        "name": "Шервуд 80.04",
+        "value": " Шервуд 80.04",
+        "active": false
+      },
+      {
+        "name": "Линия тёмная",
+        "value": " Линия тёмная",
+        "active": false
+      },
+      {
+        "name": "Монарх",
+        "value": " Монарх",
+        "active": false
+      },
+      {
+        "name": "Шервуд 80.03",
+        "value": "Шервуд 80.03",
+        "active": false
+      },
+      {
+        "name": "Токио Винорит",
+        "value": " Токио Винорит",
+        "active": false
+      },
+      {
+        "name": "Токио ПВХ",
+        "value": " Токио ПВХ",
+        "active": false
+      },
+      {
+        "name": "Фиеста",
+        "value": " Фиеста",
+        "active": false
+      },
+      {
+        "name": "Вена",
+        "value": " Вена",
+        "active": false
+      },
+      {
+        "name": "Новосёл 6 светлый",
+        "value": " Новосёл 6 светлый",
+        "active": false
+      },
+      {
+        "name": "Новосёл 6 тёмный",
+        "value": " Новосёл 6 тёмный",
+        "active": false
+      },
+      {
+        "name": "Гранд светлый",
+        "value": " Гранд светлый",
+        "active": false
+      },
+      {
+        "name": "Новосёл 5",
+        "value": " Новосёл 5",
+        "active": false
+      },
+      {
+        "name": "Север",
+        "value": " Север",
+        "active": false
+      },
+      {
+        "name": "Север 1",
+        "value": " Север 1",
+        "active": false
+      }
+    ]
+  },
+  {
+    "name": "Сторона открытия",
+    "code": "open_side",
+    "list": [
+      {
+        "name": "левое",
+        "value": "849",
+        "active": false
+      },
+      {
+        "name": "правое",
+        "value": "850",
+        "active": false
+      }
+    ]
+  },
+  {
+    "name": "Ширина",
+    "code": "width",
+    "list": [
+      {
+        "name": "880",
+        "value": "853",
+        "active": false
+      },
+      {
+        "name": "960",
+        "value": "854",
+        "active": false
+      },
+      {
+        "name": "860",
+        "value": "851",
+        "active": false
+      },
+      {
+        "name": "950",
+        "value": "852",
+        "active": false
+      }
+    ]
+  }
+]

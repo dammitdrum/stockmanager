@@ -13,9 +13,7 @@
 				<b><span class="js_total"><%=String(total).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></span> руб.</b>
 			</p>
 		</div>
-		<%if(role!=='mogilev'){%>
 		<textarea class="text_field js_comment" placeholder="Введите комментарий"><%=comment%></textarea>
-		<%}%>
 		<div class="clearfix ui">
 			<%if(typeof edit === 'undefined'){%>
 				<%if(role==="mogilev"){%>

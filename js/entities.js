@@ -11,7 +11,7 @@ define(['backbone'],function(Backbone){
 
 	var CollectionDoors = Backbone.Collection.extend({
 		model: Model,
-		url: '/request/sklad/'
+		url: 'js/json/doors.json'
 	});
 
 	var FilterModel = Backbone.Model.extend({
@@ -23,12 +23,12 @@ define(['backbone'],function(Backbone){
 
 	var FilterCollection = Backbone.Collection.extend({
 		model: FilterModel,
-		url: '/request/sklad/?component=sklad:filter'
+		url: 'js/json/filters.json'
 	});
 
-	var Managers = Backbone.Collection.extend({
+	var Markets = Backbone.Collection.extend({
 		model: FilterModel,
-		url: '/request/sklad/?component=sklad:filter&for=orders'
+		url: 'js/json/markets.json'
 	});
 
 	var OrdersModel = Backbone.Model.extend({
@@ -44,7 +44,7 @@ define(['backbone'],function(Backbone){
 
 	var OrdersCollection = Backbone.Collection.extend({
 		model: OrdersModel,
-		url: '/request/sklad/?component=sklad:orders',
+		url: 'js/json/orders.json',
 		comparator: function(model) {
 			return -model.get('id');
 		}
@@ -52,25 +52,21 @@ define(['backbone'],function(Backbone){
 
 	var ShipsCollection = Backbone.Collection.extend({
 		model: OrdersModel,
-		url: '/request/sklad/?component=sklad:ships',
+		url: 'js/json/ships.json',
 		comparator: function(model) {
 			return -model.get('id');
 		}
 	});
 
 	var profileModel = Backbone.Model.extend({
-		url: '/request/sklad/?component=sklad:user',
+		url: 'js/json/user.json',
 	});
 
 	var quantityModel = Backbone.Model.extend({
 		defaults: {
-			orders: 0,
-			ships: 0
-		},
-		initialize: function() {
-			this.fetch();
-		},
-		url: '/request/sklad/?component=sklad:ships&count=true',
+			orders: 12,
+			ships: 7
+		}
 	})
 	
 	return {
@@ -83,7 +79,7 @@ define(['backbone'],function(Backbone){
 		ships: new ShipsCollection(),
 		ordersCollection: Orders,
 		profile: profileModel,
-		managers: Managers,
+		markets: Markets,
 		quant: quantityModel
 	}
 

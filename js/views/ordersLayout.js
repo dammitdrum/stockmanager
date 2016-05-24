@@ -49,6 +49,7 @@ define([
             };
             if (this.page === 'homePage'&&
             		!(App.user.get('role')==='sklad')) {
+            	console.log('render');
             	this.showPreload();
 				this.entity.fetch({data: self.dataFilt}).then(function() {
 	            	self.renderList(self.entity,self.status);
@@ -77,7 +78,7 @@ define([
 					this.status = ['new','approved'];
 					break;
 				case '3':
-					this.status = ['history'];
+					this.status = ['history','canceled'];
 					break;
 			};
 
@@ -107,6 +108,8 @@ define([
 		},
 		removeOrder: function(child,id) {
 			this.refreshOrders('canceled',id);
+			console.log(this.entity.findWhere({id: id}));
+			this.entity.remove(this.entity.findWhere({id: id}));
 		},
 		approveOrder: function(child,id) {
 			var status = App.user.get('role') !== 'sklad'?'approved':'history';
@@ -118,26 +121,17 @@ define([
 				status: status,
 				id: id
 			};
-			var url = this.model.get('mode') === 'orders' ?'orders':'ships';
-            $.ajax({
-				url: '/request/sklad/?component=sklad:'+url,
-				type: "PUT",
-				data: JSON.stringify(data),
-				success: function() {
-					self.showPreload();
-		            self.entity.fetch({data: self.dataFilt}).then(function() {
-		            	self.renderList(self.entity,self.status);
-		            	Entities.doorsStock.fetch();
-		            });
-				}
-			});
+			var url = this.mode === 'orders' ? '/orders':'/ships';
+			console.log('for ajax:\n url: '+url+'\n data: '+JSON.stringify(data)+
+				'\n filterData: '+JSON.stringify(this.dataFilt));
 		},
-		rerenderOrder: function(child, data) {
-
-			var model = new Entities.model(data[0]);
-			var doors = new Entities.collection(model.get('doors'));
-			console.log(data);
-			model.set('doors',doors);
+		rerenderOrder: function(child, doors, id) {
+			var model = this.entity.findWhere({id: id});
+			var sum = 0;
+			model.get('doors').each(function(door) {
+				sum += door.get('order').quantity*door.get('price');
+			});
+			model.set({'total':sum,'doors':doors});
 			this.entity.set(model,{remove:false});
 		},
 		renderSearchResult: function(child, query) {
@@ -174,7 +168,7 @@ define([
             	filter: {
             		status: this.status
             	},
-            	nav: 'page-'+this.navPage
+            	PAGEN_1: this.navPage
             };
 			this.entity.fetch({
 				data: self.dataFilt,
@@ -189,13 +183,23 @@ define([
 		},
 		renderList: function(result,status,nav,query) {
 			if (result.length) {
+				
+				var filtResult = new Entities.collection();
+
+				for (var i = 0; i < status.length; i++) {
+					 filtResult.add(result.where({status: status[i]}));
+				};
 				if (typeof nav === 'undefined') {
-					var nav = result.length%12 !== 0 ? false:true;
+					var nav = filtResult.length%12 !== 0 ? false:true;
 				};
 				var View = this.mode ==="ships" ? shipsViews.ships : ordersViews.orders;
+				filtResult.comparator = function(model) {
+					return -model.get('id');
+				};
+				filtResult.sort();
 				var orders = new View({
 					model: new Entities.model({'status':status,'nav':nav}),
-					collection: result
+					collection: filtResult
 				});
 			} else {
 				var orders = new ordersViews.emptyResult({

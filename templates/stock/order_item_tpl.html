@@ -1,9 +1,9 @@
 <td data-toggle="modal" data-target="#stockModal"  class="bold"><%=name%></td>
 <td data-toggle="modal" data-target="#stockModal" ><%=art%></td>
-<td data-toggle="modal" data-target="#stockModal" ><%=String(price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></td>
+<td class="price" data-toggle="modal" data-target="#stockModal" ><%=String(price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></td>
 <% var quantity = order.quantity;%>
-<td data-toggle="modal" data-target="#stockModal" ><%=quantity%></td>
-<td data-toggle="modal" data-target="#stockModal"  class="bold"><%=String(price*quantity).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></td>
+<td class="center" data-toggle="modal" data-target="#stockModal" ><%=quantity%></td>
+<td class="price" data-toggle="modal" data-target="#stockModal"  class="bold"><%=String(price*quantity).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%></td>
 <td><span class="edit js_to_order" data-toggle="modal" data-target="#addModal">
 	<i class="tooltip">Редактировать</i>
 </span></td>

@@ -11,7 +11,7 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 			'click @ui.but': 'goToOrder'
 		},
 		collectionEvents: {
-			'add remove': 'render'
+			'all': 'render'
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[8]);
@@ -43,16 +43,21 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 			comment: '.js_comment'
 		},
 		events: {
-			'click @ui.but': 'submitOrder'
+			'click @ui.but': 'submitOrder',
+			'change @ui.comment': 'saveComment'
 		},
 		collectionEvents: {
-			'add remove reset': 'render'
+			'add remove': 'render'
 		},
 		initialize: function(opt) {
 			this.template = _.template(App.Templates[11]);
 			var self = this;
 			this.managers = opt.managers;
 			this.stopSubmit = false;
+			this.comment = '';
+		},
+		onRender: function() {
+			this.ui.comment.val(this.comment);
 		},
 		serializeData: function() {
 			var total = 0;
@@ -67,6 +72,9 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 				role: App.user.get('role'),
 				managers: this.managers
 			};
+		},
+		saveComment: function() {
+			this.comment = this.ui.comment.val();
 		},
 		submitOrder: function() {
 			if (!this.collection.length||this.stopSubmit) return;

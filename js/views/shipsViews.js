@@ -2,9 +2,6 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 
 	var shipItem = Marionette.ItemView.extend({
 		className: 'box ship',
-		ui: {
-			
-		},
 		events: {
 			'click':'select'
 		},
@@ -14,6 +11,11 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		initialize: function() {
 			this.template = _.template(App.Templates[22]);
 			this.stop = false;
+			var sum = 0;
+			this.model.get('doors').each(function(door) {
+				sum += door.get('order').quantity*door.get('price');
+			});
+			this.model.set('total',sum);
 		},
 		onDomRefresh: function() {
 			if (this.model.get('status')==='canceled') {

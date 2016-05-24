@@ -4,9 +4,15 @@
 		<th>Наименование</th>
 		<th>Артикул</th>
 		<th>Ст. открытия</th>
-		<th>Ширина</th>
-		<th>Кол-во</th>
-		<th <%if(role==="admin"||role==="mogilev"&&mode==="ships"){%>colspan="2"<%}%>><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
+		<th class="center">Ширина</th>
+		<th class="center">Кол-во</th>
+	<%if(role==="admin"||role==="mogilev"||role==="sklad"){%>
+		<th class="center">На складе</th>
+		<%if(role!=="sklad"){%>
+		<th class="center">Резерв</th>
+		<%}%>
+	<%}%>
+		<th <%if(role==="admin"||role==="mogilev"&&mode==="ships"){%> class="price <%if(!_.find(status,function(str) {return str === 'history'})){%>pad<%}else{%>last<%}%>" colspan="2"<%}else{%> class="price last"<%}%>><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
 	</tr>
 	</thead>
 	<tbody></tbody>

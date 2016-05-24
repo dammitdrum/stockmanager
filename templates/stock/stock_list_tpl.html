@@ -3,13 +3,16 @@
 	<th>Наименование</th>
 	<th>Артикул</th>
 	<th>Ст. открытия</th>
-	<th>Ширина</th>
-	<th>Высота</th>
+	<th class="center">Ширина</th>
+	<th class="center">Высота</th>
 	<%if(role==="manager"){%>
-	<th colspan="2"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
+	<th colspan="2" class="price"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
 	<%} else {%>
-	<th class="price"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
-	<th class="quant" <%if(role!=="sklad"){%>colspan="2"<%}%>>Кол-во</th>
+	<th class="price <%if(role==="manager"){%>last<%}%>"><span class="sort <%if(price==='up'){%>up<%}%>" data-sort="price">Цена, руб</span></th>
+	<th class="quant">Кол-во</th>
+	<%}%>
+	<%if(role==="mogilev"||role==="admin"){%>
+		<th <%if(role!=="sklad"){%>colspan="2"<%}%> class="reserv">Резерв</th>
 	<%}%>
 </tr>
 </thead>

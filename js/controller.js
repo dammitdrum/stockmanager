@@ -33,7 +33,7 @@ define([
 			this.title_page = new Entities.model();
 			this.role = App.user.get('role');
 			this.filtersStock = new Entities.filtersStock();
-			this.managers = new Entities.managers();
+			this.managers = new Entities.markets();
 			this.managers.fetch();
 			Entities.doorsStock.fetch();
 			this.stockLayout = new stockLayout({
@@ -52,24 +52,17 @@ define([
 
 		mainRoute: function() {
 			var role = this.role;
-			var status = role==='admin' ? ['new'] : ['new','approved'];
+			var status = role==='admin' ? ['new'] : ['approved'];
 
 			this.ordersLayout.page = 'homePage';
 			this.ordersLayout.status = status;
 			this.ordersLayout.mode = role==='mogilev'?'ships':'orders';
 			this.ordersLayout.render();
 			
-			if (role !== 'sklad') {
-				var model = new Entities.model({
-					'role': role
-				})
-			} else {
-				var model = new Entities.quant({
-					'role': role
-				})
-			}
 			var tabsV = new filtersViews.tabView({
-				model: model
+				model: new Entities.quant({
+					'role': role
+				})
 			});
 			var footer = new footerViews.footer();
 			
@@ -101,8 +94,9 @@ define([
 		},
 
 		orderRoute: function() {
-			var managers = this.role==="admin"?this.managers.at(0).get('list').toJSON():'';
-			console.log(managers);
+			var managers = this.role==="admin" ?
+				this.managers.at(0).get('list').toJSON() : '' ;
+				
 			var back = new filtersViews.backStock();
 			var doorsV = new stockViews.orderList({
 				collection: Entities.orderCollection
@@ -131,7 +125,7 @@ define([
 
 		ordersRoute: function() {
 			var title = this.role!=="sklad"?'Текущие заказы':'Текущие отгрузки';
-			var status = this.role === 'admin' ? ['approved']:['new','approved'];
+			var status = this.role === 'admin'||this.role === 'sklad' ? ['approved']:['new','approved'];
 			this.showOrders('orders',title,status);
 		},
 
@@ -150,20 +144,22 @@ define([
 		historyShipsRoute: function() {
 			var title = this.role!=="sklad"?'История отгрузок':'История приема';
 			if (this.role==="sklad"||this.role==="mogilev") {
-				this.showOrders('ships',title,['history']);
+				this.showOrders('ships',title,['history','canceled']);
 			}
 		},
 
 		showOrders: function(mode,title,status) {
 			var role = this.role;
-
 			this.title_page.set('title',title);
 			this.ordersLayout.page = '';
 			this.ordersLayout.mode = mode;
 			this.ordersLayout.status = status;
 			this.ordersLayout.render();
 
-			var filters = role==="admin"||role==="mogilev"&&mode==='orders'||role==="sklad"&&mode==='orders' ? this.managers : ''
+			var filters = role==="admin"||
+				role==="mogilev"&&mode==='orders'||
+				role==="sklad"&&mode==='orders' ? this.managers : '';
+
 			var filtersV = new filtersViews.orderFilters({
 				model: new Entities.model({
 					'status':status,
@@ -188,12 +184,10 @@ define([
 		},
 
 		profileRoute: function() {
-			App.user.fetch().then(function() {
-				var profile = new profileView({
-					model: App.user
-				});
-				App.contentRegion.show(profile);
+			var profile = new profileView({
+				model: App.user
 			});
+			App.contentRegion.show(profile);
 		},
 
 		showHeader: function() {

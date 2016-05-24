@@ -1,0 +1,4524 @@
+[
+  {
+    "id": "204",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "new",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1762",
+        "name": "Линия светлая",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7c3/7c3a0ddc7cf88b1ce385ecc1f1fd3dc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/db8/db8f5f6f19df5e95dd590bd6f790bf5b.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Пломбир»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 6,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1788",
+        "name": "Стиль 80.02",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/78c/78c0d168bfaaa6f0346f2560706c0769.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/738/738b77d5da9155f8a7661efe4d775982.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "вставки «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "205",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "new",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1788",
+        "name": "Стиль 80.02",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/78c/78c0d168bfaaa6f0346f2560706c0769.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/738/738b77d5da9155f8a7661efe4d775982.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "вставки «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1801",
+        "name": "Шервуд 80.03",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/a65/a65b10e2205f7023ed23ca985bf12682.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/dba/dba34f2bf12da381ee036530d67682d5.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 4,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "206",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "new",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1844",
+        "name": "Север 1",
+        "type": "Для дома",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/991/99102e80e41b98d1b19746bc8a336155.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/7d4/7d41c481ccefec13c82af7a23f943c57.jpg",
+        "otdelka_f": [
+          "Оцинкованная сталь с декоративным покрытием RENOLIT",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Оцинкованная сталь с декоративным покрытием RENOLIT",
+          "цвет «Дуб темный»"
+        ],
+        "furniture": [
+          [
+            "Замок",
+            "Замок Siegenia"
+          ],
+          [
+            "Зажимы по полотну",
+            "Зажимы по полотну Siegenia"
+          ],
+          [
+            "Ручка",
+            "Siegenia"
+          ]
+        ],
+        "price": 15715000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1807",
+        "name": "Токио Винорит",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/b57/b573cc1dc1891d5e8b576f90ba450bb1.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/95e/95e59f75fde0d7643d0889e78635f892.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб беленый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10115000,
+        "quantity": 5,
+        "quantity_reserved": 4,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "207",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "new",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1782",
+        "name": "Лацио",
+        "type": "Для дома",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "3",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/5bb/5bb4180ff6ea133e3bd52dd7d55bb6a5.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/8ab/8ab9331171417873e6e4b2bffe600fa3.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ влагостойкий",
+          "патина темная ",
+          "16 мм",
+          "рис. ХФ-31 ",
+          "цвет «Дуб золотистый»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ влагостойкий ",
+          "патина темная",
+          "16 мм",
+          "рис. О-Е ",
+          "цвет «Дуб золотистый»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 15470000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1789",
+        "name": "Стиль 80.02",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/78c/78c0d168bfaaa6f0346f2560706c0769.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/738/738b77d5da9155f8a7661efe4d775982.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "вставки «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "208",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "new",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1774",
+        "name": "Легран 06",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "10 мм",
+          "рис. Н-64",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "цвет «Эшвайт Мелинга», черное стекло"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 8967000,
+        "quantity": 5,
+        "quantity_reserved": 2,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1756",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 8,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1830",
+        "name": "Новосёл 6 тёмный",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/89c/89ca1e4838b2e2c4939944c690aadd5b.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/a4f/a4f3c000e5bf9bd8b082fa6464dbea40.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ влагостойкий",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ влагостойкий ",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 7565000,
+        "quantity": 5,
+        "quantity_reserved": 2,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "209",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "new",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1813",
+        "name": "Токио ПВХ",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/3f0/3f07a3eea48c26af246a5d34b43d5abd.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/0ba/0bac47e3b3d4918aa7c9d5cb97071c89.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Орех темный» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Орех темный» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9010000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1807",
+        "name": "Токио Винорит",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/b57/b573cc1dc1891d5e8b576f90ba450bb1.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/95e/95e59f75fde0d7643d0889e78635f892.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб беленый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10115000,
+        "quantity": 5,
+        "quantity_reserved": 4,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1793",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 2,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "216",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "new",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1770",
+        "name": "Миллениум тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-55",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-1» ",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10030000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1773",
+        "name": "Легран 06",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "10 мм",
+          "рис. Н-64",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "цвет «Эшвайт Мелинга», черное стекло"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 8967000,
+        "quantity": 7,
+        "quantity_reserved": 4,
+        "order": {
+          "quantity": 2,
+          "comment": "xcvxcvcxv",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1772",
+        "name": "Миллениум тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/c6c/c6c61c0bb822956e1a2d7ee164965b71.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/99e/99e9ddea6f759aa68b079614224b74e4.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-55",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-1» ",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10030000,
+        "quantity": 9,
+        "quantity_reserved": 11,
+        "order": {
+          "quantity": 2,
+          "comment": "xcvxcvxcv",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1776",
+        "name": "Легран 06",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/f83/f83d757412c126f30828897cdee457d7.png",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/8ca/8ca74cdb4346a57462342ad6352f51ea.png",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "10 мм",
+          "рис. Н-64",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "цвет «Эшвайт Мелинга», черное стекло"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 8967000,
+        "quantity": 5,
+        "quantity_reserved": 6,
+        "order": {
+          "quantity": 2,
+          "comment": "xcvxcvxcvcxvx dreet44554",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "180",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1795",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 3,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "182",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1814",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": null,
+          "changed": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "185",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1814",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": null,
+          "changed": null
+        }
+      },
+      {
+        "id": "1833",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 2,
+          "comment": null,
+          "changed": null
+        }
+      },
+      {
+        "id": "1824",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": null,
+          "changed": null
+        }
+      },
+      {
+        "id": "1829",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": null,
+          "changed": null
+        }
+      },
+      {
+        "id": "1820",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": null,
+          "changed": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "186",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1756",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 8,
+        "quantity_reserved": 2,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1778",
+        "name": "Легран 05",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/941/941f653aae7e96912916a075441ba2df.png",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/6b0/6b0195432c71377ce57b0dc729728045.png",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "10 мм",
+          "рис. Н-64",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "цвет «Эшвайт Мелинга», белое стекло"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 8967000,
+        "quantity": 5,
+        "quantity_reserved": 2,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1766",
+        "name": "Миллениум светлая",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/2f8/2f8469896d7e9f6a71f5e9865bf4774a.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/973/97399336aca7c85936ea256981026f93.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-55",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-1» ",
+          "цвет «Пломбир»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10030000,
+        "quantity": 3,
+        "quantity_reserved": 6,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1801",
+        "name": "Шервуд 80.03",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/a65/a65b10e2205f7023ed23ca985bf12682.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/dba/dba34f2bf12da381ee036530d67682d5.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1820",
+        "name": "Шервуд 80.03",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/a65/a65b10e2205f7023ed23ca985bf12682.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/dba/dba34f2bf12da381ee036530d67682d5.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "187",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1753",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 7,
+        "quantity_reserved": 20,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "189",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1791",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1818",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1822",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1838",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "191",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1753",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 7,
+        "quantity_reserved": 20,
+        "order": {
+          "quantity": 1,
+          "comment": "КфаАААА",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "194",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1791",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1818",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1822",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1838",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 5,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1808",
+        "name": "Токио Винорит",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/b57/b573cc1dc1891d5e8b576f90ba450bb1.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/95e/95e59f75fde0d7643d0889e78635f892.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб беленый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10115000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1834",
+        "name": "Токио Винорит",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/b57/b573cc1dc1891d5e8b576f90ba450bb1.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/95e/95e59f75fde0d7643d0889e78635f892.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Дуб беленый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10115000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "195",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1792",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "Тест",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1831",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "Тест",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1840",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 2,
+          "comment": "Тест",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "197",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1745",
+        "name": "Гранд тёмный",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/4dc/4dc421de30c6d5d1a12e8874b3cbae25.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/d90/d90b6a6735c14e61c4fb2eafb8c9bb0c.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2»",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2» ",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10185000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "Тест",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1821",
+        "name": "Гранд тёмный",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/4dc/4dc421de30c6d5d1a12e8874b3cbae25.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/d90/d90b6a6735c14e61c4fb2eafb8c9bb0c.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2»",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2» ",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10185000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "Тест",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1819",
+        "name": "Гранд тёмный",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/4dc/4dc421de30c6d5d1a12e8874b3cbae25.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/d90/d90b6a6735c14e61c4fb2eafb8c9bb0c.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2»",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2» ",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10185000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "Тест",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "198",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1753",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 7,
+        "quantity_reserved": 20,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "170",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "approved",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1795",
+        "name": "Линия тёмная",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/0e8/0e8d1d71af48c8c7f33d686a76684bc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e86/e866bf8e51246a4dadf659e7c3a27f3f.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 3,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "166",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "canceled",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1766",
+        "name": "Миллениум светлая",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/2f8/2f8469896d7e9f6a71f5e9865bf4774a.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/973/97399336aca7c85936ea256981026f93.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-55",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-1» ",
+          "цвет «Пломбир»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10030000,
+        "quantity": 3,
+        "quantity_reserved": 6,
+        "order": {
+          "quantity": 2,
+          "comment": "До отгрузки",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "168",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "history",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1754",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 5,
+        "quantity_reserved": 12,
+        "order": {
+          "quantity": 1,
+          "comment": "Проапр",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "165",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "history",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1814",
+        "name": "Токио ПВХ",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/3f0/3f07a3eea48c26af246a5d34b43d5abd.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/0ba/0bac47e3b3d4918aa7c9d5cb97071c89.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Орех темный» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "16 мм",
+          "рис. Н-51",
+          "цвет «Орех темный» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9010000,
+        "quantity": 4,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1833",
+        "name": "Гранд светлый",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/6e3/6e364fbb7ebdd0d1c2c56bbaa22b6017.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/5db/5dbd156d910e7be1288a9544ff0949ee.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2»",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2» ",
+          " цвет «Капучино»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10920000,
+        "quantity": 3,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 2,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1824",
+        "name": "Вена",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/8a2/8a2e1733fb1a69f60aa83fa828bfe642.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e47/e471d6aa8d449c1caf74c62e9b9ddd98.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. О-Е",
+          "цвет «Тик (темное дерево)»"
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "16 мм",
+          "рис. О-Е ",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 9265000,
+        "quantity": 4,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1829",
+        "name": "Новосёл 6 тёмный",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/89c/89ca1e4838b2e2c4939944c690aadd5b.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/a4f/a4f3c000e5bf9bd8b082fa6464dbea40.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ влагостойкий",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ влагостойкий ",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 7565000,
+        "quantity": 4,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1820",
+        "name": "Фиеста",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "960",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/da3/da3a134d45028ae06ee1bdb0e5abfe1a.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e8e/e8e8955cb367fc81f377f138f8a1a084.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "16 мм",
+          "рис. Б-3",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "16 мм",
+          "рис. Б-3",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 8670000,
+        "quantity": 4,
+        "quantity_reserved": 2,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "157",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "history",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1753",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 4,
+        "quantity_reserved": 18,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "161",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "history",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1753",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 4,
+        "quantity_reserved": 18,
+        "order": {
+          "quantity": 1,
+          "comment": "КфаАААА",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "155",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "history",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1792",
+        "name": "Шервуд 80.04",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/030/0307c90da9fd624b529616176be3ed31.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e29/e29316f686cd8f4fd43d330ddd6543c1.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 4,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 1,
+          "comment": "Тест",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1831",
+        "name": "Новосёл 6 тёмный",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/89c/89ca1e4838b2e2c4939944c690aadd5b.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/a4f/a4f3c000e5bf9bd8b082fa6464dbea40.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ влагостойкий",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ влагостойкий ",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 7565000,
+        "quantity": 4,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1840",
+        "name": "Новосёл 5",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/11c/11c6698f67bc1ea1271474df38130d42.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/17f/17f8e8c5c1dfa37017bde9e0dbbd3747.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ влагостойкий",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ влагостойкий ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Дуб темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 7565000,
+        "quantity": 3,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 2,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "157",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "history",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1745",
+        "name": "Гранд тёмный",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/4dc/4dc421de30c6d5d1a12e8874b3cbae25.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/d90/d90b6a6735c14e61c4fb2eafb8c9bb0c.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2»",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-2» ",
+          "цвет «Венге темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10185000,
+        "quantity": 4,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 1,
+          "comment": "Тест",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1821",
+        "name": "Вена",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/8a2/8a2e1733fb1a69f60aa83fa828bfe642.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e47/e471d6aa8d449c1caf74c62e9b9ddd98.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. О-Е",
+          "цвет «Тик (темное дерево)»"
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "16 мм",
+          "рис. О-Е ",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 9265000,
+        "quantity": 4,
+        "quantity_reserved": 4,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1819",
+        "name": "Фиеста",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/da3/da3a134d45028ae06ee1bdb0e5abfe1a.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e8e/e8e8955cb367fc81f377f138f8a1a084.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "16 мм",
+          "рис. Б-3",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "16 мм",
+          "рис. Б-3",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 8670000,
+        "quantity": 4,
+        "quantity_reserved": 0,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "158",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "canceled",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1753",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 4,
+        "quantity_reserved": 18,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "202",
+    "date": "24.05.16",
+    "object": "Фирменный «Стальная линия» админ",
+    "status": "history",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1753",
+        "name": "Стиль 80.01",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "860",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7fe/7fe39e99029c139aa319797668056325.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/1c8/1c83a9938776ce879437c46dca545a7b.jpg",
+        "otdelka_f": [
+          "Металл 1.2 мм",
+          "полимер «Черный шелк» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Спарта-4» ",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 5525000,
+        "quantity": 4,
+        "quantity_reserved": 18,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1761",
+        "name": "Линия светлая",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/7c3/7c3a0ddc7cf88b1ce385ecc1f1fd3dc2.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/db8/db8f5f6f19df5e95dd590bd6f790bf5b.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-16",
+          "цвет «Пломбир»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 9860000,
+        "quantity": 6,
+        "quantity_reserved": 7,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "203",
+    "date": "24.05.16",
+    "object": "Фирменный салон «Стальная линия»",
+    "status": "canceled",
+    "comment": null,
+    "doors": [
+      {
+        "id": "1765",
+        "name": "Миллениум светлая",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/2f8/2f8469896d7e9f6a71f5e9865bf4774a.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/973/97399336aca7c85936ea256981026f93.jpg",
+        "otdelka_f": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "рис. Н-55",
+          "цвет «Венге темный»"
+        ],
+        "otdelka_b": [
+          "Экошпон",
+          "МДФ",
+          "16 мм",
+          "фрезеровка «Техно-1» ",
+          "цвет «Пломбир»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Kale 257L (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Kale 252R (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Kale с поворотной ручкой"
+          ],
+          [
+            "Ручка",
+            "Crit"
+          ]
+        ],
+        "price": 10030000,
+        "quantity": 6,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1832",
+        "name": "Новосёл 6 тёмный",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "правое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/89c/89ca1e4838b2e2c4939944c690aadd5b.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/a4f/a4f3c000e5bf9bd8b082fa6464dbea40.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ влагостойкий",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "otdelka_b": [
+          "Винорит",
+          "МДФ влагостойкий ",
+          "10 мм",
+          "рис. Б-1",
+          "цвет «Дуб темный»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 7565000,
+        "quantity": 5,
+        "quantity_reserved": 1,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1821",
+        "name": "Вена",
+        "type": "Для квартиры",
+        "art": "empty",
+        "width": "880",
+        "height": "2060 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/8a2/8a2e1733fb1a69f60aa83fa828bfe642.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/e47/e471d6aa8d449c1caf74c62e9b9ddd98.jpg",
+        "otdelka_f": [
+          "Винорит",
+          "МДФ",
+          "16 мм",
+          "рис. О-Е",
+          "цвет «Тик (темное дерево)»"
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "16 мм",
+          "рис. О-Е ",
+          "цвет «Венге светлый» "
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 9265000,
+        "quantity": 4,
+        "quantity_reserved": 4,
+        "order": {
+          "quantity": 1,
+          "comment": "",
+          "changed": ""
+        }
+      },
+      {
+        "id": "1802",
+        "name": "Шервуд 80.03",
+        "type": "Для офиса",
+        "art": "empty",
+        "width": "950",
+        "height": "2050 мм",
+        "contour": "2",
+        "open_side": "левое",
+        "img_src_f": "http://bitrix-cat.by/upload/iblock/a65/a65b10e2205f7023ed23ca985bf12682.jpg",
+        "img_src_b": "http://bitrix-cat.by/upload/iblock/dba/dba34f2bf12da381ee036530d67682d5.jpg",
+        "otdelka_f": [
+          "ПВХ ",
+          "МДФ",
+          "10 мм",
+          "рис. Н-41",
+          "цвет «Тиковое дерево» "
+        ],
+        "otdelka_b": [
+          "ПВХ",
+          "МДФ",
+          "10 мм",
+          "фрезеровка «Базилика» (упрощенная)",
+          "цвет «Тиковое дерево»"
+        ],
+        "furniture": [
+          [
+            "Верхний замок",
+            "Border 3B8 8Г (сувальдный)"
+          ],
+          [
+            "Глазок",
+            "Apecs"
+          ],
+          [
+            "Ночная задвижка",
+            "Apecs L-0260"
+          ],
+          [
+            "Нижний замок",
+            "Border 3B4-3.85Г (цилиндровый)"
+          ],
+          [
+            "Цилиндр секрета",
+            "Apecs с поворотной ручкой"
+          ],
+          [
+            "Ручки-розетки",
+            "Avers"
+          ]
+        ],
+        "price": 6715000,
+        "quantity": 5,
+        "quantity_reserved": 3,
+        "order": {
+          "quantity": 2,
+          "comment": "",
+          "changed": ""
+        }
+      }
+    ]
+  }
+]
