@@ -14,7 +14,7 @@
 	<%}%>
 	<%if(role!=='sklad'){%>
 	<a href="#stock" class="button">Оформить 
-		<%if(role==='manager'){%>новый заказ<%}else{%>новую отгрузку<%}%></a>
+		<%if(role!=='mogilev'){%>новый заказ<%}else{%>новую отгрузку<%}%></a>
 	<%} else {%>
 		<div class="side">
 			<p class="title">Приемы</p>

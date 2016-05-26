@@ -15,6 +15,7 @@ require.config({
     }
   },
   shim : {
+    'lib/backbone.localStorage' : ['backbone'],
     underscore : {
       exports : '_'
     },
@@ -83,7 +84,9 @@ require(['backbone','app','controller','entities','ui'],function(Backbone,App,Co
       if (get) {
         App.user.set('role',get.substring(1));
       };
-      tplLoader.start();
+      Entities.doorsStock.fetch().then(function() {
+        tplLoader.start();
+      });
     })
   	
  

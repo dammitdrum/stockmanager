@@ -2,7 +2,6 @@
 	<div class="role">
 		<span class="text">Отправитель заказа:</span>
 		<select class="js_manager">
-			<option value="0">admin</option>
 			<% _.each(managers, function(manager){ %>
 			<option value="<%=manager.value%>"><%=manager.name%></option>
 			<% }); %>

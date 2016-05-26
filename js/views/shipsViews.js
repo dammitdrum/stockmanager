@@ -12,8 +12,12 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.template = _.template(App.Templates[22]);
 			this.stop = false;
 			var sum = 0;
+
 			this.model.get('doors').each(function(door) {
-				sum += door.get('order').quantity*door.get('price');
+				var price = Entities.doorsStock.findWhere({
+					id: door.get('id')
+				}).get('price');
+				sum += door.get('order').quantity*price;
 			});
 			this.model.set('total',sum);
 		},
@@ -23,15 +27,14 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			};
 		},
 		select: function() {
-			this.triggerMethod('show:detail',this.model,this.stop);
+			this.triggerMethod('show:detail',this.model);
 		}
 	});
 	
 
-	var shipsView = Marionette.CompositeView.extend({
+	var shipsView = Marionette.CollectionView.extend({
 		childView: shipItem,
 		className: 'curr_orders clearfix',
-		childViewContainer: "#ships_list",
 		childEvents: {
 			'show:detail':'setActive',
 		},
@@ -42,7 +45,6 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			'click @ui.more': 'getMore'
 		},
 		initialize: function() {
-			this.template = _.template('<div id="ships_list"></div><%if(nav){%><button class="more_orders js_more">Показать более поздние отгрузки</button><%}%>');
 			this.count = 0;
 		},
 		onDomRefresh: function() {

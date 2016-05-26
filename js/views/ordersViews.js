@@ -12,8 +12,12 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.template = _.template(App.Templates[13]);
 			this.stop = false;
 			var sum = 0;
+			
 			this.model.get('doors').each(function(door) {
-				sum += door.get('order').quantity*door.get('price');
+				var price = Entities.doorsStock.findWhere({
+					id: door.get('id')
+				}).get('price');
+				sum += door.get('order').quantity*price;
 			});
 			this.model.set('total',sum);
 		},
@@ -28,10 +32,9 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 	});
 	
 
-	var ordersView = Marionette.CompositeView.extend({
+	var ordersView = Marionette.CollectionView.extend({
 		childView: orderItem,
 		className: 'curr_orders clearfix',
-		childViewContainer: "#orders_list",
 		childEvents: {
 			'show:detail':'setActive',
 		},
@@ -42,7 +45,6 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			'click @ui.more': 'getMore'
 		},
 		initialize: function() {
-			this.template = _.template('<div id="orders_list"></div><%if(nav){%><button class="more_orders js_more">Показать более поздние заказы</button><%}%>');
 			this.count = 0;
 		},
 		onDomRefresh: function() {
@@ -93,18 +95,23 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[15]);
+			this.door = Entities.doorsStock.findWhere({
+				id: this.model.get('id')
+			}).clone();
 		},
 		serializeData: function() {
-			var obj = this.model.toJSON();
+			this.door.set({'order': this.model.get('order')});
+			var obj = this.door.toJSON();
 			obj["role"] = App.user.get('role');
 			obj["mode"] = this.mode;
+			obj["status"] = this.status;
 			return obj;
 		},
 		showModal: function(e) {
 			if ($(e.target).hasClass('js_to_edit')) {
 				this.triggerMethod('request:collection');
 			} else {
-				this.triggerMethod('render:detailModal',this.model);
+				this.triggerMethod('render:detailModal',this.door);
 			}
 		}
 	});
@@ -124,16 +131,19 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		},
 		collectionEvents: {
 			'sort':'render',
-			'add':'fetchOrder',
+			'add':'updateOrder',
 		},
 		childEvents: {
 			'request:collection': 'triggerEditModal'
 		},
 		initialize: function() {
 			this.template = _.template(App.Templates[14]);
+			this.entity = this.model.get('mode') === 'ships'? 
+				Entities.ships : Entities.orders;
 		},
 		onBeforeAddChild: function(child) {
 			child.mode = this.model.get('mode');
+			child.status = this.model.get('status');
 		},
 		triggerEditModal: function(child) {
 			this.triggerMethod('render:editModal',child.model,this.collection,1);
@@ -142,9 +152,12 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			var prop = $(e.target).attr('data-sort'),
 				model = this.model;
 			this.collection.comparator = function(door) {
+				var price = Entities.doorsStock.findWhere({
+					id: door.get('id')
+				}).get('price');
 				return model.get(prop) ?
-					-door.get('price')*door.get('order').quantity:
-					door.get('price')*door.get('order').quantity;
+					-price*door.get('order').quantity:
+					price*door.get('order').quantity;
 			};
 			model.get(prop) ? model.set(prop,''):model.set(prop,'up');
 			this.collection.sort();
@@ -155,25 +168,17 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		cancelHandler: function() {
 			this.triggerMethod('remove:order',this.model.get('orderId'));
 		},
-		fetchOrder: function() {
-			var arr = [],
-				self = this;
-			this.collection.each(function(door) {
-				door = {
-					id: door.get('id'),
-					quantity: door.get('order').quantity,
-					comment: door.get('order').comment,
-					changed: door.get('order').changed
-				};
-				arr.push(door);
+		updateOrder: function() {
+			var model = this.entity.findWhere({id: this.model.get('orderId')});
+			var sum = 0;
+			model.get('doors').each(function(door) {
+				var price = Entities.doorsStock.findWhere({
+					id: door.get('id')
+				}).get('price');
+				sum += door.get('order').quantity*price;
 			});
-			var data = {
-				id: this.model.get('orderId'),
-				data: arr
-			};
-			var url = this.model.get('mode') === 'orders' ?'/orders':'/ships';
-            console.log('for ajax:\n url: '+url+'\n data: '+JSON.stringify(data));
-			self.triggerMethod('rerender:order',this.collection,this.model.get('orderId'));
+			model.set({'total':sum,'doors':this.collection});
+			model.save();
 		}
 	});
 

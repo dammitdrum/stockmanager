@@ -28,13 +28,16 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.order = this.model.get('order') || {'quantity': 1,'comment': ''};
 			this.editMode = opt.edit;
 			this.changed = opt.changed;
+			this.price = Entities.doorsStock.findWhere({
+				id: this.model.get('id')
+			}).get('price');
 		},
 		serializeData: function() {
 			var order = this.order;
 			return {
 				quantity: order.quantity, 
 				comment: order.comment,
-				price: this.model.get('price'),
+				price: this.price,
 				edit: this.editMode,
 				role: App.user.get('role')
 			};
@@ -45,7 +48,7 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			if (n === 0) n = 1; 
 			this.ui.num.val(n);
 			this.order.quantity = n;
-			this.ui.total.html( String(this.model.get('price')*n)
+			this.ui.total.html( String(this.price*n)
 				.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;') );
 		},
 		setComment: function(e) {
@@ -86,11 +89,6 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 				id: this.model.get('id'),
 				price: this.model.get('price')
 			};
-			$.ajax({
-				url: '/request/sklad/?component=sklad:list',
-				type: "PUT",
-				data: JSON.stringify(data)
-			});
 		}
 	});
 

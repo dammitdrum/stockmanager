@@ -112,7 +112,7 @@ define([
 			this.filter = {
 				status: this.model.get('status'),
 				managers: [],
-				from: moment().subtract(1,'w').format('DD.MM.YY'),
+				from: moment().subtract(1,'y').format('DD.MM.YY'),
 				to: moment().format('DD.MM.YY')
 			};
 		},

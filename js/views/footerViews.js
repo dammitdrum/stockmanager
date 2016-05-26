@@ -1,6 +1,6 @@
 // ui_scrollTop global
 
-define(['marionette','app','entities','backbone'],function(Marionette,App,Entities){
+define(['marionette','app','entities','moment'],function(Marionette,App,Entities,moment){
 
 	var stockFooterView = Marionette.ItemView.extend({
 		className: 'top clearfix',
@@ -31,7 +31,9 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 		},
 		goToOrder: function() {
 			if (this.collection.length === 0) return;
-			App.navigate('stock/order',{trigger:true});
+			Entities.markets.fetch().then(function() {
+				App.navigate('stock/order',{trigger:true});
+			});
 		}
 	});
 
@@ -79,45 +81,52 @@ define(['marionette','app','entities','backbone'],function(Marionette,App,Entiti
 		submitOrder: function() {
 			if (!this.collection.length||this.stopSubmit) return;
 			var data = [],
-				self = this,
-				role = App.user.get('role');
-			
+				comment = null,
+				role = App.user.get('role'),
+				manager = role === 'manager'? App.user.get('name') : null,
+				entity = role !== 'mogilev' ? Entities.orders : Entities.ships,
+				status = role !== 'mogilev' ? 'new' : 'approved',
+				newOrder = new Entities.orderModel(),
+				doors = new Entities.collection(),
+				id = entity.length ? +entity.at(0).get('id')+1 : 1;
+
 			this.stopSubmit = true;
-			this.collection.each(function(model) {
-				var obj = {};
-				obj.id = model.get('id');
-				obj.quantity = model.get('order').quantity;
-				obj.comment = model.get('order').comment;
-				data.push(obj);
-			});
+			
 			if (this.ui.select.length) {
-				var manager = this.ui.select.find('option:selected').val();
+				manager = this.ui.select.find('option:selected').text();
 			};
 			if (this.ui.comment.length) {
-				var comment = this.ui.comment.val();
+				comment = this.ui.comment.val();
 			};
-			
-			var url = role !== 'mogilev' ?'orders':'ships';
-			var entity = role !== 'mogilev' ? Entities.orders : Entities.ships;
-            $.ajax({
-				url: '/request/sklad/?component=sklad:'+url,
-				type: "POST",
-				data: JSON.stringify({
-					data: data, 
-					manager: manager, 
-					comment: comment,
-					doc_type: 'A'
-				}),
-				success: function() {
-					self.collection.each(function(model) {
-                		model.unset('order',{silent: true});
-                	});
-                	self.collection.reset();
-                    self.triggerMethod('submit:order',self.collection.length);
-                    entity.fetch();
-                    self.stopSubmit = false;
-				}
-			});
+
+			this.collection.each(function(door) {
+				var order = new Entities.model();
+				order.set({
+					'id': door.get('id'),
+					'order': door.get('order')
+				});
+				doors.add(order);
+			})
+
+			newOrder.set({
+				'id': id,
+				'comment': comment,
+				'date': moment().format('DD.MM.YY'),
+				'status': status,
+				'object': manager,
+				'doors': doors
+			})
+
+			entity.add(newOrder);
+			newOrder.save();
+
+			this.collection.each(function(model) {
+        		model.unset('order',{silent: true});
+        	});
+
+        	this.collection.reset();
+            this.triggerMethod('submit:order');
+            this.stopSubmit = false;
 		}
 	});
 

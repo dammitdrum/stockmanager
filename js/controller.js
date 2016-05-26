@@ -33,8 +33,7 @@ define([
 			this.title_page = new Entities.model();
 			this.role = App.user.get('role');
 			this.filtersStock = new Entities.filtersStock();
-			this.managers = new Entities.markets();
-			this.managers.fetch();
+			this.markets = Entities.markets;
 			Entities.doorsStock.fetch();
 			this.stockLayout = new stockLayout({
 				model: this.title_page,
@@ -94,8 +93,8 @@ define([
 		},
 
 		orderRoute: function() {
-			var managers = this.role==="admin" ?
-				this.managers.at(0).get('list').toJSON() : '' ;
+			var markets = this.role==="admin" ?
+				this.markets.at(0).get('list').toJSON() : '' ;
 				
 			var back = new filtersViews.backStock();
 			var doorsV = new stockViews.orderList({
@@ -103,7 +102,7 @@ define([
 			});
 			var footer = new footerViews.orderFooter({
 				collection: Entities.orderCollection,
-				managers: managers
+				managers: markets
 			});
 			var title = this.role!=="mogilev"?'Бланк заказа':'Бланк отгрузки';
 			this.showStock(back,doorsV,footer,title);
@@ -158,7 +157,7 @@ define([
 
 			var filters = role==="admin"||
 				role==="mogilev"&&mode==='orders'||
-				role==="sklad"&&mode==='orders' ? this.managers : '';
+				role==="sklad"&&mode==='orders' ? this.markets : '';
 
 			var filtersV = new filtersViews.orderFilters({
 				model: new Entities.model({

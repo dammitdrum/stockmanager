@@ -22,7 +22,6 @@ define([
 			'filter:orders':'renderFilterResult',
 			'set:tab':'changeTab',
 			'get:moreOrders':'getMoreOrders',
-			'rerender:order':'rerenderOrder',
 			'remove:order':'removeOrder',
 			'approve:order':'approveOrder'
 		},
@@ -41,19 +40,17 @@ define([
 				modalRegion: "#stockModal",
 				editModalRegion: "#editModal"
 			});
-			this.navPage = 1;
-			this.dataFilt = {
-            	filter: {
-            		status: this.status,
+            if (this.page === 'homePage'&&!(App.user.get('role')==='sklad')) {
+
+            	if (!this.entity.length) {
+            		this.showPreload();
+					this.entity.fetch().then(function() {
+		            	self.renderList(self.entity,self.status);
+		            });
+            	} else {
+            		this.renderList(this.entity,this.status);
             	}
-            };
-            if (this.page === 'homePage'&&
-            		!(App.user.get('role')==='sklad')) {
-            	console.log('render');
-            	this.showPreload();
-				this.entity.fetch({data: self.dataFilt}).then(function() {
-	            	self.renderList(self.entity,self.status);
-	            });
+
             };
         },
 		serializeData: function() {
@@ -64,8 +61,6 @@ define([
 		},
 		changeTab: function(child,tab) {
 			var self = this;
-
-			this.navPage = 1;
 
 			switch(tab) {
 				case '0':
@@ -81,15 +76,16 @@ define([
 					this.status = ['history','canceled'];
 					break;
 			};
-
 			this.getRegion('orderDetailRegion').empty();
-			this.showPreload();
 
-			this.entity.fetch({
-				data: { filter: {status: self.status}}
-			}).then(function() {
-				self.renderList(self.entity,self.status)
-			});
+			if (!this.entity.length) {
+        		this.showPreload();
+				this.entity.fetch().then(function() {
+	            	self.renderList(self.entity,self.status);
+	            });
+        	} else {
+        		this.renderList(this.entity,this.status);
+        	};
 		},
 		renderDetailModal: function(child, door) {
 			var modal = new modalViews.Detail({ 
@@ -107,32 +103,61 @@ define([
 			this.showChildView('editModalRegion',modal);
 		},
 		removeOrder: function(child,id) {
-			this.refreshOrders('canceled',id);
-			console.log(this.entity.findWhere({id: id}));
-			this.entity.remove(this.entity.findWhere({id: id}));
+			this.entity.findWhere({id: id}).set('status','canceled').save();
+			if (this.mode !== 'ships' || this.status !== 'new') {
+				this.changeQuantities(this.entity.findWhere({id: id}),'cancelQuantity');
+			};
+			this.renderList(this.entity,this.status);
 		},
 		approveOrder: function(child,id) {
 			var status = App.user.get('role') !== 'sklad'?'approved':'history';
-			this.refreshOrders(status,id);
-		},
-		refreshOrders: function(status,id) {
-			var self = this;
-			var data = {
-				status: status,
-				id: id
+			this.entity.findWhere({id: id}).set('status',status).save();
+
+			if (this.status[0] === 'new') {
+				var type = 'setQuantity'
+			} else {
+				var type = this.mode === 'ships' ? 
+					'addQuantity' : 'removeQuantity';
 			};
-			var url = this.mode === 'orders' ? '/orders':'/ships';
-			console.log('for ajax:\n url: '+url+'\n data: '+JSON.stringify(data)+
-				'\n filterData: '+JSON.stringify(this.dataFilt));
+			this.changeQuantities(this.entity.findWhere({id: id}),type);
+
+			this.renderList(this.entity,this.status);
 		},
-		rerenderOrder: function(child, doors, id) {
-			var model = this.entity.findWhere({id: id});
-			var sum = 0;
-			model.get('doors').each(function(door) {
-				sum += door.get('order').quantity*door.get('price');
-			});
-			model.set({'total':sum,'doors':doors});
-			this.entity.set(model,{remove:false});
+		changeQuantities: function(order,type) {
+
+			order.get('doors').each(function(door) {
+					
+				var stockDoor = Entities.doorsStock.findWhere({
+						id: door.get('id')
+					}),
+					stockQ = stockDoor.get('quantity'),
+					orderQ = door.get('order').quantity,
+					reservQ = stockDoor.get('quantity_reserved');
+
+				switch(type) {
+					case 'addQuantity':
+						var q = stockQ + orderQ,
+							r = reservQ;
+						break;
+					case 'removeQuantity':
+						var q = stockQ - orderQ,
+							r = reservQ - orderQ;
+						break;
+					case 'cancelQuantity':
+						var q = stockQ,
+							r = reservQ - orderQ;
+						break;
+					case 'setQuantity':
+						var q = stockQ,
+							r = reservQ + orderQ;
+						break;
+				}
+
+				stockDoor.set({
+					'quantity': q,
+					'quantity_reserved': r
+				})
+			})
 		},
 		renderSearchResult: function(child, query) {
 	        var self = this;
@@ -145,52 +170,36 @@ define([
 		renderFilterResult: function(child, filter) {
 			var self = this;
 
-            this.navPage = 1;
-            this.dataFilt = {
-            	filter: {
-            		date:[filter.from, filter.to],
-            		status: filter.status,
-            		managers: filter.managers
-            	}
-            };
-            this.status = filter.status;
             this.showPreload();
-            this.entity.fetch({data: this.dataFilt}).then(function() {
-            	self.renderList(self.entity,filter.status);
-            });
-		},
-		getMoreOrders: function(child,param) {
-			var self = this,
-				nav = true;
-
-			this.navPage++;
-            this.dataFilt = {
-            	filter: {
-            		status: this.status
-            	},
-            	PAGEN_1: this.navPage
+            
+            if (!this.entity.length) {
+            	this.entity.fetch().then(function() {
+	            	self.filtDateRange(self.entity,filter);
+	            });
+            } else {
+            	this.filtDateRange(this.entity,filter);
             };
-			this.entity.fetch({
-				data: self.dataFilt,
-				remove: false,
-				success: function(coll,response) {
-					nav = coll.length%12 !== 0 || response === null ?
-						false : true; 
-				}
-			}).then(function() {
-				self.renderList(self.entity,self.status,nav)
-            });
 		},
-		renderList: function(result,status,nav,query) {
-			if (result.length) {
-				
-				var filtResult = new Entities.collection();
+		filtDateRange: function(entity,filter) {
+			var filtEntity = new Entities.collection();
+        	entity.each(function(model) {
+            	var check = moment(model.get('date'),'DD.MM.YY').isBetween(
+	            	moment(filter.from,'DD.MM.YY').format('YYYY-MM-DD'), 
+	            	moment(filter.to,'DD.MM.YY').format('YYYY-MM-DD'),
+	            	null, '[]'
+	            );
+	            if (check) {
+	            	filtEntity.add(model);
+	            };
+            });
+            this.renderList(filtEntity,this.status);
+		},
+		renderList: function(result,status,query) {
+			var filtResult = new Entities.collection();
 
+			if (result.length) {
 				for (var i = 0; i < status.length; i++) {
 					 filtResult.add(result.where({status: status[i]}));
-				};
-				if (typeof nav === 'undefined') {
-					var nav = filtResult.length%12 !== 0 ? false:true;
 				};
 				var View = this.mode ==="ships" ? shipsViews.ships : ordersViews.orders;
 				filtResult.comparator = function(model) {
@@ -198,10 +207,11 @@ define([
 				};
 				filtResult.sort();
 				var orders = new View({
-					model: new Entities.model({'status':status,'nav':nav}),
+					model: new Entities.model({'status':status}),
 					collection: filtResult
 				});
-			} else {
+			} 
+			if (filtResult.length === 0) {
 				var orders = new ordersViews.emptyResult({
 					model: new Entities.model({
 						'query': query

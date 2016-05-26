@@ -1,5 +1,8 @@
 	
-define(['backbone'],function(Backbone){
+define(['backbone','lib/backbone.localStorage'],function(Backbone){
+
+	var storageOrders = new Backbone.LocalStorage('orders');
+	var storageShips = new Backbone.LocalStorage('ships');
 
 	var Model = Backbone.Model.extend({
 		
@@ -38,13 +41,10 @@ define(['backbone'],function(Backbone){
 		},
 	});
 
-	var Orders = Backbone.Collection.extend({
-		model: OrdersModel
-	});
-
 	var OrdersCollection = Backbone.Collection.extend({
 		model: OrdersModel,
-		url: 'js/json/orders.json',
+		//url: 'js/json/orders.json',
+		localStorage: storageOrders,
 		comparator: function(model) {
 			return -model.get('id');
 		}
@@ -52,7 +52,8 @@ define(['backbone'],function(Backbone){
 
 	var ShipsCollection = Backbone.Collection.extend({
 		model: OrdersModel,
-		url: 'js/json/ships.json',
+		//url: 'js/json/ships.json',
+		localStorage: storageShips,
 		comparator: function(model) {
 			return -model.get('id');
 		}
@@ -77,10 +78,10 @@ define(['backbone'],function(Backbone){
 		orderCollection: new Collection(),
 		orders: new OrdersCollection(),
 		ships: new ShipsCollection(),
-		ordersCollection: Orders,
 		profile: profileModel,
-		markets: Markets,
-		quant: quantityModel
+		markets: new Markets(),
+		quant: quantityModel,
+		orderModel: OrdersModel
 	}
 
 })

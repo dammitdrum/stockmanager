@@ -1,3 +1,4 @@
+<% var isHistory = _.find(status,function(str) {return str === 'history'});%>
 <table class="table">
 	<thead>
 	<tr class="head">
@@ -6,13 +7,13 @@
 		<th>Ст. открытия</th>
 		<th class="center">Ширина</th>
 		<th class="center">Кол-во</th>
-	<%if(role==="admin"||role==="mogilev"||role==="sklad"){%>
+	<%if((role==="admin"||role==="mogilev"||role==="sklad")&&!isHistory){%>
 		<th class="center">На складе</th>
 		<%if(role!=="sklad"){%>
 		<th class="center">Резерв</th>
 		<%}%>
 	<%}%>
-		<th <%if(role==="admin"||role==="mogilev"&&mode==="ships"){%> class="price <%if(!_.find(status,function(str) {return str === 'history'})){%>pad<%}else{%>last<%}%>" colspan="2"<%}else{%> class="price last"<%}%>><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
+		<th <%if(role==="admin"||role==="mogilev"&&mode==="ships"){%> class="price <%if(!isHistory){%>pad<%}else{%>last<%}%>" colspan="2"<%}else{%> class="price last"<%}%>><span class="sort <%if(cost==='up'){%>up<%}%>" data-sort="cost">Стоимость, руб</span></th>
 	</tr>
 	</thead>
 	<tbody></tbody>
@@ -22,7 +23,7 @@
 	<%if(_.find(status,function(str) {return str === 'new'})){%>
 	<button class="approve green js_approve">Подтвердить заказ</button>
 	<%}%>
-	<%if(!_.find(status,function(str) {return str === 'history'})){%>
+	<%if(!isHistory){%>
 	<button class="cancel js_cancel">Отменить заказ</button>
 	<%}%>
 </div>
