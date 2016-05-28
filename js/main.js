@@ -1,5 +1,6 @@
 
 require.config({
+  urlArgs: "v0.0.1",
   paths : {
     underscore : 'lib/underscore',
     backbone   : 'lib/backbone',
@@ -49,6 +50,7 @@ require(['backbone','app','controller','entities','ui'],function(Backbone,App,Co
     Backbone.history.start();
   });
   App.user = new Entities.profile();
+  App.line = $('.load_line');
 
 	var tplLoader = new App.Loader({
           tpl:[
@@ -79,14 +81,47 @@ require(['backbone','app','controller','entities','ui'],function(Backbone,App,Co
           url:'templates/'
     });
 
+    
     App.user.fetch().then(function() {
       var get = window.location.search;
       if (get) {
         App.user.set('role',get.substring(1));
       };
-      Entities.doorsStock.fetch().then(function() {
-        tplLoader.start();
-      });
+      if (Entities.doorsStorage.records.length) {
+        Entities.doorsStock.localStorage = Entities.doorsStorage;
+        Entities.doorsStock.fetch().then(function() {
+          App.line.css('width','15%');
+          Entities.orders.fetch().then(function() {
+
+            Entities.ships.fetch().then(function() {
+
+              App.line.css('width','45%');
+              tplLoader.start();
+
+            })
+
+          })
+        });
+      } else {
+        Entities.doorsStock.fetch().then(function() {
+          Entities.doorsStock.localStorage = Entities.doorsStorage;
+          Entities.doorsStock.each(function(door) {
+            door.save();
+          })
+          App.line.css('width','15%');
+          Entities.orders.fetch().then(function() {
+
+            Entities.ships.fetch().then(function() {
+
+              App.line.css('width','45%');
+              tplLoader.start();
+
+            })
+
+          })
+        });
+      }
+      
     })
   	
  

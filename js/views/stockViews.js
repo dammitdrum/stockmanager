@@ -64,6 +64,9 @@ define(['marionette','app','backbone'],function(Marionette,App,Backbone){
 			};
 			model.get(prop) ? model.set(prop,''):model.set(prop,'up');
 			this.collection.sort();
+		},
+		onDomRefresh: function() {
+			App.line.css('width','100%').fadeOut(400);
 		}
 	});
 

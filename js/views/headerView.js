@@ -43,6 +43,7 @@ define([
 		onDomRefresh: function() {
 			this.setActive(window.location.hash);
 			$('body').addClass('loaded');
+			App.line.css('width','100%').fadeOut(400);
 		},
 		toggleNav: function(e) {
 			var list = $(e.target).closest('.list');

@@ -3,6 +3,8 @@ define(['backbone','lib/backbone.localStorage'],function(Backbone){
 
 	var storageOrders = new Backbone.LocalStorage('orders');
 	var storageShips = new Backbone.LocalStorage('ships');
+	var doorsStorage = new Backbone.LocalStorage('doors');
+	var userStorage = new Backbone.LocalStorage('user');
 
 	var Model = Backbone.Model.extend({
 		
@@ -22,11 +24,6 @@ define(['backbone','lib/backbone.localStorage'],function(Backbone){
 		    response.list = new Collection(response.list);
 		    return response;
 		},
-	});
-
-	var FilterCollection = Backbone.Collection.extend({
-		model: FilterModel,
-		url: 'js/json/filters.json'
 	});
 
 	var Markets = Backbone.Collection.extend({
@@ -60,28 +57,34 @@ define(['backbone','lib/backbone.localStorage'],function(Backbone){
 	});
 
 	var profileModel = Backbone.Model.extend({
-		url: 'js/json/user.json',
+		defaults: function() {
+			return {
+				name: "Фирменный салон «Стальная линия»",
+				city: "Минск",
+				index: "220100",
+				address: "ТЦ Трюм, ул. Кальварийская, 7Б-6",
+				ur_address: "ТЦ Трюм, ул. Кальварийская, 7Б-6",
+				main_name: "Васек",
+				phone: "1234678",
+				email: "asdsdsdasd@ya.ru",
+				fio: "Пупкин Вася Федотович",
+				role: "admin"
+			}
+		},
+		localStorage: userStorage
 	});
-
-	var quantityModel = Backbone.Model.extend({
-		defaults: {
-			orders: 12,
-			ships: 7
-		}
-	})
 	
 	return {
 		model: Model,
 		collection: Collection,
-		filtersStock: FilterCollection,
 		doorsStock: new CollectionDoors(),
 		orderCollection: new Collection(),
 		orders: new OrdersCollection(),
 		ships: new ShipsCollection(),
 		profile: profileModel,
 		markets: new Markets(),
-		quant: quantityModel,
-		orderModel: OrdersModel
+		orderModel: OrdersModel,
+		doorsStorage: doorsStorage
 	}
 
 })

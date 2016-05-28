@@ -29,7 +29,6 @@ define([
 			this.role = opt.role;
 		},
 		onRender: function() {
-			ui_scrollTop();
 			this.addRegions({
 				modalRegion: "#stockModal",
 				addModalRegion: "#addModal",

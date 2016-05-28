@@ -111,7 +111,7 @@ define([
 			this.template = _.template(App.Templates[17]);
 			this.filter = {
 				status: this.model.get('status'),
-				managers: [],
+				markets: [],
 				from: moment().subtract(1,'y').format('DD.MM.YY'),
 				to: moment().format('DD.MM.YY')
 			};
@@ -158,12 +158,12 @@ define([
 		searchHandler: function() {
 			this.triggerMethod('search:orders',this.ui.search.val());
 		},
-		filterManager: function(child,managers) {
+		filterManager: function(child,markets) {
 			var self = this;
-			this.filter.managers = [];
-			managers.each(function(manager) {
-				manager.get('active') ? 
-					self.filter.managers.push(manager.get('value')):'';
+			this.filter.markets = [];
+			markets.each(function(market) {
+				market.get('active') ? 
+					self.filter.markets.push(market.get('name')):'';
 			});
 			this.triggerMethod('filter:orders',this.filter);
 			

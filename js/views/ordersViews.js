@@ -59,7 +59,7 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			if (_.find(status,function(str) {return str === 'approved'})) {
 				this.$el.removeClass('new').addClass('curr');
 			};
-
+			App.line.css('width','100%').fadeOut(400);
 		},
 		onAddChild: function(child) {
 			this.count++;
@@ -186,6 +186,9 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 		className: 'search_res_empty',
 		initialize: function() {
 			this.template = _.template('<p class="mess">Ничего не найдено <%if(typeof query !== "undefined"){%>по запросу <b class="js_res">"<%=query%>"</b><%}%></p>');
+		},
+		onDomRefresh: function() {
+			App.line.css('width','100%').fadeOut(400);
 		}
 	});
 

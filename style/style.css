@@ -48,8 +48,9 @@ body {
 }
 header {
   background: #f4f4f4;
-  padding: 30px 0;
+  padding: 30px 0 0;
   position: relative;
+  z-index: 3;
 }
 header .logo {
   display: block;
@@ -67,7 +68,7 @@ header .logo:hover::before {
 }
 header .nav {
   float: left;
-  margin-top: 11px;
+  margin-top: 10px;
 }
 header .nav > a {
   float: left;
@@ -181,10 +182,8 @@ header .nav .list.open .drop {
   transition: height 0.15s ease 0s;
 }
 header .nav.temp {
-  position: absolute;
-  right: 0;
-  top: 72px;
   z-index: 3;
+  float: right;
 }
 header .nav.temp .list {
   margin: 0;
@@ -271,7 +270,7 @@ header.grad {
   font: 700 55px 'permian-bold', sans-serif;
   color: #1d1d1d;
   line-height: 55px;
-  padding: 20px 0 30px;
+  padding: 10px 0 30px;
 }
 .title_top.air {
   padding: 95px 0;
@@ -2715,7 +2714,38 @@ header .nav a{
 .curr_orders .box .back {
       background: linear-gradient(135deg, #eff7ff 0%, #AEBFCC 100%);
 }
-.footer{
+.footer {
   opacity: 0.97;
   background: #F4F4F4;
+}
+.content_loader {
+  text-align: right;
+  padding: 30px ;
+  box-sizing: border-box;
+  text-align: right;
+}
+.content_loader span {
+  font: 400 20px 'permian', sans-serif;
+  color: #999;
+}
+.content_loader span i {
+  font-size: 12px;
+}
+.content_loader span b {
+  font-size: 16px;
+}
+.load_line {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background: #3498db;
+  background: linear-gradient(to right, rgba(17,127,198,1) 0%,rgba(43,215,128,1) 100%);
+  width: 0;
+  height: 4px;
+  box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
 }

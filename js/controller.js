@@ -32,9 +32,12 @@ define([
 		initialize: function () {
 			this.title_page = new Entities.model();
 			this.role = App.user.get('role');
-			this.filtersStock = new Entities.filtersStock();
+			this.filtersStock = this.createFilters({
+				'Фильтр по названию':'name',
+				'Сторона открытия':'open_side',
+				'Ширина':'width'
+			});
 			this.markets = Entities.markets;
-			Entities.doorsStock.fetch();
 			this.stockLayout = new stockLayout({
 				model: this.title_page,
 			});
@@ -50,6 +53,7 @@ define([
 		},
 
 		mainRoute: function() {
+			App.line.show().css('width','20%');
 			var role = this.role;
 			var status = role==='admin' ? ['new'] : ['approved'];
 
@@ -59,8 +63,10 @@ define([
 			this.ordersLayout.render();
 			
 			var tabsV = new filtersViews.tabView({
-				model: new Entities.quant({
-					'role': role
+				model: new Entities.model({
+					'role': role,
+					'orders': Entities.orders.where({'status':'approved'}).length,
+					'ships': Entities.ships.where({'status':'approved'}).length
 				})
 			});
 			var footer = new footerViews.footer();
@@ -69,7 +75,9 @@ define([
 			this.ordersLayout.showChildView('footerRegion',footer);
 		},
 
-		stockRoute: function() {		
+		stockRoute: function() {	
+			App.line.show().css('width','20%');
+
 			var filtersV = new filtersViews.filters({
 				collection: this.filtersStock
 			});
@@ -83,13 +91,7 @@ define([
 				'Двери на складе':'Двери на складе в Минске';
 
 			this.showStock(filtersV,doorsV,footer,title);
-			if (!this.filtersStock.length) {
-				this.filtersStock.fetch().then(function() {
-					ui_dropdown();
-				});
-			} else {
-				ui_dropdown();
-			};
+			ui_dropdown();
 		},
 
 		orderRoute: function() {
@@ -124,7 +126,7 @@ define([
 
 		ordersRoute: function() {
 			var title = this.role!=="sklad"?'Текущие заказы':'Текущие отгрузки';
-			var status = this.role === 'admin'||this.role === 'sklad' ? ['approved']:['new','approved'];
+			var status = this.role !== 'manager' ? ['approved']:['new','approved'];
 			this.showOrders('orders',title,status);
 		},
 
@@ -148,6 +150,7 @@ define([
 		},
 
 		showOrders: function(mode,title,status) {
+			App.line.show().css('width','20%');
 			var role = this.role;
 			this.title_page.set('title',title);
 			this.ordersLayout.page = '';
@@ -195,6 +198,39 @@ define([
 			});
 			App.headerRegion.show(header);
 		},
+
+		createFilters: function(obj) {
+			var filters = new Entities.collection();
+			for (key in obj) {
+				var model = new Entities.model({
+					'name': key,
+					'code': obj[key],
+					'list': this.createFilter(obj[key])
+				})
+				filters.add(model);
+			};
+			return filters;
+		},
+
+		createFilter: function(code) {
+			var arr_vals = [];
+			Entities.doorsStock.each(function(door) {
+				var prop = door.get(code);
+				if ( !_.find(arr_vals,function(val) {
+						return val === prop}) ) {
+					arr_vals.push(prop);
+				};
+			});
+			arr_vals.sort();
+			var filter = new Entities.collection();
+			for (var i = 0; i < arr_vals.length; i++) {
+				var model = new Entities.model({
+					'name': arr_vals[i]
+				});
+				filter.add(model);
+			};
+			return filter;
+		}
 		
 	});
 	

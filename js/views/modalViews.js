@@ -85,10 +85,7 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			if (this.model.get('order')) {
 				this.collection.set(this.model,{remove:false})
 			}
-			var data = {
-				id: this.model.get('id'),
-				price: this.model.get('price')
-			};
+			this.model.save();
 		}
 	});
 

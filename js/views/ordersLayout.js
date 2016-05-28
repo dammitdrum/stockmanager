@@ -5,7 +5,8 @@ define([
 	'entities',
 	'views/ordersViews',
 	'views/shipsViews',
-	'moment'
+	'moment',
+	'backboneSearch'
 ],function(Marionette, App, modalViews, Entities, ordersViews, shipsViews, moment){
 
 	return Marionette.LayoutView.extend({
@@ -34,24 +35,16 @@ define([
 		onRender: function() {
 			this.entity = this.mode === 'ships'? Entities.ships : Entities.orders;
 			var self = this;
+			this.entityFiltered = this.entity;//for searching
 			this.addRegions({
 				ordersRegion: "#orders_region",
 				orderDetailRegion: "#order_detail",
 				modalRegion: "#stockModal",
 				editModalRegion: "#editModal"
 			});
-            if (this.page === 'homePage'&&!(App.user.get('role')==='sklad')) {
-
-            	if (!this.entity.length) {
-            		this.showPreload();
-					this.entity.fetch().then(function() {
-		            	self.renderList(self.entity,self.status);
-		            });
-            	} else {
-            		this.renderList(this.entity,this.status);
-            	}
-
-            };
+			if (this.page==='homePage'&&App.user.get('role')!=='sklad') {
+				this.renderList(this.entity,this.status);
+			};
         },
 		serializeData: function() {
 			return {
@@ -77,15 +70,7 @@ define([
 					break;
 			};
 			this.getRegion('orderDetailRegion').empty();
-
-			if (!this.entity.length) {
-        		this.showPreload();
-				this.entity.fetch().then(function() {
-	            	self.renderList(self.entity,self.status);
-	            });
-        	} else {
-        		this.renderList(this.entity,this.status);
-        	};
+        	this.renderList(this.entity,this.status);
 		},
 		renderDetailModal: function(child, door) {
 			var modal = new modalViews.Detail({ 
@@ -104,7 +89,7 @@ define([
 		},
 		removeOrder: function(child,id) {
 			this.entity.findWhere({id: id}).set('status','canceled').save();
-			if (this.mode !== 'ships' || this.status !== 'new') {
+			if (this.mode !== 'ships' && this.status[0] !== 'new') {
 				this.changeQuantities(this.entity.findWhere({id: id}),'cancelQuantity');
 			};
 			this.renderList(this.entity,this.status);
@@ -157,42 +142,48 @@ define([
 					'quantity': q,
 					'quantity_reserved': r
 				})
+				stockDoor.save();
 			})
 		},
 		renderSearchResult: function(child, query) {
-	        var self = this;
-            this.dataFilt.filter.status = this.status;
-            this.dataFilt.filter.id = query;
-            this.entity.fetch({data: this.dataFilt}).then(function() {
-            	self.renderList(self.entity,self.status);
-            });
+            if (query.length === 0) {
+				this.renderList(this.entity,this.status);
+				return;
+			};
+			var results = this.entityFiltered.search(query,['id']);
+			this.renderList(results,this.status);
 		},
 		renderFilterResult: function(child, filter) {
-			var self = this;
+			var filtDateEntity = new Entities.collection();
+			var filtMarketEntity = new Entities.collection();
 
-            this.showPreload();
-            
-            if (!this.entity.length) {
-            	this.entity.fetch().then(function() {
-	            	self.filtDateRange(self.entity,filter);
-	            });
-            } else {
-            	this.filtDateRange(this.entity,filter);
-            };
-		},
-		filtDateRange: function(entity,filter) {
-			var filtEntity = new Entities.collection();
-        	entity.each(function(model) {
+        	this.entity.each(function(model) {
             	var check = moment(model.get('date'),'DD.MM.YY').isBetween(
 	            	moment(filter.from,'DD.MM.YY').format('YYYY-MM-DD'), 
 	            	moment(filter.to,'DD.MM.YY').format('YYYY-MM-DD'),
 	            	null, '[]'
 	            );
 	            if (check) {
-	            	filtEntity.add(model);
+	            	filtDateEntity.add(model);
 	            };
             });
-            this.renderList(filtEntity,this.status);
+
+            if (filter.markets.length) {
+	            var arr_hash = [];
+	            for (var i = 0; i < filter.markets.length; i++) {
+	            	var hash = {};
+					hash['object'] = filter.markets[i];
+					arr_hash.push(hash);
+	            };
+				_.each(arr_hash,function(hash) {
+					filtMarketEntity.add(filtDateEntity.where(hash));
+				});
+				this.renderList(filtMarketEntity,this.status);
+				this.entityFiltered = filtMarketEntity;
+				return;
+			};
+            this.renderList(filtDateEntity,this.status);
+            this.entityFiltered = filtDateEntity;
 		},
 		renderList: function(result,status,query) {
 			var filtResult = new Entities.collection();
@@ -219,10 +210,6 @@ define([
 				});
 			};
 			this.showChildView('ordersRegion',orders);
-		},
-		showPreload: function() {
-			var preload = new ordersViews.preload();
-			this.showChildView('ordersRegion',preload);
 		},
 		showDetail: function(child, order) {
 			var el = child.$el,

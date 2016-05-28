@@ -59,6 +59,7 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			if (_.find(status,function(str) {return str === 'approved'})) {
 				this.$el.removeClass('new').addClass('curr');
 			};
+			App.line.css('width','100%').fadeOut(400);
 		},
 		onAddChild: function(child) {
 			this.count++;

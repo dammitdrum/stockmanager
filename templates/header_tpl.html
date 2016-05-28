@@ -1,4 +1,4 @@
-
+<div class="clearfix">
 <a href="#" class="logo"></a>
 <%if(role==='mogilev'||role==='sklad'){%>
 <nav class="nav">
@@ -28,6 +28,15 @@
 	<a href="#orders/history">История заказов</a>
 </nav>
 <%}%>
+<a href="#profile" class="profile js_profile">
+	<span class="name"><%=role%></span>
+	<span class="descript"><%=address%></span>
+</a>
+<div class="date">
+	<span class="time"><i class="js_hour"></i><i class="js_dots dots fadein">:</i><i class="js_min"></i></span>
+	<span class="day"><i class="js_date"></i><br><i class="js_day_week"></i></span>
+</div>
+</div>
 <div class="nav temp">
 <div class="list">
 	<span class="trigg">Изменить роль</span>
@@ -38,13 +47,5 @@
 		<li><a href="?sklad">склад</a></li>
 	</ul>
 </div>
-</div>
-<a href="#profile" class="profile js_profile">
-	<span class="name"><%=role%></span>
-	<span class="descript"><%=address%></span>
-</a>
-<div class="date">
-	<span class="time"><i class="js_hour"></i><i class="js_dots dots fadein">:</i><i class="js_min"></i></span>
-	<span class="day"><i class="js_date"></i><br><i class="js_day_week"></i></span>
 </div>
 		
