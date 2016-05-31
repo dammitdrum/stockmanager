@@ -1,0 +1,9 @@
+<div class="back"><i class="line"></i></div>
+<div class="front">
+	<p class="date"><%=date%></p>
+	<p class="quant">Дверей: <%=doors.length%>шт</p>
+	<p class="manager"><%=object%></p>
+	<p class="price"><%=String(total).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1&nbsp;')%> руб.</p>
+	<span class="num">№ <%=id%><br><%if(status==='canceled'){print('Отменен')}%></span>
+	<span class="print"></span>
+</div>

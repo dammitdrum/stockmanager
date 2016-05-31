@@ -1,0 +1,20 @@
+
+<%if (_.find(status,function(str) {return str === 'history'})) {%>
+<div class="search">
+	<span class="icon"></span>
+	<input type="text" class="input" id="search" placeholder="Поиск по номеру заказа">
+</div>
+<%} else {%>
+<ul class="period_tabs clearfix js_period">
+	<li>Сегодня</li>
+	<li class="js_yesterday" data-period="d">Вчера</li>
+	<li data-period="w">Неделя</li>
+	<li data-period="M">Месяц</li>
+	<li data-period="Q">Квартал</li>
+	<li data-period="y" class="active">Год</li>
+</ul>
+<%}%>
+<div class="period clearfix">
+	<input type="text" class="date js_date_range" placeholder="Выберите период">
+</div>
+<div id="filter_list"></div>

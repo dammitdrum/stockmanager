@@ -1,0 +1,36 @@
+<div class="wrap clearfix">
+	<%if(role==='admin'){%>
+	<span class="tab active" data-tab="0">Новые</span>
+	<span class="tab" data-tab="1">Текущие</span>
+	<span class="tab" data-tab="3">История</span>
+	<%}%>
+	<%if(role==='manager'){%>
+	<span class="tab active" data-tab="2">Текущие заказы</span>
+	<span class="tab" data-tab="3">История заказов</span>
+	<%}%>
+	<%if(role==='mogilev'){%>
+	<span class="tab active" data-tab="1">Текущие отгрузки</span>
+	<span class="tab" data-tab="3">История отгрузок</span>
+	<%}%>
+	<%if(role!=='sklad'){%>
+	<a href="#stock" class="button">Оформить 
+		<%if(role!=='mogilev'){%>новый заказ<%}else{%>новую отгрузку<%}%></a>
+	<%} else {%>
+		<div class="side">
+			<p class="title">Приемы</p>
+			<p class="text">Прием входных дверей с Могилева</p>
+			<div class="clearfix">
+				<a href="#ships" class="curr">Текущие<i class="count"><%=ships%></i></a>
+				<a href="#ships/history" class="history">История</a>
+			</div>
+		</div>
+		<div class="side right">
+			<p class="title">Отгрузки</p>
+			<p class="text">Отгрузки входных дверей в Минск</p>
+			<div class="clearfix">
+				<a href="#orders" class="curr">Текущие<i class="count"><%=orders%></i></a>
+				<a href="#orders/history" class="history">История</a>
+			</div>
+		</div>
+	<%}%>
+</div>

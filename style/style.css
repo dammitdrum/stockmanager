@@ -37,9 +37,13 @@
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-body {
+html {
+  min-height: 100%;
   position: relative;
+}
+body {
   min-width: 1180px;
+      margin-bottom: 56px;
 }
 .wrap {
   margin: 0 auto;
@@ -730,7 +734,7 @@ header.grad {
 }
 .stock {
   padding-bottom: 240px;
-  min-height: 540px;
+  min-height: 400px;
 }
 .stock .dropdown {
   float: left;
@@ -794,7 +798,7 @@ header.grad {
   background: #e5f9f1;
 }
 .search_res_empty {
-  padding: 100px 0;
+  padding: 150px 0 200px;
 }
 .search_res_empty .mess {
   font: 400 34px 'permian', sans-serif;
@@ -829,6 +833,10 @@ header.grad {
   z-index: 5;
   background: #fff;
   border-top: 1px solid #f2f2f2;
+}
+.footer.abs {
+  position: absolute;
+  min-width: 1180px;
 }
 .footer .top {
   padding: 25px 0 0px;
@@ -959,6 +967,17 @@ header.grad {
 }
 .footer .bottom .scrollTop:hover {
   opacity: 0.75;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer.fix {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
 }
 footer .bottom {
   padding: 22px 0;
@@ -1123,7 +1142,6 @@ footer .bottom .scrollTop:hover {
   float: left;
   margin-right: 33.3px;
   position: relative;
-  cursor: pointer;
   top: 0;
   margin-bottom: 50px;
   width: 260px;
@@ -1216,6 +1234,7 @@ footer .bottom .scrollTop:hover {
 .curr_orders .box .front {
   position: relative;
   z-index: 2;
+  cursor: pointer;
   width: 100%;
   height: 210px;
   top: 0;
