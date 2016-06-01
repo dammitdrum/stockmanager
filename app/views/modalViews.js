@@ -31,6 +31,10 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.price = Entities.doorsStock.findWhere({
 				id: this.model.get('id')
 			}).get('price');
+			this.mode = opt.mode;
+		},
+		onRender: function() {
+			this.old_q = this.order.quantity;
 		},
 		serializeData: function() {
 			var order = this.order;
@@ -58,6 +62,13 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			if (this.changed) {
 				this.order.changed = 1;
 			}
+			if (this.editMode&&this.mode==='orders') {
+				var stockDoor = Entities.doorsStock.findWhere({
+					id: this.model.get('id')
+				});
+				var n = stockDoor.get('quantity_reserved') - this.old_q + this.order.quantity;
+				stockDoor.set('quantity_reserved',n).save();
+			};
 			this.collection.remove(this.model);
 			this.model.set({'order': this.order});
 			this.collection.add(this.model);

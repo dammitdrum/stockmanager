@@ -83,7 +83,8 @@ define([
 				model: door,
 				collection: doors,
 				edit: true,
-				changed: changed
+				changed: changed,
+				mode: this.mode
 			});
 			this.showChildView('editModalRegion',modal);
 		},

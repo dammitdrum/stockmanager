@@ -169,16 +169,17 @@ define(['marionette','app','entities'],function(Marionette,App,Entities){
 			this.triggerMethod('remove:order',this.model.get('orderId'));
 		},
 		updateOrder: function() {
-			var model = this.entity.findWhere({id: this.model.get('orderId')});
+			var order = this.entity.findWhere({id: this.model.get('orderId')});
 			var sum = 0;
-			model.get('doors').each(function(door) {
+
+			this.collection.each(function(door) {
 				var price = Entities.doorsStock.findWhere({
 					id: door.get('id')
 				}).get('price');
 				sum += door.get('order').quantity*price;
 			});
-			model.set({'total':sum,'doors':this.collection});
-			model.save();
+			order.set({'total':sum,'doors':this.collection});
+			order.save();
 		}
 	});
 
