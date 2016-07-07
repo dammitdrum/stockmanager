@@ -1,2 +1,2 @@
 # stockmanager
-application for management stock, using backbone marionette and require
+application for management stock, using backbone marionette and requirejs
